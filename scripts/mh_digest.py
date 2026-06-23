@@ -68,7 +68,7 @@ MEDIA_RELAX       = 5
 MIN_STUDIES       = 5
 MAX_CANDIDATES    = 30
 MIN_TITLE_SCORE   = 1      # studies scoring 0 on novelty signals skip abstract fetch
-ABSTRACT_MAX_CHARS = 1500  # truncate abstracts to cap input tokens
+ABSTRACT_MAX_CHARS = 5000  # raised — DOI fetch now supplements short abstracts
 PUBMED_ISSN_BATCH = 3
 ESUMMARY_BATCH    = 20
 NCBI_DELAY        = 0.4
@@ -280,19 +280,72 @@ def apply_media_filter(candidates: list[tuple], threshold: int) -> list[tuple]:
 
 # ── Step 5: Fetch abstracts ──────────────────────────────────────────────────
 
-def fetch_abstract(pmid: str) -> str:
+def fetch_doi_content(doi: str) -> str:
+    """Try to scrape full abstract from publisher DOI page."""
+    if not doi:
+        return ""
+    try:
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (compatible; research-digest-bot/1.0; "
+                "+https://github.com/Meggers1982/new-scientist-story-ideas)"
+            ),
+            "Accept": "text/html,application/xhtml+xml",
+        }
+        r = requests.get(f"https://doi.org/{doi}", headers=headers, timeout=20, allow_redirects=True)
+        r.raise_for_status()
+        html = r.text
+
+        # 1. citation_abstract meta tag (used by many publishers)
+        for pattern in [
+            r'<meta[^>]+name="citation_abstract"[^>]+content="([^"]{200,})"',
+            r'<meta[^>]+content="([^"]{200,})"[^>]+name="citation_abstract"',
+        ]:
+            m = re.search(pattern, html, re.IGNORECASE)
+            if m:
+                return m.group(1).strip()
+
+        # 2. Common abstract container elements
+        for pattern in [
+            r'<(?:div|section)[^>]+id="[^"]*abstract[^"]*"[^>]*>(.*?)</(?:div|section)>',
+            r'<(?:div|section)[^>]+class="[^"]*abstract[^"]*"[^>]*>(.*?)</(?:div|section)>',
+            r'<p[^>]+class="[^"]*abstract[^"]*"[^>]*>(.*?)</p>',
+        ]:
+            m = re.search(pattern, html, re.IGNORECASE | re.DOTALL)
+            if m:
+                text = re.sub(r'<[^>]+>', ' ', m.group(1)).strip()
+                text = re.sub(r'\s+', ' ', text)
+                if len(text) > 200:
+                    return text
+
+        return ""
+    except Exception as e:
+        print(f"  DOI fetch error ({doi}): {e}")
+        return ""
+
+
+def fetch_abstract(pmid: str, doi: str = "") -> str:
+    """Fetch abstract from PubMed; supplement with DOI page if PubMed text is short."""
+    pubmed_text = ""
     url = f"{PUBMED_BASE}/efetch.fcgi?db=pubmed&id={pmid}&retmode=text&rettype=abstract"
     try:
         r = requests.get(url, timeout=20)
         r.raise_for_status()
-        text = r.text.strip()
-        # Truncate to cap input tokens — key info is almost always in the first ~1500 chars
-        if len(text) > ABSTRACT_MAX_CHARS:
-            text = text[:ABSTRACT_MAX_CHARS] + "… [truncated]"
-        return text
+        pubmed_text = r.text.strip()
+        if len(pubmed_text) > ABSTRACT_MAX_CHARS:
+            pubmed_text = pubmed_text[:ABSTRACT_MAX_CHARS] + "… [truncated]"
     except Exception as e:
         print(f"  efetch error for {pmid}: {e}")
-        return ""
+
+    # Try DOI page for a richer abstract
+    if doi:
+        time.sleep(NCBI_DELAY)
+        doi_text = fetch_doi_content(doi)
+        if doi_text and len(doi_text) > len(pubmed_text):
+            print(f"  {pmid}: DOI abstract used ({len(doi_text)} chars vs PubMed {len(pubmed_text)} chars)")
+            return doi_text
+
+    return pubmed_text
 
 
 # ── Step 6: Claude — single combined pass ────────────────────────────────────
@@ -478,7 +531,7 @@ def main():
     print("\nFetching abstracts...")
     studies = []
     for _, pmid, s in passed:
-        abstract = fetch_abstract(pmid)
+        abstract = fetch_abstract(pmid, doi=s.get("doi", ""))
         time.sleep(NCBI_DELAY)
         if not abstract:
             continue
