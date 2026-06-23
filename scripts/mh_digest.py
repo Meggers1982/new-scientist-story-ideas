@@ -341,6 +341,8 @@ For each study below, return a single JSON array. Each object must have exactly 
   "caveats": "comma-separated flags present in the abstract: small sample (N<100), observational design, single-center, self-reported outcomes, short follow-up, industry funding [name], preprint, secondary analysis — or 'None identified'",
   "fact_check_note": "Describe any corrections you made to summary/caveats vs what the abstract actually says, or empty string if nothing needed fixing",
   "excluded": false,
+  "ns_score": 7,
+  "ns_score_reason": "One sentence explaining the score — what makes it strong or weak for NS Mind",
   "ns_pitch": {{
     "headline": "NS Mind headline — present tense, punchy, counterintuitive",
     "hook": "One sentence opening, leading with the surprising finding",
@@ -355,7 +357,15 @@ Rules:
 - Never use: breakthrough, cure, reverses, eliminates, proven to prevent
 - Always use: suggests, found that, associated with, early evidence indicates
 - No causal language for observational studies
-- If a study is conducted entirely in animals, cell lines, or computational models: set "excluded": true, headline "EXCLUDED: animal/non-human study only", other fields empty strings
+- If a study is conducted entirely in animals, cell lines, or computational models: set "excluded": true, headline "EXCLUDED: animal/non-human study only", ns_score 0, other fields empty strings
+- ns_score rubric (1–10): start at 5, then adjust:
+  +2 counterintuitive or overturns prior belief
+  +2 human subjects, decent sample (N≥100)
+  +1 clear societal/lifestyle hook NS Mind readers care about
+  +1 clean design (RCT, longitudinal, large cohort)
+  −1 per major caveat (small N, self-report, single-center, etc.)
+  −2 animal/non-human only (but those are excluded anyway)
+  Topic fit bonus: relationships, sleep, emotion, cognition, mental health treatment, neurodiversity, social behaviour score higher
 - Return ONLY a valid JSON array, no other text
 
 {NS_STYLE_NOTES}
@@ -518,8 +528,6 @@ def main():
     RESULTS_PATH.write_text(json.dumps(payload, indent=2))
     print(f"\nResults saved to {RESULTS_PATH} ({len(enriched)} studies)")
 
-    # Short email notification
-    send_notification(CATEGORIES_INPUT, chunk_label, len(enriched), run_date)
     print("\nDone.")
 
 
