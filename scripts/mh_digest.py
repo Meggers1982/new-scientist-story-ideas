@@ -84,6 +84,28 @@ SKIP_PUBTYPES = {
     "case reports", "published erratum", "retraction of publication",
 }
 
+# Title phrases that strongly indicate an animal-only or non-human study
+ANIMAL_ONLY_SIGNALS = {
+    "in mice", "in rats", "in mouse", "in rat", "mouse model", "rat model",
+    "murine", "rodent model", "in zebrafish", "in drosophila", "in c. elegans",
+    "in vivo model", "animal model", "in vitro", "cell line", "in silico",
+    "in monkeys", "in primates", "primate model", "in pigs", "in rabbits",
+}
+
+# Title phrases that confirm human subjects — override animal signals
+HUMAN_SIGNALS = {
+    "patient", "patients", "human", "humans", "adult", "adults", "children",
+    "cohort", "clinical trial", "randomized", "participants", "men", "women",
+    "adolescent", "population", "longitudinal", "cross-sectional", "survey",
+}
+
+def is_animal_only(title: str) -> bool:
+    """Return True if the title signals an animal/non-human study with no human subject indicators."""
+    t = title.lower()
+    has_animal = any(sig in t for sig in ANIMAL_ONLY_SIGNALS)
+    has_human  = any(sig in t for sig in HUMAN_SIGNALS)
+    return has_animal and not has_human
+
 
 # ── Step 1: Category & ISSN resolution ───────────────────────────────────────
 
@@ -197,6 +219,9 @@ def screen_candidates(summaries: dict) -> list[tuple]:
         if SKIP_PUBTYPES & set(s["pubtype"]):
             continue
         if not s["title"]:
+            continue
+        if is_animal_only(s["title"]):
+            print(f"  PMID {pmid}: animal-only title — skipped")
             continue
         score = title_score(s["title"])
         scored.append((score, pmid, s))
@@ -317,6 +342,7 @@ Writing rules:
 - Always use: "suggests", "found that", "associated with", "early evidence indicates"
 - If a study doesn't clearly fit any groundbreaking criterion, write "Included for relevance" and still write a full entry
 - Be concise — each entry should be readable in under 2 minutes
+- EXCLUDE any study whose abstract shows it was conducted entirely in animals, cell lines, or computational models with no human subjects — write "EXCLUDED: animal/non-human study only" and skip the entry entirely
 
 Studies:
 {studies_block}"""
