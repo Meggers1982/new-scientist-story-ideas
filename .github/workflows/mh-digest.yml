@@ -144,7 +144,11 @@ jobs:
       - name: List downloaded artifacts
         run: find /tmp/artifacts -name "*.json" | sort
 
-      - name: Merge results
+      - name: Merge results and send digest email
+        env:
+          RESEND_API_KEY:  ${{ secrets.RESEND_API_KEY }}
+          RECIPIENT_EMAIL: meagan.lea.morris@gmail.com
+          DASHBOARD_URL:   https://meggers1982.github.io/new-scientist-story-ideas/
         run: python scripts/merge_results.py
 
       - name: Commit and push updated results

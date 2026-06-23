@@ -129,6 +129,26 @@
   .badge-gb    { background: #fef3c7; color: #92400e; }
   .badge-media { background: #dcfce7; color: #166534; }
 
+  /* NS Score badge */
+  .score-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: help;
+  }
+  .score-high   { background: #dcfce7; color: #14532d; border: 1px solid #86efac; }
+  .score-mid    { background: #fef9c3; color: #713f12; border: 1px solid #fde047; }
+  .score-low    { background: #f3f4f6; color: #6b7280; border: 1px solid #d1d5db; }
+  .score-dot    { width: 6px; height: 6px; border-radius: 50%; display: inline-block; }
+  .score-high .score-dot { background: #16a34a; }
+  .score-mid .score-dot  { background: #ca8a04; }
+  .score-low .score-dot  { background: #9ca3af; }
+
   .card-body { padding: 0 24px 16px; font-size: 0.92rem; }
   .card-body p { margin-bottom: 10px; color: #333; }
   .card-body strong { color: #111; }
@@ -295,6 +315,17 @@
     <option value="30">Past 30 days</option>
   </select>
 
+  <select id="filter-score" onchange="applyFilters()">
+    <option value="0">All scores</option>
+    <option value="8">Top picks (8–10)</option>
+    <option value="6">Strong (6+)</option>
+  </select>
+
+  <select id="sort-by" onchange="applyFilters()">
+    <option value="score" selected>Sort: NS score</option>
+    <option value="date">Sort: newest first</option>
+  </select>
+
   <button class="btn-clear" onclick="clearFilters()">Clear filters</button>
 </div>
 
@@ -379,14 +410,17 @@ function applyFilters() {
   const gbType   = document.getElementById("filter-groundbreaking").value;
   const statusF  = document.getElementById("filter-status").value;
   const days     = parseInt(document.getElementById("filter-days").value);
+  const minScore = parseInt(document.getElementById("filter-score").value);
+  const sortBy   = document.getElementById("sort-by").value;
   const statuses = getStatuses();
   const cutoff   = days > 0 ? new Date(Date.now() - days * 86400000) : null;
 
-  const filtered = ALL_STUDIES.filter(s => {
+  let filtered = ALL_STUDIES.filter(s => {
     const status = statuses[s.pmid] || "new";
     if (statusF && status !== statusF) return false;
     if (category && s.category !== category) return false;
     if (gbType && !(s.groundbreaking || "").includes(gbType)) return false;
+    if (minScore > 0 && (s.ns_score || 0) < minScore) return false;
     if (cutoff) {
       const rd = new Date(s.run_date);
       if (rd < cutoff) return false;
@@ -398,6 +432,13 @@ function applyFilters() {
     }
     return true;
   });
+
+  // Sort
+  if (sortBy === "score") {
+    filtered.sort((a, b) => (b.ns_score || 0) - (a.ns_score || 0));
+  } else {
+    filtered.sort((a, b) => (b.run_date || "").localeCompare(a.run_date || ""));
+  }
 
   const countEl = document.getElementById("result-count");
   countEl.style.display = "block";
@@ -414,7 +455,18 @@ function clearFilters() {
   document.getElementById("filter-groundbreaking").value = "";
   document.getElementById("filter-status").value = "";
   document.getElementById("filter-days").value = "7";
+  document.getElementById("filter-score").value = "0";
+  document.getElementById("sort-by").value = "score";
   applyFilters();
+}
+
+function scoreBadge(s) {
+  const score = s.ns_score;
+  if (!score && score !== 0) return "";
+  const cls   = score >= 8 ? "score-high" : score >= 6 ? "score-mid" : "score-low";
+  const label = score >= 8 ? "Top pick" : score >= 6 ? "Strong" : "Lower fit";
+  const title = esc(s.ns_score_reason || "");
+  return `<span class="score-badge ${cls}" title="${title}"><span class="score-dot"></span>${score}/10 · ${label}</span>`;
 }
 
 // ── Card rendering ────────────────────────────────────────────────────────
@@ -452,6 +504,7 @@ function renderCard(s) {
   <div class="card-header">
     <div class="card-headline">${esc(s.headline || s.title || "Untitled")}</div>
     <div class="card-meta">
+      ${scoreBadge(s)}
       <span class="badge badge-cat">${esc(s.category || "")}</span>
       ${s.groundbreaking ? `<span class="badge badge-gb">${esc(s.groundbreaking)}</span>` : ""}
       ${s.media_coverage && s.media_coverage.includes("✓") ? `<span class="badge badge-media">Not widely covered ✓</span>` : ""}
