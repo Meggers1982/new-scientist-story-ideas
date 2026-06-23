@@ -22,13 +22,6 @@ jobs:
     name: "${{ matrix.category }} ${{ matrix.chunk_total > 1 && format('({0}/{1})', matrix.chunk_index, matrix.chunk_total) || '' }}"
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    # On manual dispatch with a specific category, only run that job
-    if: |
-      github.event_name == 'schedule' ||
-      github.event.inputs.category == '' ||
-      (github.event.inputs.category == matrix.category &&
-       (github.event.inputs.chunk_index == '' || github.event.inputs.chunk_index == matrix.chunk_index))
-
     strategy:
       fail-fast: false   # one job failing won't cancel the others
       matrix:
@@ -103,7 +96,6 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SERPAPI_KEY:       ${{ secrets.SERPAPI_KEY }}
           RESEND_API_KEY:    ${{ secrets.RESEND_API_KEY }}
-          FROM_EMAIL:        ${{ secrets.FROM_EMAIL }}
           RECIPIENT_EMAIL:   meagan.lea.morris@gmail.com
           CATEGORIES:        ${{ matrix.category }}
           CHUNK_INDEX:       ${{ matrix.chunk_index }}
