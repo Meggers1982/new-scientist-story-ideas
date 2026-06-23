@@ -32,12 +32,13 @@ import requests
 ANTHROPIC_KEY      = os.environ["ANTHROPIC_API_KEY"]
 SERPAPI_KEY        = os.environ.get("SERPAPI_KEY", "")
 RESEND_KEY         = os.environ["RESEND_API_KEY"]
-FROM_EMAIL         = os.environ["FROM_EMAIL"]
+FROM_EMAIL         = os.environ.get("FROM_EMAIL", "onboarding@resend.dev")
 RECIPIENT          = os.environ.get("RECIPIENT_EMAIL", "meagan.lea.morris@gmail.com")
 CATEGORIES_INPUT   = os.environ.get("CATEGORIES", "all")
 TOPIC_FOCUS        = os.environ.get("TOPIC_FOCUS", "").strip()
 CHUNK_INDEX        = int(os.environ.get("CHUNK_INDEX", "1"))   # 1-based
 CHUNK_TOTAL        = int(os.environ.get("CHUNK_TOTAL", "1"))
+FILTER_CATEGORY    = os.environ.get("FILTER_CATEGORY", "").strip()
 
 CSV_PATH = Path(__file__).parent.parent / "data" / "Mental Health - Brain Mental Health.csv"
 
@@ -53,7 +54,7 @@ ALL_CATEGORIES = [
     "Substance-Related Disorders",
 ]
 
-DAYS_BACK         = 30
+DAYS_BACK         = 7
 MEDIA_THRESHOLD   = 3    # skip if >= this many Google News results
 MEDIA_RELAX       = 5    # fallback threshold if < MIN_STUDIES pass
 MIN_STUDIES       = 5    # minimum studies before relaxing media filter
@@ -540,6 +541,11 @@ def main():
 
     # 1. Categories & ISSNs
     categories = resolve_categories(CATEGORIES_INPUT)
+
+    # If a category filter was set via workflow_dispatch, skip non-matching jobs
+    if FILTER_CATEGORY and FILTER_CATEGORY.lower() not in CATEGORIES_INPUT.lower():
+        print(f"Skipping: filter='{FILTER_CATEGORY}', this job='{CATEGORIES_INPUT}' — no match.")
+        return
     print(f"\nCategories ({len(categories)}): {', '.join(categories)}")
     issns = get_issns(categories)
     print(f"ISSNs: {len(issns)}")

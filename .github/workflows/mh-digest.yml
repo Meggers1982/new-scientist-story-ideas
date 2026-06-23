@@ -1,9 +1,9 @@
 name: Mental Health Research Digest
 
 on:
-  # Runs every Monday at 9:00 AM ET (14:00 UTC)
+  # Runs every morning at 7:00 AM ET (12:00 UTC)
   schedule:
-    - cron: '0 14 * * 1'
+    - cron: '0 12 * * *'
 
   # Manual trigger — optionally override a single category+chunk
   workflow_dispatch:
@@ -101,4 +101,5 @@ jobs:
           CHUNK_INDEX:       ${{ matrix.chunk_index }}
           CHUNK_TOTAL:       ${{ matrix.chunk_total }}
           TOPIC_FOCUS:       ""
+          FILTER_CATEGORY:   ${{ github.event.inputs.category }}
         run: python scripts/mh_digest.py
