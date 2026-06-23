@@ -257,6 +257,22 @@
   }
   .pubmed-link:hover { text-decoration: underline; }
 
+  /* ── Remove button ── */
+  .btn-remove {
+    background: none;
+    border: none;
+    color: #d1d5db;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    line-height: 1;
+    transition: color 0.15s, background 0.15s;
+    font-family: sans-serif;
+  }
+  .btn-remove:hover { color: #ef4444; background: #fef2f2; }
+  .card.status-removed { opacity: 0.45; border-left-color: #ef4444; }
+
   /* ── Loading ── */
   #loading {
     text-align: center;
@@ -306,6 +322,7 @@
     <option value="saved">Saved</option>
     <option value="pitched">Pitched</option>
     <option value="passed">Passed</option>
+    <option value="removed">Removed</option>
   </select>
 
   <select id="filter-days" onchange="applyFilters()">
@@ -403,6 +420,17 @@ function setStatus(pmid, status) {
   renderStats({ studies: ALL_STUDIES });
 }
 
+// ── Remove study ──────────────────────────────────────────────────────────
+function removeStudy(pmid) {
+  setStatus(pmid, 'removed');
+  const card = document.querySelector(`[data-pmid="${pmid}"]`);
+  if (card) {
+    card.style.transition = 'opacity 0.25s';
+    card.style.opacity = '0';
+    setTimeout(() => applyFilters(), 250);
+  }
+}
+
 // ── Filters ───────────────────────────────────────────────────────────────
 function applyFilters() {
   const query    = document.getElementById("search").value.toLowerCase();
@@ -417,6 +445,7 @@ function applyFilters() {
 
   let filtered = ALL_STUDIES.filter(s => {
     const status = statuses[s.pmid] || "new";
+    if (status === "removed" && statusF !== "removed") return false;
     if (statusF && status !== statusF) return false;
     if (category && s.category !== category) return false;
     if (gbType && !(s.groundbreaking || "").includes(gbType)) return false;
@@ -522,9 +551,13 @@ function renderCard(s) {
   ${pitchSection}
   <div class="card-footer">
     <div class="status-selector">${statusBtns}</div>
-    <a class="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/${s.pmid}/" target="_blank">
-      PubMed ${s.pmid} ↗
-    </a>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a class="pubmed-link" href="https://pubmed.ncbi.nlm.nih.gov/${s.pmid}/" target="_blank">
+        PubMed ${s.pmid} ↗
+      </a>
+      <button class="btn-remove" title="Remove from dashboard"
+        onclick="removeStudy('${s.pmid}')">✕</button>
+    </div>
   </div>
 </div>`;
 }
