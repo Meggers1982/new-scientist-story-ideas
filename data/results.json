@@ -574,7 +574,12 @@
       "run_date": "2026-06-26",
       "category": "Psychology",
       "chunk": "2/3",
-      "status": "new"
+      "status": "new",
+      "ns_pitch": {
+        "headline": "People know they won't care more about six suffering children than one \u2014 and they're right",
+        "hook": "A new experiment finds that people accurately predict their own scope insensitivity: they foresee they'll feel no more generous helping six children than one, and when the moment comes, that's exactly what happens.",
+        "pitch_angle": "Researchers ran a 1,500-person randomised experiment testing whether donors' anticipated warm glow matched their actual feelings \u2014 and found a rare case of accurate self-prediction: people knew in advance that the number of beneficiaries wouldn't move them. The exception was telling: only when donors were forced to compare one versus six children side by side did generosity increase, suggesting that charities framing appeals as direct comparisons may unlock giving that a single-child story never could."
+      }
     },
     {
       "pmid": "42329806",
