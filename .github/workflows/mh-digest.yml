@@ -163,7 +163,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: update research digest results [skip ci]"
-            git push
+            git pull --rebase origin main && git push
           fi
       - name: Publish results to shared dashboard
         env:
