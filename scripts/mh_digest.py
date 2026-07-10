@@ -68,6 +68,7 @@ MEDIA_RELAX       = 5
 MIN_STUDIES       = 5
 MAX_CANDIDATES    = 30
 MIN_TITLE_SCORE   = 1      # studies scoring 0 on novelty signals skip abstract fetch
+MIN_NS_SCORE      = 4      # drop studies scored 3 or below — too weak/niche to pitch
 ABSTRACT_MAX_CHARS = 5000  # raised — DOI fetch now supplements short abstracts
 PUBMED_ISSN_BATCH = 3
 ESUMMARY_BATCH    = 20
@@ -411,6 +412,7 @@ Rules:
 - Always use: suggests, found that, associated with, early evidence indicates
 - No causal language for observational studies
 - If a study is conducted entirely in animals, cell lines, or computational models: set "excluded": true, headline "EXCLUDED: animal/non-human study only", ns_score 0, other fields empty strings
+- Note the country/region of the study population when it's relevant to interpreting the finding. Flag (in caveats_to_flag) when a result is closely tied to one non-US region's specific context — e.g. a soy-consumption pattern specific to rural China, or a water-quality issue specific to Iran — and unlikely to generalize to a US/global readership.
 - ns_score rubric (1–10): start at 5, then adjust:
   +2 counterintuitive or overturns prior belief
   +2 human subjects, decent sample (N≥100)
@@ -418,6 +420,7 @@ Rules:
   +1 clean design (RCT, longitudinal, large cohort)
   −1 per major caveat (small N, self-report, single-center, etc.)
   −2 animal/non-human only (but those are excluded anyway)
+  −2 finding is tied to a single non-US/non-multinational region's diet, genetics, environment, or healthcare system in a way unlikely to resonate with or apply to a US/global audience (this does not apply to large multinational cohorts, WHO/global-health studies, or findings with a clear universal biological mechanism)
   Topic fit bonus: relationships, sleep, emotion, cognition, mental health treatment, neurodiversity, social behaviour score higher
 - Return ONLY a valid JSON array, no other text
 
@@ -567,9 +570,9 @@ def main():
         results = process_batch(batch, i + 1, media_checked)
         enriched.extend(results)
 
-    # Filter excluded studies
-    enriched = [s for s in enriched if not s.get("excluded")]
-    print(f"Included after exclusion check: {len(enriched)}")
+    # Filter excluded studies and low-relevance studies
+    enriched = [s for s in enriched if not s.get("excluded") and s.get("ns_score", 0) >= MIN_NS_SCORE]
+    print(f"Included after exclusion + relevance-score (≥{MIN_NS_SCORE}) check: {len(enriched)}")
 
     if not enriched:
         print("No included studies — exiting.")
