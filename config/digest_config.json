@@ -1,0 +1,41 @@
+{
+  "_comment": "Edit this file to change digest behaviour. Commit the change and the next run picks it up.",
+
+  "publication": "New Scientist",
+  "section": "New Scientist Mind",
+  "reader_profile": "curious, science-literate general readers who are not specialists",
+
+  "subject_focus": "",
+
+  "_focus_comment": "Leave subject_focus empty to rotate through focus_rotation daily. Set it to a specific topic (e.g. 'memory') to always search that topic.",
+
+  "focus_rotation": [
+    "",
+    "depression",
+    "memory",
+    "sleep",
+    "anxiety",
+    "autism",
+    "schizophrenia",
+    "trauma",
+    "decision-making",
+    "stress",
+    "bipolar",
+    "emotion regulation",
+    "artificial intelligence",
+    "ADHD",
+    "psychotherapy",
+    "neuroimaging",
+    "addiction",
+    "social media",
+    "exercise",
+    "dementia"
+  ],
+
+  "_rotation_comment": "20 topics, each measured at 75+ articles over a 30-day window across the full journal list. See README 'Choosing topic wording' before adding one.",
+
+  "days_back": 30,
+  "media_threshold": 3,
+  "max_candidates": 60,
+  "max_abstracts": 40
+}

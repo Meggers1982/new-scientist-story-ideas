@@ -1,0 +1,269 @@
+"""Parse every digest (and matching fact-check) in outputs/ into the JSON the
+static dashboard (docs/) reads. Rebuilds from scratch each run so it stays
+correct even if past output files are edited or renamed by hand.
+
+Output is split so the dashboard's first load stays flat as runs accumulate:
+`index.json` holds only what the sidebar and the search box need (roughly 5%
+of the total), and each run's full body goes to `runs/<id>.json`, fetched on
+demand when that run is opened."""
+
+import json
+import re
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).parent.parent
+OUTPUTS_DIR = REPO_ROOT / "outputs"
+DASHBOARD_DATA_DIR = REPO_ROOT / "docs" / "data"
+DASHBOARD_INDEX_PATH = DASHBOARD_DATA_DIR / "index.json"
+DASHBOARD_RUNS_DIR = DASHBOARD_DATA_DIR / "runs"
+LEGACY_DATA_PATH = DASHBOARD_DATA_DIR / "digests.json"
+
+HEADER_FIELD_RE = re.compile(r"\*\*([^*:]+):\*\*\s*([^\n|]+)")
+STUDY_SPLIT_RE = re.compile(r"^### (\d+)\.\s*(.+)$", re.MULTILINE)
+CITATION_ROW_RE = re.compile(
+    r"^\|\s*\d+\s*\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*$",
+    re.MULTILINE,
+)
+FACT_CHECK_VERDICT_RE = re.compile(
+    r"### Study \d+:.*?\n\*\*PMID:\*\*\s*(\d+)\s*\|\s*\*\*Verdict:\*\*\s*([^\n]+)"
+)
+FACT_CHECK_SUMMARY_RE = re.compile(
+    r"\*\*Total issues:\*\*\s*([^\n]+)\n\*\*Entries requiring revision:\*\*\s*([^\n]+)\n\*\*Entries cleared:\*\*\s*([^\n]+)"
+)
+
+
+def _slugify(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", text.strip().lower()).strip("-") or "untitled"
+
+
+def _header_fields(text: str) -> dict:
+    fields = {}
+    for label, value in HEADER_FIELD_RE.findall(text):
+        fields[label.strip()] = value.strip()
+    return fields
+
+
+def _parse_study_block(number: str, heading: str, body: str) -> dict:
+    fields = _header_fields(body)
+
+    def _section(name: str) -> str:
+        match = re.search(
+            rf"\*\*{re.escape(name)}:\*\*\s*(.+?)(?=\n\*\*[A-Za-z][^*]*:\*\*|\Z)",
+            body,
+            re.DOTALL,
+        )
+        if not match:
+            return ""
+        value = match.group(1).strip()
+        # Drop a trailing "---" divider (and anything after it) that spills into
+        # the last field when no bold label follows before the next study/heading.
+        value = re.split(r"\n\s*-{3,}\s*", value)[0]
+        return value.strip()
+
+    story_angles_block = _section("Story angles")
+    pitch_match = re.search(
+        r"-\s*\*\*Pitch angle:\*\*\s*(.+?)(?=\n-\s*\*\*Wider angle|\Z)",
+        story_angles_block,
+        re.DOTALL,
+    )
+    wider_match = re.search(r"-\s*\*\*Wider angle:\*\*\s*(.+)", story_angles_block, re.DOTALL)
+
+    ns_fit = fields.get("NS fit", "")
+    score_match = re.match(r"\s*(\d+)\s*/\s*10\s*[—-]?\s*(.*)", ns_fit, re.DOTALL)
+
+    return {
+        "number": int(number),
+        "title": heading.strip(),
+        "journal": fields.get("Journal", "").strip("* "),
+        "published": fields.get("Published", ""),
+        "pmid": fields.get("PMID", ""),
+        "doi": fields.get("DOI", ""),
+        "novelty": fields.get("Novelty", ""),
+        "ns_score": int(score_match.group(1)) if score_match else None,
+        "ns_score_reason": score_match.group(2).strip() if score_match else ns_fit,
+        "media_check": fields.get("Media check", ""),
+        "the_study": _section("The study"),
+        "why_it_matters": _section("Why it matters"),
+        "pitch_angle": pitch_match.group(1).strip() if pitch_match else "",
+        "wider_angle": wider_match.group(1).strip() if wider_match else "",
+        "caveats": _section("Caveats"),
+    }
+
+
+def _parse_studies(body: str) -> list[dict]:
+    matches = list(STUDY_SPLIT_RE.finditer(body))
+    studies = []
+    for i, match in enumerate(matches):
+        number, heading = match.group(1), match.group(2)
+        start = match.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(body)
+        block = body[start:end]
+        # Trim trailing citation table / trends / feature-pitch sections that
+        # follow the last study entry.
+        block = re.split(r"\n## ", block)[0]
+        studies.append(_parse_study_block(number, heading, block))
+    return studies
+
+
+def _parse_named_section(text: str, heading: str) -> str:
+    match = re.search(
+        rf"^## {re.escape(heading)}\s*\n(.*?)(?=\n## |\Z)", text, re.DOTALL | re.MULTILINE
+    )
+    return match.group(1).strip() if match else ""
+
+
+def _parse_fact_check(path: Path) -> dict | None:
+    if not path.exists():
+        return None
+    text = path.read_text(encoding="utf-8")
+    header = _header_fields(text)
+    verdicts = {
+        pmid: verdict.strip() for pmid, verdict in FACT_CHECK_VERDICT_RE.findall(text)
+    }
+    summary_match = FACT_CHECK_SUMMARY_RE.search(text)
+    summary = None
+    if summary_match:
+        summary = {
+            "total_issues": summary_match.group(1).strip(),
+            "entries_requiring_revision": summary_match.group(2).strip(),
+            "entries_cleared": summary_match.group(3).strip(),
+        }
+    return {
+        "checked": header.get("Checked", ""),
+        "studies_reviewed": header.get("Studies reviewed", ""),
+        "verdicts_by_pmid": verdicts,
+        "summary": summary,
+        "raw": text,
+    }
+
+
+def _parse_digest_file(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8")
+    header = _header_fields(text)
+    body = text.split("---", 1)[1] if "---" in text else text
+
+    focus = header.get("Focus", "")
+    is_broad = focus.strip().lower().startswith("broad")
+
+    studies = _parse_studies(body)
+    citation_rows = CITATION_ROW_RE.findall(text)
+
+    trends_raw = _parse_named_section(text, "Research Trends & Continuity")
+    feature_pitch_raw = _parse_named_section(text, "Bigger Picture: Feature Pitch")
+
+    fact_check_path = path.with_name(path.stem + " Fact Check.md")
+    fact_check = _parse_fact_check(fact_check_path)
+
+    run_date = header.get("Run date", "")
+    topic = "" if is_broad else focus
+    run_id = f"{path.stem}"
+
+    return {
+        "id": _slugify(run_id),
+        "filename": path.name,
+        "title": path.stem,
+        "run_date": run_date,
+        "coverage_window": header.get("Coverage window", ""),
+        "journals_searched": header.get("Journals searched", ""),
+        "articles_screened": header.get("Articles screened", ""),
+        "focus": focus,
+        "topic": topic,
+        "is_broad": is_broad,
+        "publication": header.get("Publication", ""),
+        "section": header.get("Section", ""),
+        "study_count": len(studies),
+        "studies": studies,
+        "citation_table": [
+            {"pmid": pmid, "journal": journal, "date": date, "doi": doi}
+            for pmid, journal, date, doi in citation_rows
+        ],
+        "trends_raw": trends_raw,
+        "feature_pitch_raw": feature_pitch_raw,
+        "fact_check": fact_check,
+    }
+
+
+def _search_blob(run: dict) -> str:
+    """Everything the search box matches on, flattened at build time so the
+    index doesn't have to carry the full study objects."""
+    parts = [run.get("title", ""), run.get("focus", ""), run.get("topic", "")]
+    for study in run.get("studies", []):
+        parts.extend([study.get("title", ""), study.get("pmid", ""), study.get("journal", "")])
+    return " ".join(p for p in parts if p).lower()
+
+
+def _index_entry(run: dict) -> dict:
+    fact_check = run.get("fact_check") or {}
+    summary = fact_check.get("summary") or {}
+    scores = [s["ns_score"] for s in run.get("studies", []) if s.get("ns_score")]
+    return {
+        "id": run["id"],
+        "title": run.get("title", ""),
+        "topic": run.get("topic", ""),
+        "run_date": run.get("run_date", ""),
+        "study_count": run.get("study_count", 0),
+        "top_score": max(scores) if scores else None,
+        "total_issues": summary.get("total_issues", ""),
+        "search": _search_blob(run),
+    }
+
+
+def build() -> list:
+    runs = []
+    for path in sorted(OUTPUTS_DIR.glob("*.md")):
+        if path.name.endswith("Fact Check.md"):
+            continue
+        runs.append(_parse_digest_file(path))
+
+    runs.sort(key=lambda r: (r["run_date"], r["filename"]), reverse=True)
+
+    # Two outputs can slugify to the same id; keep them addressable as separate
+    # files rather than letting the later one overwrite the earlier.
+    seen = {}
+    for run in runs:
+        base = run["id"]
+        seen[base] = seen.get(base, 0) + 1
+        if seen[base] > 1:
+            run["id"] = f"{base}-{seen[base]}"
+
+    return runs
+
+
+def main() -> None:
+    runs = build()
+
+    DASHBOARD_RUNS_DIR.mkdir(parents=True, exist_ok=True)
+    written = set()
+    for run in runs:
+        path = DASHBOARD_RUNS_DIR / f"{run['id']}.json"
+        path.write_text(json.dumps(run, indent=2), encoding="utf-8")
+        written.add(path.name)
+
+    # Drop run files whose source markdown was renamed or deleted.
+    stale = [p for p in DASHBOARD_RUNS_DIR.glob("*.json") if p.name not in written]
+    for path in stale:
+        path.unlink()
+
+    index = {
+        "generated_from": "outputs/*.md",
+        "run_count": len(runs),
+        "topics": sorted({r["topic"] for r in runs if r["topic"]}),
+        "runs": [_index_entry(r) for r in runs],
+    }
+    DASHBOARD_INDEX_PATH.write_text(json.dumps(index, indent=2), encoding="utf-8")
+
+    # Superseded by index.json + runs/; removing it stops the old whole-history
+    # blob from being re-committed on every daily run.
+    if LEGACY_DATA_PATH.exists():
+        LEGACY_DATA_PATH.unlink()
+
+    index_kb = DASHBOARD_INDEX_PATH.stat().st_size / 1024
+    print(
+        f"Wrote {len(runs)} runs to {DASHBOARD_RUNS_DIR.relative_to(REPO_ROOT)}/ "
+        f"and {DASHBOARD_INDEX_PATH.relative_to(REPO_ROOT)} ({index_kb:.0f} KB)"
+        + (f"; pruned {len(stale)} stale run file(s)" if stale else "")
+    )
+
+
+if __name__ == "__main__":
+    main()
