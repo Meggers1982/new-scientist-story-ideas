@@ -1,10 +1,21 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 47,
+  "run_count": 48,
   "topics": [
-    "memory"
+    "memory",
+    "sleep"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-sleep-august-2026",
+      "title": "New Scientist Story Ideas \u2014 Sleep \u2014 August 2026",
+      "topic": "sleep",
+      "run_date": "2026-08-22",
+      "study_count": 14,
+      "top_score": 7,
+      "total_issues": "23 (19 Minor, 4 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 sleep \u2014 august 2026 sleep sleep autistic children keep more regular bedtimes than their peers \u2014 but get up at wildly different times 42593049 autism three nights of poor sleep predict next-day mood \u2014 and how long you slept doesn't 42617377 behaviour research and therapy half of people in a depressive episode also meet criteria for nightmare disorder 42617369 journal of psychiatric research it's long sleep, not short sleep, that tracks with inflammation in 30,000 us adults 42546640 psychiatry research sleep changes forecast later depression \u2014 but depression doesn't forecast sleep 42541934 psychiatry research genetic analysis suggests ptsd raises the risk of sleep apnoea \u2014 but not the other way round 42611531 european journal of psychotraumatology heart-and-metabolic illness makes depression harder to recover from \u2014 and poor sleep makes it worse still 42628578 journal of affective disorders \"you can sleep when you die\": how hustle culture rations sleep in women of colour 42624738 sleep health night and weekend shifts predict which toddlers get a bedtime routine \u2014 unless the mother has a strong support network 42545383 journal of family psychology sleep quality doesn't predict firefighters' long-term resilience \u2014 a sense of meaning does 42495965 european journal of psychotraumatology a night's sleep doesn't help you forget a made-up word 42593994 journal of experimental psychology: learning, memory, and cognition a blood marker rises in people who respond to sleep deprivation therapy for depression 41903946 international clinical psychopharmacology a dawn-simulating lamp changes how people with intellectual disability wake up 42613717 journal of intellectual disabilities self-blame and catastrophising are the thinking habits that track both poor sleep and poor mental health 42587372 journal of health psychology"
+    },
     {
       "id": "new-scientist-story-ideas-memory-august-2026",
       "title": "New Scientist Story Ideas \u2014 Memory \u2014 August 2026",
