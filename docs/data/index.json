@@ -1,11 +1,22 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 48,
+  "run_count": 49,
   "topics": [
     "memory",
+    "neuroimaging",
     "sleep"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-neuroimaging-august-2026",
+      "title": "New Scientist Story Ideas \u2014 Neuroimaging \u2014 August 2026",
+      "topic": "neuroimaging",
+      "run_date": "2026-08-23",
+      "study_count": 18,
+      "top_score": 8,
+      "total_issues": "22 (18 Minor, 4 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 neuroimaging \u2014 august 2026 neuroimaging neuroimaging only one type of \"psychosis risk\" leaves a brain signature that resembles schizophrenia 41823413 brain childhood trauma raises bipolar risk almost entirely through routes the brain scan cannot see 42234441 jama psychiatry people carrying dementia genes hold their brain networks together for decades while the tissue shrinks 41277710 brain a brain-training therapy for early schizophrenia fails to protect grey matter the second time round 42623965 journal of psychiatric research people who often become lucid in dreams have distinctive grey and white matter architecture 41677447 journal of sleep research an ssri taken only in the second half of the cycle calms brain responses to provocation in pmdd 42515970 the british journal of psychiatry brain surgery for depression works \u2014 but only when the brain's valuation machinery comes back online 42533701 brain night-shift nurses show altered amygdala activity that tracks both blood metabolites and low mood 42624217 journal of affective disorders a neural network can identify you from two minutes of brain activity \u2014 and then predict things about you 42527301 eneuro coal miners' resting brain networks look nothing like the undergraduates neuroscience is built on 42518290 ergonomics the hunt for brain-based subtypes of childhood attention problems mostly comes up empty 41989408 journal of psychopathology and clinical science adults with adhd fall into three emotion-regulation types \u2014 and they respond differently to therapy 41962667 journal of affective disorders elite footballers read the game with the thinking brain, not the visual brain 42518012 brain imaging and behavior sad music reliably lights up the brain's memory hub, not just its emotion circuits 42617440 brain and cognition a computational model splits sentence-building into two stages with separate brain addresses 42527808 psychonomic bulletin & review counting things you touch and counting things you see compete for the same mental slot 42551095 cognitive psychology one night without sleep reorganises how brain structure and function line up 41851418 cognitive, affective & behavioral neuroscience brain chemistry at admission predicts who will halve their psychosis symptoms in 12 weeks 42061209 journal of psychiatric research"
+    },
     {
       "id": "new-scientist-story-ideas-sleep-august-2026",
       "title": "New Scientist Story Ideas \u2014 Sleep \u2014 August 2026",
