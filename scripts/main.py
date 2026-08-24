@@ -14,6 +14,7 @@ from digest_generator import generate_digest
 from fact_checker import run_fact_check
 from trends import generate_trends_section
 from build_dashboard_data import main as rebuild_dashboard_data
+from build_aggregator_feed import main as rebuild_aggregator_feed
 
 
 REPO_ROOT = Path(__file__).parent.parent
@@ -251,6 +252,10 @@ def main() -> None:
     # ── Step 9: Rebuild dashboard data ───────────────────────────────────────
     print("\nRebuilding dashboard data...")
     rebuild_dashboard_data()
+
+    # ── Step 10: Refresh the feed research-digest-dashboard pulls ────────────
+    print("\nRebuilding aggregator feed...")
+    rebuild_aggregator_feed()
 
     print("\nDone ✓")
 
