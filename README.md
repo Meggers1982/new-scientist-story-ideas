@@ -4,7 +4,7 @@ Automated pipeline that searches PubMed for recent mental health and brain
 science research, drops anything the press already has, uses Claude to write a
 pitchable story-ideas digest, fact-checks its own output against the source
 abstracts, and publishes every run to a browsable dashboard —
-**https://meggers1982.github.io/new-scientist-story-ideas/**
+**https://new-scientist-story-ideas.vercel.app**
 
 Built on the same methodology as
 [senior-research-digest](https://github.com/Meggers1982/senior-research-digest):
@@ -49,7 +49,7 @@ below.
 10. **Refreshes the aggregator feed** (`build_aggregator_feed.py`) — see below.
 11. **Commits everything back** — `outputs/`, `topic_memory/`, `docs/` and
     `data/results.json` and `seen_pmids.json` are committed and pushed by the
-    workflow, so history accumulates in the repo and GitHub Pages redeploys
+    workflow, so history accumulates in the repo and Vercel redeploys
     automatically. The workflow then pings `research-digest-dashboard` to pull
     the new feed.
 
@@ -75,10 +75,14 @@ reader-facing summaries:
   replaced by a **Pitch angle** (how to sell it to New Scientist) and a **Wider
   angle** (a different, larger story elsewhere), plus **Novelty**, **NS fit**
   (1-10, honest use of the range) and **Media check** per entry.
-- **GitHub Pages, not Vercel.** The senior repo is private, so Pages isn't
-  available on the free plan and it deploys to Vercel with Git integration
-  deliberately disconnected. This repo is public, so Pages is free and serves
-  `/docs` on every push to `main` — no deploy step, no Vercel secrets.
+- **Vercel with Git integration left connected.** The senior repo deploys via an
+  explicit `vercel deploy --prod` from inside `docs/`, with Git integration
+  deliberately disconnected, because a repo-root connection there builds an
+  empty site and steals the production alias. Here the project's **Root
+  Directory is set to `docs`**, so the connected-Git build finds `index.html`
+  and every push to `main` is a deploy — no deploy step in the workflow and no
+  `VERCEL_TOKEN` secret. Don't clear that Root Directory setting; that is the
+  whole reason this arrangement is safe.
 
 Two portability fixes were also needed at this repo's scale, both worth knowing
 if you sync changes back the other way:
@@ -107,8 +111,8 @@ The data is split so first load stays flat as runs accumulate: `data/index.json`
 holds only what the sidebar and search box need, and each run's full body lives
 in `data/runs/<id>.json`, fetched on demand when that run is opened.
 
-GitHub Pages serves the `/docs` folder of `main`, so a push is a deploy. To view
-it locally without pushing:
+Vercel serves the `/docs` folder of `main` (set as the project's Root
+Directory), so a push is a deploy. To view it locally without pushing:
 
 ```bash
 cd docs && python3 -m http.server 8000
@@ -299,7 +303,7 @@ scripts/
   migrate_legacy_results.py  one-time back-conversion of the old JSON archive
 outputs/                     every digest + fact-check ever generated (.md)
 topic_memory/                per-topic running memory used by trends.py
-docs/                        static dashboard, served by GitHub Pages
+docs/                        static dashboard, served by Vercel (Root Directory)
 archive/legacy-results.json  the previous pipeline's full 904-study archive
 data/
   Mental Health ... .csv      the curated journal list
