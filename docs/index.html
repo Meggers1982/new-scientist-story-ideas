@@ -134,6 +134,16 @@
   .run-header-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
   .run-header h2 { margin: 0 0 8px; font-size: 1.4rem; }
   .run-header .meta-row { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 0.85rem; }
+  .header-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; flex-wrap: wrap; }
+  .header-controls select {
+    width: auto;
+    padding: 7px 10px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    cursor: pointer;
+  }
   .export-btn {
     flex-shrink: 0;
     padding: 7px 14px;
@@ -148,6 +158,12 @@
   }
   .export-btn:hover { border-color: var(--accent); }
   .export-btn:disabled { opacity: 0.6; cursor: default; }
+  .filter-note {
+    margin-top: 8px;
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
   .fact-summary {
     margin-top: 10px;
     font-size: 0.82rem;
@@ -261,7 +277,35 @@
 </div>
 <button id="scroll-top-btn" title="Back to top" aria-label="Back to top">&#8593;</button>
 <script>
-const state = { data: null, filtered: [], activeId: null, runs: new Map(), loadSeq: 0 };
+const STUDY_SORT_KEY = "nssi:study-sort";
+const MIN_SCORE_KEY = "nssi:min-score";
+const state = {
+  data: null, filtered: [], activeId: null, runs: new Map(), loadSeq: 0,
+  // Highest NS fit first by default: the point of the dashboard is deciding what
+  // to pitch, and digest order is the order Claude happened to write them in.
+  studySort: localStorage.getItem(STUDY_SORT_KEY) || "score",
+  minScore: Number(localStorage.getItem(MIN_SCORE_KEY) || 0),
+};
+
+// Hide the studies scoring below the threshold. Unscored entries are kept at
+// any threshold — they are unknown, not weak, and silently dropping them would
+// make the count lie.
+function filterStudies(studies, minScore) {
+  if (!minScore) return studies;
+  return studies.filter(s => !Number.isFinite(s.ns_score) || s.ns_score >= minScore);
+}
+
+// Studies with no parsed score sort last rather than being treated as a 0 —
+// an unscored entry is unknown, not bad. Digest number breaks ties so the
+// order stays stable between renders.
+function sortStudies(studies, mode) {
+  if (mode !== "score") return studies;
+  return studies.slice().sort((a, b) => {
+    const sa = Number.isFinite(a.ns_score) ? a.ns_score : -1;
+    const sb = Number.isFinite(b.ns_score) ? b.ns_score : -1;
+    return sb - sa || a.number - b.number;
+  });
+}
 
 // Run bodies live in their own files; fetch once, then serve from the cache.
 async function loadRun(id) {
@@ -419,7 +463,14 @@ async function renderMain() {
     ? `<div class="fact-summary">Fact check: ${escapeHtml(run.fact_check.summary.total_issues)} total issues · ${escapeHtml(run.fact_check.summary.entries_requiring_revision)} entries need revision · ${escapeHtml(run.fact_check.summary.entries_cleared)} cleared</div>`
     : (run.fact_check ? `<div class="fact-summary">Fact check available (no summary table found)</div>` : "");
 
-  const studiesHtml = run.studies.map(s => renderStudy(s, run.fact_check)).join("");
+  const shownStudies = sortStudies(filterStudies(run.studies, state.minScore), state.studySort);
+  const studiesHtml = shownStudies.length
+    ? shownStudies.map(s => renderStudy(s, run.fact_check)).join("")
+    : `<div class="empty-state">No studies in this run score ${state.minScore}/10 or higher.</div>`;
+  const hiddenCount = run.studies.length - shownStudies.length;
+  const filterNote = hiddenCount
+    ? `<div class="filter-note">Showing ${shownStudies.length} of ${run.studies.length} studies · ${hiddenCount} below NS fit ${state.minScore}/10 hidden</div>`
+    : "";
 
   const citationHtml = run.citation_table.length ? `
     <div class="table-scroll">
@@ -461,7 +512,18 @@ async function renderMain() {
     <div class="run-header">
       <div class="run-header-top">
         <h2>${escapeHtml(run.title)}</h2>
-        <button id="export-docx-btn" class="export-btn">Export .docx</button>
+        <div class="header-controls">
+          <label class="sr-only" for="study-sort">Sort studies</label>
+          <select id="study-sort" title="Order the studies in this run">
+            <option value="score"${state.studySort === "score" ? " selected" : ""}>Sort: NS fit (high to low)</option>
+            <option value="digest"${state.studySort === "digest" ? " selected" : ""}>Sort: digest order</option>
+          </select>
+          <label class="sr-only" for="min-score">Minimum NS fit score</label>
+          <select id="min-score" title="Hide studies scoring below this">
+            ${[0, 5, 6, 7, 8].map(v => `<option value="${v}"${state.minScore === v ? " selected" : ""}>${v ? `NS fit ${v}+` : "All scores"}</option>`).join("")}
+          </select>
+          <button id="export-docx-btn" class="export-btn">Export .docx</button>
+        </div>
       </div>
       <div class="meta-row">
         <span>Run date: ${escapeHtml(run.run_date)}</span>
@@ -471,6 +533,7 @@ async function renderMain() {
         <span>Studies selected: ${run.study_count}</span>
       </div>
       ${factSummary}
+      ${filterNote}
       ${jumpLinkHtml}
     </div>
     ${studiesHtml}
@@ -480,8 +543,23 @@ async function renderMain() {
     ${rawFactCheckHtml}
   `;
 
+  const sortSelect = document.getElementById("study-sort");
+  if (sortSelect) sortSelect.addEventListener("change", (e) => {
+    state.studySort = e.target.value;
+    localStorage.setItem(STUDY_SORT_KEY, state.studySort);
+    renderMain();
+  });
+
+  const minScoreSelect = document.getElementById("min-score");
+  if (minScoreSelect) minScoreSelect.addEventListener("change", (e) => {
+    state.minScore = Number(e.target.value);
+    localStorage.setItem(MIN_SCORE_KEY, String(state.minScore));
+    renderMain();
+  });
+
   const exportBtn = document.getElementById("export-docx-btn");
-  if (exportBtn) exportBtn.addEventListener("click", () => exportRunToDocx(run));
+  // Export exactly what is on screen, so the .docx matches what was read.
+  if (exportBtn) exportBtn.addEventListener("click", () => exportRunToDocx(run, shownStudies));
 
   const jumpLink = main.querySelector(".jump-link");
   if (jumpLink) jumpLink.addEventListener("click", (e) => {
@@ -597,7 +675,7 @@ function loadDocxLibrary() {
   return docxLoader;
 }
 
-async function exportRunToDocx(run) {
+async function exportRunToDocx(run, studies) {
   const btn = document.getElementById("export-docx-btn");
   if (btn) { btn.disabled = true; btn.textContent = "Exporting…"; }
   try {
@@ -628,7 +706,7 @@ async function exportRunToDocx(run) {
       }));
     }
 
-    run.studies.forEach(s => sections.push(...docxStudySection(s, run.fact_check)));
+    (studies || run.studies).forEach(s => sections.push(...docxStudySection(s, run.fact_check)));
     sections.push(...docxCitationTable(run.citation_table));
 
     if (run.trends_raw) {
