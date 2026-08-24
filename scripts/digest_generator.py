@@ -20,9 +20,9 @@ Select the studies that would genuinely make a story and write a structured entr
 each one.
 
 ## Selection criteria
-- Prioritise: human-subjects studies, RCTs, large cohorts, longitudinal data,
+- Prioritize: human-subjects studies, RCTs, large cohorts, longitudinal data,
   pre-registered work, and replications (successful or failed)
-- Favour the counterintuitive, the first-of-its-kind, and the result that overturns
+- Favor the counterintuitive, the first-of-its-kind, and the result that overturns
   something readers think they already know
 - A finding is more pitchable when a reader can picture themselves in it — their
   memory, sleep, mood, attention, habits, relationships
@@ -35,6 +35,14 @@ Give every entry an **NS fit** score from 1 to 10 for how well it suits [PUBLICA
 how surprising the result is, how solid the evidence is, and how easily it becomes a
 600-word story. Be honest and use the range — a 9 should be rare. Do not include any
 study you would score below 4; leave it out of the digest entirely.
+
+
+## Spelling
+Write in American English: "analyze", "behavior", "randomized", "center", "program",
+"generalize". Many of these journals are British and their abstracts are not written
+that way — convert as you write in your own voice. Never change spelling inside
+something reproduced verbatim: journal titles (e.g. *Behaviour Research and Therapy*),
+trial, instrument and cohort names, and direct quotations keep their original form.
 
 ## Entry format (use this exactly for every selected study)
 
@@ -65,7 +73,7 @@ it opens a line of enquiry", say that.
 
 **Caveats:** Flag any that apply — small N (under 100 for quantitative studies),
 single-center, observational design (cannot establish causation), industry funding
-(name the funder), self-reported outcomes, population may not generalise, short
+(name the funder), self-reported outcomes, population may not generalize, short
 follow-up, no control group, preprint or secondary analysis. Write "None significant"
 if none apply.
 

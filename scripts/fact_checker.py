@@ -22,7 +22,7 @@ abstract and check five areas:
 2. **Statistical findings** — numbers, percentages, effect sizes, direction of effect,
    outcome variable correctly named, significance accurately represented
 3. **Framing** — no causal language ("causes", "prevents") for observational findings;
-   no overgeneralisation beyond the study population; "Why it matters" doesn't leap
+   no overgeneralization beyond the study population; "Why it matters" doesn't leap
    beyond what the data support
 4. **Story angles** — no clinical recommendations from preliminary or observational data;
    no hype language ("breakthrough", "could reverse", "eliminates", "proven to prevent");
@@ -31,6 +31,15 @@ abstract and check five areas:
 5. **NS fit score** — is the score defensible given the evidence quality and the size of
    the claim? Flag scores of 7+ resting on small, uncontrolled, or self-reported data,
    and say what you would score it instead
+
+
+## Spelling
+Write your own commentary in American English ("analyze", "behavior", "randomized",
+"center"). This does NOT apply to anything you quote: **As written:** and
+**Abstract says:** must reproduce the digest and the abstract character for
+character, British spellings included, and a spelling difference is never itself
+an issue worth flagging. Journal titles and instrument names also keep their
+original spelling.
 
 ## Output format per study
 
@@ -87,7 +96,7 @@ SYSTEM_PROMPT_BLOCKS = [{"type": "text", "text": SYSTEM_PROMPT, "cache_control":
 
 
 def _extract_header_field(digest: str, field: str) -> str:
-    """Extract a labelled field from the digest header."""
+    """Extract a labeled field from the digest header."""
     match = re.search(rf"\*\*{re.escape(field)}:\*\*\s*([^\n|]+)", digest)
     return match.group(1).strip() if match else ""
 
