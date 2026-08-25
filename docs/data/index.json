@@ -1,13 +1,24 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 50,
+  "run_count": 51,
   "topics": [
     "addiction",
     "memory",
     "neuroimaging",
-    "sleep"
+    "sleep",
+    "social media"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-social-media-august-2026",
+      "title": "New Scientist Story Ideas \u2014 Social Media \u2014 August 2026",
+      "topic": "social media",
+      "run_date": "2026-08-25",
+      "study_count": 24,
+      "top_score": 7,
+      "total_issues": "30 (24 Minor, 6 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 social media \u2014 august 2026 social media social media teenagers' hearts slow down when they scroll before bed \u2014 so screens may not be keeping them awake the way we think 41556268 journal of sleep research unusual mental experiences come first, phone dependence follows \u2014 via daytime sleepiness 42636649 psychiatry research feeling short of time hollows out life's meaning \u2014 and the fix is what you aim for, not what you do 42541341 applied psychology: health and well-being what you see in your feed pushes your body image around \u2014 but your body image barely steers what you look at 42537570 body image watching yourself through the camera's eye may make you less able to feel hunger 42537569 body image people recovering from anorexia describe a phase of relentless hunger that clinical textbooks don't mention 41983301 international journal of eating disorders ozempic has been absorbed into pro-eating-disorder twitter as everyday, normalized talk 42604953 international journal of eating disorders classmates can reliably name the school's \"influencers\" \u2014 and those teens are both kinder and more aggressive than their peers 42552601 the journal of genetic psychology a substantial minority of people press \"like\" specifically to hurt someone 42424914 acta psychologica adding a social network to an eating-disorder app didn't help teens \u2014 and unguided self-help worked about as well as coaching 41992076 international journal of eating disorders four in five adolescents who self-harm or restrict say they sometimes do it to feel *worse* 42010304 international journal of eating disorders identifying with an online group makes you more likely to start measuring yourself against others 42546360 acta psychologica the strongest predictor of compulsive short-video use isn't the pull of the videos \u2014 it's overestimating your own self-control 42608804 cyberpsychology, behavior, and social networking short-form video use predicts disordered eating four months later \u2014 in working nurses, not teenagers 41968956 international journal of eating disorders one capacity \u2014 the ability to get started \u2014 sits underneath anxiety, depression, drinking and compulsive social media use 42285011 behaviour research and therapy a four-stage map of how recommender systems and ai companions can escort someone toward violence 41869924 personality and social psychology review real grooming conversations from court files reveal two very different kinds of offender 42427109 cyberpsychology, behavior, and social networking indigenous wayuu people describe globalized beauty ideals arriving with the internet \u2014 and cultural pride pushing back 42520348 body image \"toxic positivity\" finally gets a definition \u2014 four dimensions, and social media as a chief driver 42531487 cognition and emotion vivid \"what if\" thoughts after sexual assault track with worse trauma symptoms months later 42635305 european journal of psychotraumatology rough sex is now common among young people \u2014 and most say they first learned about it from porn and social media 42606583 the journal of sex research a new scale tries to measure how trapped people feel by their own technology 42585824 journal of psychiatric research a three-session writing exercise delivered through wechat reduced trauma symptoms \u2014 and the sophisticated version was no better than the simple one 42635256 european journal of psychotraumatology when you promote free school meals on facebook, roughly as many parents reject the message as accept it 42283650 journal of nutrition education and behavior"
+    },
     {
       "id": "new-scientist-story-ideas-addiction-august-2026",
       "title": "New Scientist Story Ideas \u2014 Addiction \u2014 August 2026",
