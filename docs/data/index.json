@@ -1,14 +1,25 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 51,
+  "run_count": 52,
   "topics": [
     "addiction",
+    "exercise",
     "memory",
     "neuroimaging",
     "sleep",
     "social media"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-exercise-august-2026",
+      "title": "New Scientist Story Ideas \u2014 Exercise \u2014 August 2026",
+      "topic": "exercise",
+      "run_date": "2026-08-26",
+      "study_count": 15,
+      "top_score": 7,
+      "total_issues": "26 (23 Minor, 3 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 exercise \u2014 august 2026 exercise exercise vigorous exercise fails to protect memory suppression, contradicting an earlier finding 42579016 psychological research telling people what others do now beats telling them what others are changing 42615122 applied psychology: health and well-being drinking, smoking and exercise in youth all predict less loneliness later \u2014 not the reverse 42544718 psychological medicine in 214,000 teenagers, a little exercise tracks with more suicidal thinking after violence \u2014 a lot tracks with less 42605073 suicide and life-threatening behavior pilates, yoga and qigong split the podium for cancer patients' mental health \u2014 and there is a dose ceiling 42412001 applied psychology: health and well-being morning outdoor exercise does nothing for sleep-deprived teenagers \u2014 bright classroom light and mindfulness do 41761836 journal of sleep research vr gym classes lift teenagers' fitness and interest \u2014 and the effect outlasts the novelty 42556203 acta psychologica a compassion exercise made people angrier 42520720 acta psychologica chronic pain patients rate massage and psychotherapy above the pills they actually take 42605847 pain management giving stressed doctors a $45 monthly gym-class pass reduced their anxiety 42362858 academic psychiatry feeling hungry predicts skipping your workout, not just breaking your diet 40415394 psychology & health being tuned in to your heartbeat says nothing about how well you read your gut 42526739 biological psychology when people are told to train according to how they feel, half the time they deliberately don't 42034345 journal of sport & exercise psychology psychiatry's bipolar disorder body finally puts exercise on the treatment agenda 42545207 bipolar disorders \"drunkorexia\" splits into two distinct patterns \u2014 and doing both marks the highest-risk students 42641412 eating behaviors"
+    },
     {
       "id": "new-scientist-story-ideas-social-media-august-2026",
       "title": "New Scientist Story Ideas \u2014 Social Media \u2014 August 2026",
