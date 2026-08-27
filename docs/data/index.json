@@ -1,8 +1,9 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 52,
+  "run_count": 53,
   "topics": [
     "addiction",
+    "dementia",
     "exercise",
     "memory",
     "neuroimaging",
@@ -10,6 +11,16 @@
     "social media"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-dementia-august-2026",
+      "title": "New Scientist Story Ideas \u2014 Dementia \u2014 August 2026",
+      "topic": "dementia",
+      "run_date": "2026-08-27",
+      "study_count": 15,
+      "top_score": 7,
+      "total_issues": "19 (15 Minor, 4 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 dementia \u2014 august 2026 dementia dementia getting less frail in later life tracks with lower dementia risk \u2014 and depression looks like a big part of the link 42600788 journal of affective disorders feeling older than your years shows up in a blood marker of nerve damage 42594533 psychiatry research an atlas of how often psychiatric and neurological disorders travel together \u2014 built from 42 million people 41895003 european neuropsychopharmacology caregivers get more upset during a conflict conversation when their partner has frontotemporal dementia \u2014 and that predicts their own depression 42593973 emotion most autistic adults with higher support needs are taking medicines linked to memory decline 42592704 autism research dementia with lewy bodies splits into two diseases that start at opposite ends of the brain 42522580 brain a plasma biomarker of alzheimer's adds nothing to a memory test in people with down syndrome 42138095 journal of intellectual disability research apathy comes in at least four flavors \u2014 and the pattern differs between depression and dementia 42607410 comprehensive psychiatry leaving work early is linked to a slightly higher dementia risk \u2014 across 2.4 million people 41885755 journal of mental health brain training that changes the brain but not behavior 42259152 brain and cognition german doctors are prescribing more antipsychotics for dementia, not fewer 42586160 psychiatrische praxis early dementia is easier to spot in people with intellectual disability who talk more 42311142 journal of intellectual disability research in parkinson's, the movement network quietly decouples from thinking networks 42178093 behavioural brain research tirzepatide and the brain: plenty of mechanism, almost no human trial data 42608956 brain and behavior forty years of evidence that stress and unhappy relationships age the immune system 42566682 annual review of psychology"
+    },
     {
       "id": "new-scientist-story-ideas-exercise-august-2026",
       "title": "New Scientist Story Ideas \u2014 Exercise \u2014 August 2026",
