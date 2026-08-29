@@ -1,9 +1,10 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 54,
+  "run_count": 55,
   "topics": [
     "addiction",
     "dementia",
+    "depression",
     "exercise",
     "memory",
     "neuroimaging",
@@ -11,6 +12,16 @@
     "social media"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-depression-august-2026",
+      "title": "New Scientist Story Ideas \u2014 Depression \u2014 August 2026",
+      "topic": "depression",
+      "run_date": "2026-08-29",
+      "study_count": 18,
+      "top_score": 7,
+      "total_issues": "26 (19 Minor, 7 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 depression \u2014 august 2026 depression depression autistic adults in the uk are twice as likely to be on antidepressants \u2014 and stay on them longer 42658004 autism research the eye may flag depression years early \u2014 but the layer is thicker, not thinner 42637150 journal of affective disorders support groups in the metaverse underperform sitting in a room together 42661554 the british journal of psychiatry depression compresses the mental map of emotions 42658635 emotion shame \u2014 not guilt \u2014 explains why teenage girls get more depressed than boys 42645734 journal of youth and adolescence prolonged childhood loneliness roughly triples the odds of a first psychotic episode 42636467 schizophrenia bulletin thirty-seven questions predict who will still be depressed or anxious two years later 42640866 psychotherapy and psychosomatics gut bacteria in depression shift from fermenting sugars to fermenting protein 42636957 progress in neuro-psychopharmacology & biological psychiatry which psychotherapy works for anorexia may depend on how depressed you are 42611819 psychotherapy and psychosomatics stress and low mood predict everyday aggression; political ideology doesn't 42661529 psychological reports glp-1 weight-loss drugs and the brain: the causal evidence isn't there yet 42624955 current psychiatry reports rumination has no shared brain signature \u2014 everyone ruminates differently 42648371 behavioural brain research growing up with a parent's drinking problem raises adult depression risk \u2014 but not on its own 42665302 international journal of social psychiatry preventing perinatal depression doesn't automatically make parents warmer 42593980 journal of family psychology in fibromyalgia, depression and body-wide symptom burden multiply each other 42660390 journal of affective disorders resilience and social support don't independently protect refugees from ptsd 42642861 british journal of clinical psychology students who wrongly believe they're first-generation are the hungriest 42634162 journal of health psychology two rich countries, two very different routes to brain stimulation for depression 42658152 nordic journal of psychiatry"
+    },
     {
       "id": "new-scientist-story-ideas-august-2026",
       "title": "New Scientist Story Ideas \u2014 August 2026",
