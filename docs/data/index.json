@@ -1,8 +1,9 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 55,
+  "run_count": 56,
   "topics": [
     "addiction",
+    "anxiety",
     "dementia",
     "depression",
     "exercise",
@@ -12,6 +13,16 @@
     "social media"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-anxiety-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Anxiety \u2014 September 2026",
+      "topic": "anxiety",
+      "run_date": "2026-09-01",
+      "study_count": 21,
+      "top_score": 8,
+      "total_issues": "26 (21 Minor, 5 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 anxiety \u2014 september 2026 anxiety anxiety cannabis anxiety does not rise with the dose \u2014 and eaten thc barely registers at all 42242480 neuroscience & biobehavioral reviews anxious attachment at 56 predicts frailty and cognitive impairment at 68 41885885 health psychology body dissatisfaction feeds social anxiety through self-disgust \u2014 but only in girls 42497472 body image trait anxiety shows up in how brain states switch, not in alpha power 42379500 international journal of psychophysiology how unpleasant a threat cue still feels after therapy-style extinction predicts whether fear comes back 42546511 behaviour research and therapy the pandemic did not uniformly worsen existing mental illness \u2014 and bipolar disorder consistently improved 42474420 current opinion in psychiatry trans patients use more mental health care and still fare worse \u2014 inside a trans-protective state 42658622 american psychologist four days of intensive treatment outperforms three weeks of inpatient care for ocd 42500867 australian & new zealand journal of psychiatry nearly half of women with polycystic ovary syndrome have clinically significant anxiety 42217371 european neuropsychopharmacology learning to step back from your thoughts blunts the link between symptoms and daily impairment 42660582 behavior therapy your partner's adhd symptoms track your postpartum anxiety 41982066 journal of attention disorders guided touch beats virtual reality for bonding in unplanned pregnancy \u2014 and both cut anxiety 42610239 journal of reproductive and infant psychology a gamified app cuts anxiety by breaking up rumination, and the mediation checks out 42660574 behavior therapy highly anxious people over-generalize fear \u2014 but extinguish it just as well as anyone else 42546510 behaviour research and therapy a stronger stress response protects lonely young adults from anxiety 42302916 biological psychology an expressive writing trial for trans adults works \u2014 and so does the control condition 42658633 american psychologist rewriting childhood memories helps hoarders whom standard cbt failed 42462484 behaviour research and therapy boredom may be a transdiagnostic symptom rather than a mood, and it has a brain signature 42675870 brain and behavior guided deep relaxation for autistic children eases anxiety while heart rate variability moves the wrong way 42632169 research in developmental disabilities telling teenagers with epilepsy that they could die suddenly does not make them more anxious 42208388 epilepsy & behavior adolescents with cannabis use disorder hold distinctive beliefs about their own thinking 42656180 clinical psychology & psychotherapy"
+    },
     {
       "id": "new-scientist-story-ideas-depression-august-2026",
       "title": "New Scientist Story Ideas \u2014 Depression \u2014 August 2026",
