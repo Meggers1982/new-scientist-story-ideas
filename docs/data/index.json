@@ -1,9 +1,10 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 56,
+  "run_count": 57,
   "topics": [
     "addiction",
     "anxiety",
+    "autism",
     "dementia",
     "depression",
     "exercise",
@@ -13,6 +14,16 @@
     "social media"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-autism-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Autism \u2014 September 2026",
+      "topic": "autism",
+      "run_date": "2026-09-02",
+      "study_count": 19,
+      "top_score": 7,
+      "total_issues": "16 (9 Minor, 7 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 autism \u2014 september 2026 autism autism genetic evidence questions why autism is diagnosed so much more often in boys 42658390 behavior genetics told a listener is autistic, people don't simplify their speech after all 42485806 acta psychologica more empathic autistic children fare worse when they withdraw socially 42670580 autism research treating parents' stress lowers autistic preschoolers' emotional meltdowns 42665438 journal of child psychology and psychiatry one in five autistic adolescents shows signs of catatonia \u2014 most often girls 42610640 journal of intellectual disability research feeling at home in your body predicts later self-esteem in autistic adults 42566953 body image a quarter of people with intellectual disability on multiple antipsychotics exceed the maximum recommended dose 42670819 journal of psychopharmacology autistic adults imagining \"what if\" blame circumstances where others blame people 41578156 quarterly journal of experimental psychology autistic traits show up in how steadily you walk across campus 41641757 quarterly journal of experimental psychology scrolling without posting is linked to withdrawal in autistic and adhd young adults 42430259 cyberpsychology, behavior, and social networking autistic children's pupils reveal the extra effort of seeing things from another viewpoint 41992731 journal of child psychology and psychiatry control for age, and autistic children's imitation looks much like everyone else's 42462495 acta psychologica autistic children's brains take a different route to reading 42619183 brain connectivity parents with depression stick with online parenting therapy best 42660578 behavior therapy latino teenagers assume they'll care for an autistic sibling; others aren't so sure 42537268 research in developmental disabilities autistic students in hong kong describe masking as both exhausting and worth it 42522543 autism families in brazil and spain are still not talking to autistic teens about sex 42528308 autism changing the building, not the resident, may reduce aggression in care settings 42605201 journal of intellectual disability research a 25-minute autism simulation shifts caregivers' attitudes \u2014 at least for a moment 42556204 acta psychologica"
+    },
     {
       "id": "new-scientist-story-ideas-anxiety-september-2026",
       "title": "New Scientist Story Ideas \u2014 Anxiety \u2014 September 2026",
