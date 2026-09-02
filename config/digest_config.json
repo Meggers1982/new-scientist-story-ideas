@@ -36,6 +36,10 @@
 
   "days_back": 30,
   "media_threshold": 3,
+  "ns_site_threshold": 2,
+  "ns_style_examples": 5,
   "max_candidates": 60,
-  "max_abstracts": 40
+  "max_abstracts": 40,
+
+  "_ns_comment": "ns_site_threshold: newscientist.com hits at or above which a study is dropped as already run there (lower than media_threshold since NS.com covering it is more disqualifying than a general outlet). ns_style_examples: how many real current NS.com headlines to pull as a style reference for the digest prompt."
 }

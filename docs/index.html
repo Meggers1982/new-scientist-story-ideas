@@ -176,6 +176,7 @@
     padding: 16px 18px;
     margin-bottom: 14px;
   }
+  .study.status-archived, .study.status-deleted { opacity: 0.6; }
   .study h3 { margin: 0 0 8px; font-size: 1.05rem; }
   .study .study-meta { font-size: 0.78rem; color: var(--muted); margin-bottom: 10px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
   .study .study-meta a { color: var(--accent); text-decoration: none; }
@@ -194,6 +195,27 @@
   .score-reason { font-size: 0.8rem; color: var(--muted); margin-top: 10px; font-style: italic; }
   .study .field-label { font-weight: 600; font-size: 0.82rem; margin-top: 10px; }
   .study .field-body { font-size: 0.9rem; margin-top: 2px; }
+  .study-actions { display: flex; align-items: center; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .status-btn {
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--panel);
+    color: var(--text);
+    font-size: 0.78rem;
+    cursor: pointer;
+  }
+  .status-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .status-btn.danger:hover { border-color: var(--bad); color: var(--bad); }
+  .status-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+  }
+  .status-badge.archived { color: var(--warn); }
+  .status-badge.deleted { color: var(--bad); }
   .story-angle { margin-top: 6px; padding-left: 10px; border-left: 2px solid var(--border); font-size: 0.88rem; }
   .story-angle b { color: var(--accent); }
   .section-block {
@@ -279,13 +301,60 @@
 <script>
 const STUDY_SORT_KEY = "nssi:study-sort";
 const MIN_SCORE_KEY = "nssi:min-score";
+// Per-PMID archive/delete status, keyed by PMID so it's stable across runs
+// and survives a rebuild of the underlying digest files. This is additive to
+// the digest's own vocabulary (novelty, NS fit, media/NS.com checks) — it
+// never touches the parsed run data, only what's shown and in what order.
+// Single-viewer, this browser only: no backend, same as every other dashboard
+// preference here (study sort, min score) — there was no cross-device need
+// for the sibling digest repos either, and this dashboard has one viewer.
+const STUDY_STATUS_KEY = "nssi:study-status";
+const STATUS_FILTER_KEY = "nssi:status-filter";
+
+function loadStudyStatus() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(STUDY_STATUS_KEY) || "{}");
+    return raw && typeof raw === "object" ? raw : {};
+  } catch {
+    return {};
+  }
+}
+
 const state = {
   data: null, filtered: [], activeId: null, runs: new Map(), loadSeq: 0,
   // Highest NS fit first by default: the point of the dashboard is deciding what
   // to pitch, and digest order is the order Claude happened to write them in.
   studySort: localStorage.getItem(STUDY_SORT_KEY) || "score",
   minScore: Number(localStorage.getItem(MIN_SCORE_KEY) || 0),
+  studyStatus: loadStudyStatus(),
+  // Active-only by default: an archived or deleted idea shouldn't keep
+  // competing for attention with ones still worth pitching.
+  statusFilter: localStorage.getItem(STATUS_FILTER_KEY) || "active",
 };
+
+function saveStudyStatus() {
+  try {
+    localStorage.setItem(STUDY_STATUS_KEY, JSON.stringify(state.studyStatus));
+  } catch (e) {
+    console.warn("Could not save story status (localStorage unavailable):", e);
+  }
+}
+
+// null/undefined clears the status (restore). PMID-less studies (shouldn't
+// happen in practice) are simply not actionable — nothing to key them by.
+function setStudyStatus(pmid, status) {
+  if (!pmid) return;
+  if (status) state.studyStatus[pmid] = status;
+  else delete state.studyStatus[pmid];
+  saveStudyStatus();
+}
+
+function filterByStatus(studies, statusMap, filter) {
+  if (filter === "all") return studies;
+  if (filter === "archived") return studies.filter(s => statusMap[s.pmid] === "archived");
+  if (filter === "deleted") return studies.filter(s => statusMap[s.pmid] === "deleted");
+  return studies.filter(s => !statusMap[s.pmid]); // "active" (default)
+}
 
 // Hide the studies scoring below the threshold. Unscored entries are kept at
 // any threshold — they are unknown, not weak, and silently dropping them would
@@ -406,10 +475,33 @@ function inlineMd(text) {
     .replace(/\*([^*]+?)\*/g, "<i>$1</i>");
 }
 
-function renderStudy(study, factCheck) {
+function studyActionsHtml(pmid, status) {
+  if (!pmid) return "";
+  const restoreBtn = `<button class="status-btn" data-action="restore" data-pmid="${escapeHtml(pmid)}">Restore</button>`;
+  if (status === "archived") {
+    return `<div class="study-actions">
+      <span class="status-badge archived">Archived</span>
+      ${restoreBtn}
+      <button class="status-btn danger" data-action="deleted" data-pmid="${escapeHtml(pmid)}">Delete</button>
+    </div>`;
+  }
+  if (status === "deleted") {
+    return `<div class="study-actions">
+      <span class="status-badge deleted">Deleted</span>
+      ${restoreBtn}
+    </div>`;
+  }
+  return `<div class="study-actions">
+    <button class="status-btn" data-action="archived" data-pmid="${escapeHtml(pmid)}">Archive</button>
+    <button class="status-btn danger" data-action="deleted" data-pmid="${escapeHtml(pmid)}">Delete</button>
+  </div>`;
+}
+
+function renderStudy(study, factCheck, status) {
   const verdict = factCheck && factCheck.verdicts_by_pmid ? factCheck.verdicts_by_pmid[study.pmid] : null;
+  const statusClass = status ? ` status-${status}` : "";
   return `
-    <div class="study">
+    <div class="study${statusClass}">
       <h3>${escapeHtml(String(study.number))}. ${escapeHtml(study.title)}</h3>
       <div class="study-meta">
         <span>${escapeHtml(study.journal)}</span>
@@ -419,9 +511,10 @@ function renderStudy(study, factCheck) {
         ${study.ns_score ? `<span class="score ${scoreClass(study.ns_score)}" title="${escapeHtml(study.ns_score_reason)}">NS fit ${study.ns_score}/10</span>` : ""}
         ${verdict ? `<span class="verdict ${verdictClass(verdict)}">${escapeHtml(verdict)}</span>` : ""}
       </div>
-      ${study.novelty || study.media_check ? `<div class="study-tags">
+      ${study.novelty || study.media_check || study.ns_check ? `<div class="study-tags">
         ${study.novelty ? `<span class="badge">${escapeHtml(study.novelty)}</span>` : ""}
         ${study.media_check ? `<span class="badge ${/widely covered ✓/.test(study.media_check) ? "clean" : ""}">${escapeHtml(study.media_check)}</span>` : ""}
+        ${study.ns_check ? `<span class="badge ${/coverage found ✓/.test(study.ns_check) ? "clean" : ""}" title="newscientist.com overlap check">${escapeHtml(study.ns_check)}</span>` : ""}
       </div>` : ""}
       <div class="field-label">The study</div>
       <div class="field-body">${escapeHtml(study.the_study) || "—"}</div>
@@ -433,6 +526,7 @@ function renderStudy(study, factCheck) {
       ${study.ns_score_reason ? `<div class="score-reason">Score rationale: ${escapeHtml(study.ns_score_reason)}</div>` : ""}
       <div class="field-label">Caveats</div>
       <div class="field-body">${escapeHtml(study.caveats) || "—"}</div>
+      ${studyActionsHtml(study.pmid, status)}
     </div>
   `;
 }
@@ -463,13 +557,21 @@ async function renderMain() {
     ? `<div class="fact-summary">Fact check: ${escapeHtml(run.fact_check.summary.total_issues)} total issues · ${escapeHtml(run.fact_check.summary.entries_requiring_revision)} entries need revision · ${escapeHtml(run.fact_check.summary.entries_cleared)} cleared</div>`
     : (run.fact_check ? `<div class="fact-summary">Fact check available (no summary table found)</div>` : "");
 
-  const shownStudies = sortStudies(filterStudies(run.studies, state.minScore), state.studySort);
+  const statusFiltered = filterByStatus(run.studies, state.studyStatus, state.statusFilter);
+  const shownStudies = sortStudies(filterStudies(statusFiltered, state.minScore), state.studySort);
+  const emptyReason = statusFiltered.length === 0 && state.statusFilter !== "active"
+    ? `No studies in this run are ${state.statusFilter}.`
+    : `No studies in this run score ${state.minScore}/10 or higher.`;
   const studiesHtml = shownStudies.length
-    ? shownStudies.map(s => renderStudy(s, run.fact_check)).join("")
-    : `<div class="empty-state">No studies in this run score ${state.minScore}/10 or higher.</div>`;
-  const hiddenCount = run.studies.length - shownStudies.length;
-  const filterNote = hiddenCount
-    ? `<div class="filter-note">Showing ${shownStudies.length} of ${run.studies.length} studies · ${hiddenCount} below NS fit ${state.minScore}/10 hidden</div>`
+    ? shownStudies.map(s => renderStudy(s, run.fact_check, state.studyStatus[s.pmid])).join("")
+    : `<div class="empty-state">${escapeHtml(emptyReason)}</div>`;
+  const hiddenByScore = statusFiltered.length - shownStudies.length;
+  const hiddenByStatus = run.studies.length - statusFiltered.length;
+  const noteParts = [];
+  if (hiddenByStatus) noteParts.push(`${hiddenByStatus} archived/deleted hidden`);
+  if (hiddenByScore) noteParts.push(`${hiddenByScore} below NS fit ${state.minScore}/10 hidden`);
+  const filterNote = noteParts.length
+    ? `<div class="filter-note">Showing ${shownStudies.length} of ${run.studies.length} studies · ${noteParts.join(" · ")}</div>`
     : "";
 
   const citationHtml = run.citation_table.length ? `
@@ -522,6 +624,15 @@ async function renderMain() {
           <select id="min-score" title="Hide studies scoring below this">
             ${[0, 5, 6, 7, 8].map(v => `<option value="${v}"${state.minScore === v ? " selected" : ""}>${v ? `NS fit ${v}+` : "All scores"}</option>`).join("")}
           </select>
+          <label class="sr-only" for="status-filter">Which story statuses to show</label>
+          <select id="status-filter" title="Which story statuses to show">
+            ${[
+              ["active", "Active only"],
+              ["all", "All (incl. archived/deleted)"],
+              ["archived", "Archived only"],
+              ["deleted", "Deleted only"],
+            ].map(([v, label]) => `<option value="${v}"${state.statusFilter === v ? " selected" : ""}>${label}</option>`).join("")}
+          </select>
           <button id="export-docx-btn" class="export-btn">Export .docx</button>
         </div>
       </div>
@@ -555,6 +666,24 @@ async function renderMain() {
     state.minScore = Number(e.target.value);
     localStorage.setItem(MIN_SCORE_KEY, String(state.minScore));
     renderMain();
+  });
+
+  const statusFilterSelect = document.getElementById("status-filter");
+  if (statusFilterSelect) statusFilterSelect.addEventListener("change", (e) => {
+    state.statusFilter = e.target.value;
+    localStorage.setItem(STATUS_FILTER_KEY, state.statusFilter);
+    renderMain();
+  });
+
+  // Delegated: study cards (and their action buttons) are rebuilt on every
+  // render, so listeners are attached to the current buttons each time rather
+  // than trying to persist them across re-renders.
+  main.querySelectorAll(".status-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const { pmid, action } = btn.dataset;
+      setStudyStatus(pmid, action === "restore" ? null : action);
+      renderMain();
+    });
   });
 
   const exportBtn = document.getElementById("export-docx-btn");

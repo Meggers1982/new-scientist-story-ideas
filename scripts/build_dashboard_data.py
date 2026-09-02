@@ -82,6 +82,7 @@ def _parse_study_block(number: str, heading: str, body: str) -> dict:
         "ns_score": int(score_match.group(1)) if score_match else None,
         "ns_score_reason": score_match.group(2).strip() if score_match else ns_fit,
         "media_check": fields.get("Media check", ""),
+        "ns_check": fields.get("NS.com check", ""),
         "the_study": _section("The study"),
         "why_it_matters": _section("Why it matters"),
         "pitch_angle": pitch_match.group(1).strip() if pitch_match else "",

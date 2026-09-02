@@ -30,24 +30,34 @@ below.
    rest by how strongly the title signals novelty.
 4. **Drops what's already been reported** (`media_filter.py`) — checks each
    candidate against Google News via SerpAPI and discards anything with 3+ hits.
-5. **Generates the digest** (`digest_generator.py`) — Claude selects the most
+5. **Checks newscientist.com specifically** (`ns_check.py`) — a general media
+   check isn't enough here: a study can clear it and still be something New
+   Scientist itself already ran, which is more disqualifying than a stranger
+   outlet covering it. `check_ns_overlap` runs a `site:newscientist.com` SerpAPI
+   search per surviving candidate and drops anything with 2+ hits (a lower bar
+   than the general filter's 3, for the same reason). Separately,
+   `fetch_ns_style_examples` pulls a handful of real, currently-published New
+   Scientist headlines in the run's subject area, once per run, for the digest
+   prompt to use as a style reference.
+6. **Generates the digest** (`digest_generator.py`) — Claude selects the most
    pitchable studies from up to 40 abstracts and writes a structured entry for
    each (headline, novelty type, NS fit score, study summary, why it matters,
-   pitch angle, wider angle, caveats).
-6. **Fact-checks itself** (`fact_checker.py`) — a second Claude pass compares
+   pitch angle, wider angle, caveats), matching the real NS.com headlines
+   supplied as a style reference where available.
+7. **Fact-checks itself** (`fact_checker.py`) — a second Claude pass compares
    every entry against the original abstract and flags inaccuracies with a
    ✅/⚠️/❌ verdict per study. It also challenges the NS fit score.
-7. **Compares against history** (`trends.py`) — Claude compares the new digest to
+8. **Compares against history** (`trends.py`) — Claude compares the new digest to
    the most recent prior digest on the same topic and to a running per-topic
    memory file (`topic_memory/<topic>.md`), producing a "Research Trends &
    Continuity" section plus a "Bigger Picture: Feature Pitch" if the batch
    suggests a larger story, with 3-4 real outlets that specific angle could go to.
-8. **Records what it covered** — selected PMIDs go into `seen_pmids.json` so the
+9. **Records what it covered** — selected PMIDs go into `seen_pmids.json` so the
    same study is never pitched twice.
-9. **Rebuilds the dashboard** (`build_dashboard_data.py`) — parses every digest +
-   fact-check in `outputs/` into `docs/data/`.
-10. **Refreshes the aggregator feed** (`build_aggregator_feed.py`) — see below.
-11. **Commits everything back** — `outputs/`, `topic_memory/`, `docs/` and
+10. **Rebuilds the dashboard** (`build_dashboard_data.py`) — parses every digest +
+    fact-check in `outputs/` into `docs/data/`.
+11. **Refreshes the aggregator feed** (`build_aggregator_feed.py`) — see below.
+12. **Commits everything back** — `outputs/`, `topic_memory/`, `docs/` and
     `data/results.json` and `seen_pmids.json` are committed and pushed by the
     workflow, so history accumulates in the repo and Vercel redeploys
     automatically. The workflow then pings `research-digest-dashboard` to pull
@@ -58,7 +68,7 @@ Nothing is ever overwritten: if two digests would land on the same filename
 
 ## Where this differs from senior-research-digest
 
-Four deliberate changes, each because this repo generates pitches rather than
+Five deliberate changes, each because this repo generates pitches rather than
 reader-facing summaries:
 
 - **A media filter.** A digest written for readers is still useful when the
@@ -67,6 +77,18 @@ reader-facing summaries:
   the abstract fetch. It degrades gracefully: with no `SERPAPI_KEY` set, every
   candidate passes and is labelled "Not verified" rather than being silently
   presented as a fresh find.
+- **A newscientist.com-specific check, on top of the general media filter.**
+  `ns_check.py` runs after `media_filter.py` and asks a narrower, more exacting
+  question: not "has anyone covered this?" but "has New Scientist itself
+  already run it?" — which sinks a pitch even when the general filter passes
+  it, so `check_ns_overlap` uses a lower hit threshold (2, vs. the general
+  filter's 3). The same module's `fetch_ns_style_examples` pulls real, current
+  New Scientist headlines in the run's subject area once per run and hands
+  them to `digest_generator.py` as a style reference, so entries are framed the
+  way New Scientist actually writes rather than in a generic science-news
+  voice. Both degrade the same way the media filter does: no key, no block —
+  entries are labelled "Not verified" and the style reference is simply
+  omitted.
 - **A PMID ledger.** `seen_pmids.json` records every study ever written up, and
   those are dropped before screening. A study that has been pitched once is not
   a new story idea. The senior digest has no equivalent, because re-covering a
@@ -74,7 +96,8 @@ reader-facing summaries:
 - **Different entry fields.** Its two "story angles" (to/about an audience) are
   replaced by a **Pitch angle** (how to sell it to New Scientist) and a **Wider
   angle** (a different, larger story elsewhere), plus **Novelty**, **NS fit**
-  (1-10, honest use of the range) and **Media check** per entry.
+  (1-10, honest use of the range), **Media check**, and **NS.com check** per
+  entry.
 - **Vercel with Git integration left connected.** The senior repo deploys via an
   explicit `vercel deploy --prod` from inside `docs/`, with Git integration
   deliberately disconnected, because a repo-root connection there builds an
@@ -110,6 +133,27 @@ inline, and export any run to .docx. When a run includes a feature pitch, a
 The data is split so first load stays flat as runs accumulate: `data/index.json`
 holds only what the sidebar and search box need, and each run's full body lives
 in `data/runs/<id>.json`, fetched on demand when that run is opened.
+
+### Archive and delete
+
+Every study card has **Archive** and **Delete** buttons, plus a status filter
+(Active only / Archived / Deleted / All) in the run header. Status is stored
+per-PMID in the browser's `localStorage`, not written back to the digest
+files or `docs/data/` — it's a per-viewer preference, the same mechanism
+already used here for study sort order and the minimum-score filter, and this
+dashboard has exactly one viewer, so there was no case for a shared backend
+(unlike `research-digest-dashboard`'s move to Neon Postgres, which exists
+because that dashboard has more than one). Archiving or deleting a study never
+changes its underlying data — a study hidden by "Active only" is still in
+`docs/data/`, restorable at any time with the **Restore** button, and it's
+still included in the flat aggregator feed
+(`data/results.json`/`build_aggregator_feed.py`), since that feed is a record
+of everything ever pitched, not a view of what's currently active here.
+Clearing the browser's site data resets every study back to active.
+
+This status is additive to the digest's own fields (Novelty, NS fit, Media
+check, NS.com check) — it's a dashboard-only view state layered on top, not a
+replacement for anything the pipeline writes.
 
 Vercel serves the `/docs` folder of `main` (set as the project's Root
 Directory), so a push is a deploy. To view it locally without pushing:
@@ -206,8 +250,10 @@ Set `DIGEST_FOCUS` to override today's rotation (e.g.
 override" and falls through to the rotation, so the broad digest cannot be forced
 this way — it only runs when the rotation lands on it.
 
-A run takes roughly 15-25 minutes, most of it the SerpAPI lookups (1 req/sec, up
-to 60) and the three Claude passes.
+A run takes roughly 15-25 minutes, most of it the SerpAPI lookups — the general
+media filter (1 req/sec, up to 60) plus the newscientist.com-specific check
+(1 req/sec, up to 60, but only over whatever survives the general filter, so
+usually well under that) — and the three Claude passes.
 
 ### Choosing topic wording
 
@@ -258,6 +304,11 @@ Edit `config/digest_config.json` and commit — the next run picks it up:
 - `days_back` — PubMed lookback window (days).
 - `media_threshold` — news hits at or above which a study is dropped as already
   covered.
+- `ns_site_threshold` — newscientist.com hits at or above which a study is
+  dropped as already run there. Lower than `media_threshold` by design: NS.com
+  covering it is more disqualifying than a general outlet doing so.
+- `ns_style_examples` — how many real, current New Scientist headlines to pull
+  as a style reference for the digest prompt.
 - `max_candidates` — how many screened studies go to the media filter.
 - `max_abstracts` — how many survivors get full abstracts fetched and sent to
   Claude.
@@ -281,7 +332,8 @@ Set these under repo Settings → Secrets and variables → Actions:
 - `ANTHROPIC_API_KEY` — required, used for digest generation, fact-checking and
   trends synthesis.
 - `SERPAPI_KEY` — optional but strongly recommended; without it the media filter
-  is skipped and entries are labelled "Not verified".
+  and the newscientist.com-specific check (`ns_check.py`) are both skipped,
+  entries are labelled "Not verified", and no style reference is fetched.
 - `NCBI_API_KEY` — optional, raises the PubMed rate limit.
 
 ## Repo layout
@@ -294,6 +346,7 @@ scripts/
   build_journals.py          regenerates journals.py from the CSV
   screening.py               pre-Claude title screen and novelty ranking
   media_filter.py            SerpAPI "already covered?" check
+  ns_check.py                newscientist.com-specific overlap check + style reference
   llm.py                     shared Claude call + text extraction helpers
   digest_generator.py        Claude prompt + call that writes the digest
   fact_checker.py            Claude prompt + call that fact-checks the digest

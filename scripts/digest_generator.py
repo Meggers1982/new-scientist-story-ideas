@@ -36,6 +36,14 @@ how surprising the result is, how solid the evidence is, and how easily it becom
 600-word story. Be honest and use the range — a 9 should be rare. Do not include any
 study you would score below 4; leave it out of the digest entirely.
 
+## Matching New Scientist's own style
+When real, currently-published New Scientist headlines are supplied below as a style
+reference, write each entry's headline and Pitch angle to match their conventions —
+tone, structure, how much (or how little) hype they carry — rather than a generic
+science-news voice. Use them as a model to write like, never as content to copy or
+reference by name. If no style reference is supplied, fall back to the entry-format
+instructions below on their own.
+
 
 ## Spelling
 Write in American English: "analyze", "behavior", "randomized", "center", "program",
@@ -53,6 +61,7 @@ trial, instrument and cohort names, and direct quotations keep their original fo
 **Novelty:** [Counterintuitive | Overturns prior research | First-in-class | Failed replication | New mechanism]
 **NS fit:** [N]/10 — [one clause on what lifts or limits the score]
 **Media check:** [copy the media-check line supplied for this PMID verbatim]
+**NS.com check:** [copy the NS.com-check line supplied for this PMID verbatim]
 
 **The study:** What researchers did, who participants were (N=, age range), key
 finding in plain language. 2–4 sentences.
@@ -117,9 +126,18 @@ def generate_digest(
     journal_count: int,
     days_back: int,
     api_key: str,
+    ns_notes: dict[str, str] | None = None,
+    ns_style_examples: list[dict] | None = None,
     model: str = MODEL,
 ) -> tuple[str, list[str]]:
     """Generate a formatted story-ideas digest from PubMed abstracts.
+
+    `ns_notes` and `ns_style_examples` come from `ns_check.py`'s
+    newscientist.com-specific checks: per-PMID overlap notes (same shape as
+    `media_notes`) and, separately, a handful of real current New Scientist
+    headlines used as a style reference. Both are optional — a caller that
+    doesn't pass them gets the general media-filter behaviour only, same as
+    before this was added.
 
     Returns:
         (full_digest_markdown, list_of_selected_pmids)
@@ -140,9 +158,11 @@ def generate_digest(
     if not abstracts:
         return header + "_No articles with usable abstracts were found for this run._", []
 
+    ns_notes = ns_notes or {}
     abstracts_block = "\n\n".join(
         f"--- PMID {pmid} ---\n"
-        f"Media check: {media_notes.get(pmid, 'Not verified')}\n\n{text}"
+        f"Media check: {media_notes.get(pmid, 'Not verified')}\n"
+        f"NS.com check: {ns_notes.get(pmid, 'Not verified')}\n\n{text}"
         for pmid, text in abstracts.items()
     )
 
@@ -152,6 +172,19 @@ def generate_digest(
         .replace("[SECTION]", section)
     )
 
+    style_block = ""
+    if ns_style_examples:
+        examples_text = "\n".join(
+            f'- "{ex["headline"]}"' + (f" — {ex['snippet']}" if ex.get("snippet") else "")
+            for ex in ns_style_examples
+        )
+        style_block = (
+            "\n**Style reference — real, currently-published New Scientist headlines in this "
+            "subject area** (write your own headlines and pitch angles to match their "
+            "conventions; do not copy their content or phrasing):\n"
+            f"{examples_text}\n"
+        )
+
     focus_line = f"**Subject focus:** {subject_focus}\n" if subject_focus else ""
     user_message = (
         f"Please build a story-ideas digest from the {len(abstracts)} abstracts below.\n\n"
@@ -159,6 +192,7 @@ def generate_digest(
         f"**Section:** {section}\n"
         f"**Readers:** {reader_profile}\n"
         + focus_line
+        + style_block
         + "\nInclude every study you would score 4 or above — do not cap the count. "
         "Leave out everything you would score below 4.\n\n"
         f"{'=' * 60}\n"

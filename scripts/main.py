@@ -10,6 +10,7 @@ from journals import ISSNS
 from pubmed import search_by_issns, fetch_summaries, fetch_abstracts_for_pmids
 from screening import screen
 from media_filter import apply_media_filter
+from ns_check import check_ns_overlap, fetch_ns_style_examples
 from digest_generator import generate_digest
 from fact_checker import run_fact_check
 from trends import generate_trends_section
@@ -135,6 +136,8 @@ def main() -> None:
     reader_profile = config.get("reader_profile", "curious general readers")
     days_back = config.get("days_back", 30)
     media_threshold = config.get("media_threshold", 3)
+    ns_site_threshold = config.get("ns_site_threshold", 2)
+    ns_style_examples_count = config.get("ns_style_examples", 5)
     max_candidates = config.get("max_candidates", 60)
     max_abstracts = config.get("max_abstracts", 40)
 
@@ -187,6 +190,16 @@ def main() -> None:
         print("Every candidate was already widely covered. Exiting.")
         sys.exit(0)
 
+    # ── Step 3b: Drop anything newscientist.com itself already ran ───────────
+    print("\nChecking newscientist.com for recent overlapping coverage...")
+    candidates, ns_notes = check_ns_overlap(
+        candidates, api_key=serpapi_key, threshold=ns_site_threshold
+    )
+
+    if not candidates:
+        print("Every remaining candidate has already run on newscientist.com. Exiting.")
+        sys.exit(0)
+
     # ── Step 4: Fetch abstracts ──────────────────────────────────────────────
     shortlist = [c["pmid"] for c in candidates[:max_abstracts]]
     print(f"\nFetching abstracts (up to {max_abstracts})...")
@@ -198,6 +211,12 @@ def main() -> None:
         sys.exit(0)
 
     # ── Step 5: Generate digest ──────────────────────────────────────────────
+    print("\nPulling New Scientist style reference headlines...")
+    ns_style_examples = fetch_ns_style_examples(
+        subject_focus, serpapi_key, max_examples=ns_style_examples_count
+    )
+    print(f"  {len(ns_style_examples)} style reference headline(s) found")
+
     print("\nGenerating digest...")
     digest_content, selected_pmids = generate_digest(
         subject_focus=subject_focus,
@@ -206,6 +225,8 @@ def main() -> None:
         reader_profile=reader_profile,
         abstracts=abstracts,
         media_notes=media_notes,
+        ns_notes=ns_notes,
+        ns_style_examples=ns_style_examples,
         journal_count=len(ISSNS),
         days_back=days_back,
         api_key=anthropic_api_key,
