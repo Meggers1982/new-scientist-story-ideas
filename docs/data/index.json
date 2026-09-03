@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 57,
+  "run_count": 58,
   "topics": [
     "addiction",
     "anxiety",
@@ -10,10 +10,21 @@
     "exercise",
     "memory",
     "neuroimaging",
+    "schizophrenia",
     "sleep",
     "social media"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-schizophrenia-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Schizophrenia \u2014 September 2026",
+      "topic": "schizophrenia",
+      "run_date": "2026-09-03",
+      "study_count": 23,
+      "top_score": 8,
+      "total_issues": "39 (30 Minor, 9 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 schizophrenia \u2014 september 2026 schizophrenia schizophrenia excess covid deaths among people with severe mental illness did not shrink after vaccines arrived 42586081 the lancet psychiatry semaglutide beats every other drug tested for antipsychotic weight gain 42418179 jama psychiatry a stress-hormone gene is switched up in schizophrenia \u2014 and aging pushes it the same way 42642806 american journal of psychiatry trauma therapy for psychosis works on questionnaires \u2014 but not on people's phone diaries 42658758 psychotherapy and psychosomatics almost a quarter of older people with psychosis have dementia 42615098 asia-pacific psychiatry people who see hallucinations face a choice between explanations that convince and ones they can live with 42627099 psychology and psychotherapy: theory, research and practice personality traits predict who develops three major psychiatric disorders \u2014 but not schizophrenia 42680113 journal of affective disorders a brain response was supposed to be weaker in people at risk of psychosis \u2014 it turned out stronger 42274463 the world journal of biological psychiatry fidgety, restless movements in early psychosis foreshadow memory problems two years on 42640953 schizophrenia bulletin clinicians' suicide risk ratings miss most of the people who go on to attempt 42044698 journal of affective disorders schizophrenia leaves an audible mark on speech \u2014 its milder cousin does not 42685439 schizophrenia research leading researchers argue the dopamine theory of schizophrenia can no longer stand alone 42418174 jama psychiatry a drug that raises prolactin sharply does not harm sexual function more than one that doesn't 42439529 the world journal of biological psychiatry people with schizophrenia living at home function better \u2014 and are at higher risk of suicide 42581341 australasian psychiatry waiting to prescribe clozapine costs patients function they don't get back 42155318 journal of psychiatric research giving a hallucinated voice a face reduces it \u2014 in a therapy tested outside its home lab 42475895 acta psychologica confronting an avatar of your hallucination lights up different brain regions than the hallucination itself 42334305 the world journal of biological psychiatry twenty years of research still can't say who will benefit from talking therapy for psychosis 42679421 schizophrenia research a brain-connectivity pattern predicts who responds to antipsychotics in the first 12 weeks 42574776 schizophrenia research more empathic people with first-episode psychosis have milder negative symptoms 42664611 schizophrenia research a probiotic blunts early metabolic damage from olanzapine \u2014 then the effect vanishes 42596905 international journal of psychiatry in medicine first measurements of the antipsychotic cariprazine in breast milk 42085651 journal of clinical psychopharmacology brain stimulation plus a listening task shifts how the brain handles unwanted sound in people who hear voices 42685703 clinical eeg and neuroscience"
+    },
     {
       "id": "new-scientist-story-ideas-autism-september-2026",
       "title": "New Scientist Story Ideas \u2014 Autism \u2014 September 2026",
