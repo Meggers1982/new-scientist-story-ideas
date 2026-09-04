@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 58,
+  "run_count": 59,
   "topics": [
     "addiction",
     "anxiety",
@@ -12,9 +12,20 @@
     "neuroimaging",
     "schizophrenia",
     "sleep",
-    "social media"
+    "social media",
+    "trauma"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-trauma-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Trauma \u2014 September 2026",
+      "topic": "trauma",
+      "run_date": "2026-09-04",
+      "study_count": 18,
+      "top_score": 7,
+      "total_issues": "33 (25 Minor, 8 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 trauma \u2014 september 2026 trauma trauma common mental disorders are lasting longer than they did a decade ago 42687372 psychological medicine mass shooting survivors describe time slowing down as they ran 42647049 psychological science judges deciding sexual abuse cases still rely on cues that science has discredited 41308177 memory psychiatric diagnoses barely predict how patients actually fare 42644771 clinical psychology & psychotherapy depression may come first and drive complex ptsd, not the other way around 42594693 journal of anxiety disorders veterans who broke their own moral code report more feelings of unreality 41347711 cognitive behaviour therapy whether you \"have ptsd\" can depend on which scoring rule your clinician uses 42635035 european journal of psychotraumatology avoidance may be the weakest sign of ptsd in refugees 42635367 european journal of psychotraumatology childhood maltreatment predicts depression severity \u2014 inflammation does not 42673683 psychiatry research a history of childhood adversity doesn't stop chronic pain treatment working 42166956 journal of psychosomatic research a 17-minute video handed out during a forensic exam may help after sexual assault 42635087 european journal of psychotraumatology a new screening tool aims to catch ptsd that starts in pregnancy, not just at birth 41936021 australian & new zealand journal of psychiatry neglect, not the drinking itself, links parental substance abuse to child exploitation 41974448 sexual abuse rejection and violence, not everyday discrimination, drive trauma symptoms in trans people 42658623 american psychologist earthquake survivors who build a \"trauma identity\" fare worse 42036873 psychology and psychotherapy: theory, research and practice trouble naming your feelings may link childhood trauma to a stiffer heartbeat 42579979 acta psychologica how a therapist asks questions changes the trauma story a client tells 42684797 memory who drops out of trauma treatment isn't predicted by how ill they are 42222912 international journal of psychiatry in clinical practice"
+    },
     {
       "id": "new-scientist-story-ideas-schizophrenia-september-2026",
       "title": "New Scientist Story Ideas \u2014 Schizophrenia \u2014 September 2026",
