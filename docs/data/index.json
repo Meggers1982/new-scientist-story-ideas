@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 59,
+  "run_count": 60,
   "topics": [
     "addiction",
     "anxiety",
@@ -13,9 +13,20 @@
     "schizophrenia",
     "sleep",
     "social media",
+    "stress",
     "trauma"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-stress-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Stress \u2014 September 2026",
+      "topic": "stress",
+      "run_date": "2026-09-06",
+      "study_count": 16,
+      "top_score": 7,
+      "total_issues": "17 (13 Minor, 3 Moderate, 1 Major)",
+      "search": "new scientist story ideas \u2014 stress \u2014 september 2026 stress stress treating sleep alongside ptsd leaves service members sleeping better six months later 42660579 behavior therapy trauma therapy for children works even while the bombs are still falling 42635370 european journal of psychotraumatology stress doesn't stop you exercising \u2014 if anything you move slightly more 42612762 psychology of sport and exercise sailors who nap most often report less job stress \u2014 and more burnout 42692480 journal of sleep research stress makes people grab the smaller, sooner reward \u2014 even when money is not tight 42693377 journal of behavioral medicine resilience doesn't protect young trauma survivors who also have ocd 42697249 journal of affective disorders most post-concussion symptoms track distress, not the blow to the head 42173054 journal of psychosomatic research people with two or more diagnoses lost far more well-being in the pandemic than their conditions predict 42686352 bmj mental health babies of three very different languages all lock onto the same speech rhythm 42621832 developmental science stressing people out doesn't change how cues pull them toward a habit 41680576 learning & behavior perfectionism and bad sleep feed each other \u2014 and stress is the go-between 41989986 behavioral sleep medicine lonely brains respond less to their own heartbeat 42456921 biological psychology for homeless young adults, family support predicts less depression \u2014 friends don't 42691267 american journal of orthopsychiatry how you chew during the day predicts how hard you grind your teeth at night 42681265 sleep and breathing pressure to hold onto your heritage \u2014 not to assimilate \u2014 tracks heavier drinking 42682243 behavioral medicine who a sexual assault survivor tells \u2014 and who tells them the wrong thing 42691265 american journal of orthopsychiatry"
+    },
     {
       "id": "new-scientist-story-ideas-trauma-september-2026",
       "title": "New Scientist Story Ideas \u2014 Trauma \u2014 September 2026",
