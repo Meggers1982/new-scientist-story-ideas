@@ -24,13 +24,26 @@ media_filter.py), and `fetch_ns_style_examples` returns an empty list, which
 digest_generator.py treats as "no reference available" rather than an error.
 """
 
+import os
 import re
 import time
 import requests
 
+try:
+    from . import serp_breaker
+except ImportError:  # run as a plain script, not a package
+    import serp_breaker
+
 SERPAPI_URL = "https://serpapi.com/search.json"
 SERPAPI_DELAY = 1.0
+SERPAPI_TIMEOUT = int(os.getenv("SERPAPI_TIMEOUT_SECONDS", "15"))
 UNVERIFIED_NOTE = "Not verified — no SerpAPI key configured"
+CIRCUIT_OPEN_NOTE = "Not verified — SerpAPI unavailable this run"
+
+# The engine this screen uses. Named so the breaker keeps its tally separate
+# from media_filter.py's google_news tally: the two screens hit different
+# SerpAPI engines and are allowed to fail independently.
+SERP_ENGINE = "google"
 
 
 def _ns_search(query: str, api_key: str, num: int = 5) -> list[dict]:
@@ -50,7 +63,7 @@ def _ns_search(query: str, api_key: str, num: int = 5) -> list[dict]:
             "num": num,
             "api_key": api_key,
         },
-        timeout=15,
+        timeout=SERPAPI_TIMEOUT,
     )
     resp.raise_for_status()
     return resp.json().get("organic_results", [])
@@ -77,6 +90,8 @@ def check_ns_overlap(
     notes: dict[str, str] = {}
     skipped = 0
 
+    unchecked = 0
+
     for i, candidate in enumerate(candidates):
         if i >= max_lookups:
             # Past the lookup budget: keep the rest, but don't claim they're clean.
@@ -84,25 +99,43 @@ def check_ns_overlap(
             notes[candidate["pmid"]] = "Not verified — past this run's SerpAPI lookup budget"
             continue
 
-        try:
-            results = _ns_search(candidate["title"], api_key)
-            hits = len(results)
-        except Exception as e:
-            print(f"  NS.com check error for '{candidate['title'][:60]}...': {e}")
-            hits = -1
-        time.sleep(SERPAPI_DELAY)
+        if serp_breaker.is_open(SERP_ENGINE):
+            # Upstream is down. Keep the candidate and say so — no call, no sleep.
+            passed.append(candidate)
+            notes[candidate["pmid"]] = CIRCUIT_OPEN_NOTE
+            unchecked += 1
+            continue
+
+        with serp_breaker.timed(SERP_ENGINE) as t:
+            try:
+                results = _ns_search(candidate["title"], api_key)
+                hits = len(results)
+                t.ok = True
+            except Exception as e:
+                print(f"  NS.com check error for '{candidate['title'][:60]}...': {e}")
+                hits = -1
 
         if hits == -1:
             passed.append(candidate)
             notes[candidate["pmid"]] = "Not verified — SerpAPI lookup failed"
-        elif hits < threshold:
+            continue
+
+        time.sleep(SERPAPI_DELAY)
+
+        if hits < threshold:
             passed.append(candidate)
             notes[candidate["pmid"]] = f"No recent NS.com coverage found ✓ ({hits} hits)"
         else:
             skipped += 1
             print(f"  PMID {candidate['pmid']}: {hits} newscientist.com hits — dropped")
 
-    print(f"  NS.com overlap check: {len(passed)} passed, {skipped} already on newscientist.com")
+    summary = (
+        f"  NS.com overlap check: {len(passed)} passed, "
+        f"{skipped} already on newscientist.com"
+    )
+    if unchecked:
+        summary += f", {unchecked} unchecked (SerpAPI gave out)"
+    print(summary)
     return passed, notes
 
 
@@ -120,12 +153,18 @@ def fetch_ns_style_examples(subject_focus: str, api_key: str, max_examples: int 
     if not api_key:
         return []
 
-    query = subject_focus if subject_focus else "mind brain psychology neuroscience"
-    try:
-        results = _ns_search(query, api_key, num=max_examples)
-    except Exception as e:
-        print(f"  NS style example fetch failed: {e}")
+    if serp_breaker.is_open(SERP_ENGINE):
+        print("  NS style examples skipped — SerpAPI unavailable this run")
         return []
+
+    query = subject_focus if subject_focus else "mind brain psychology neuroscience"
+    with serp_breaker.timed(SERP_ENGINE) as t:
+        try:
+            results = _ns_search(query, api_key, num=max_examples)
+            t.ok = True
+        except Exception as e:
+            print(f"  NS style example fetch failed: {e}")
+            return []
 
     examples = []
     for r in results[:max_examples]:

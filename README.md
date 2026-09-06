@@ -78,8 +78,8 @@ reader-facing summaries:
   candidate passes and is labelled "Not verified" rather than being silently
   presented as a fresh find. The same holds when the key is set but SerpAPI is
   not answering — a circuit breaker stops the screen after
-  `SERPAPI_FAILURE_THRESHOLD` consecutive failures (default 3) instead of paying
-  the full timeout on all 60 lookups. On 2026-09-05 every lookup timed out and
+  `SERPAPI_FAILURE_THRESHOLD` consecutive failed queries (default 3) instead of
+  paying the full timeout on all 60 lookups. On 2026-09-05 every lookup timed out and
   the un-broken version spent ~16 minutes doing it, taking the 30-minute job
   down with it; the surviving candidates are now marked "SerpAPI unavailable
   this run" so a run that could not screen never reads as a run that found
@@ -346,11 +346,21 @@ Set these under repo Settings → Secrets and variables → Actions:
 Optional tuning env vars (all have working defaults, none need setting):
 
 - `SERPAPI_TIMEOUT_SECONDS` — per-lookup read timeout (default 15).
-- `SERPAPI_FAILURE_THRESHOLD` — consecutive failed lookups before the media
-  filter gives up for the rest of the run (default 3).
-- `SERPAPI_TIME_BUDGET_SECONDS` — wall-clock ceiling on the whole media-filter
-  stage (default 300), covering the slow-but-succeeding case the failure count
-  never sees.
+- `SERPAPI_FAILURE_THRESHOLD` — consecutive failed *queries* before a SerpAPI
+  engine is given up on for the rest of the run (default 3). Queries, not
+  attempts: one slow lookup is not an outage.
+- `SERPAPI_ENGINE_TIME_BUDGET_SECONDS` — wall-clock ceiling per engine (default
+  240), covering the slow-but-succeeding case a failure count never sees.
+- `SERPAPI_TIME_BUDGET_SECONDS` — ceiling across every SerpAPI call in the run
+  (default 600). Outranks the per-engine budgets: past this, everything stops,
+  because the risk being managed is the job ceiling rather than the upstream.
+
+The breaker (`scripts/serp_breaker.py`) is shared by both SerpAPI screens and
+counts per engine, so the media filter losing Google News does not also cancel
+the newscientist.com check — they fail independently. Sharing one budget across
+both matters too: run back to back with a per-screen budget, the two of them
+could spend twice the job ceiling while each looked well-behaved alone. With a
+dead upstream both screens together now cost ~90s instead of ~32 minutes.
 
 ## Repo layout
 
