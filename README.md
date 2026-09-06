@@ -76,7 +76,14 @@ reader-facing summaries:
   Guardian ran last week. `media_filter.py` sits between the title screen and
   the abstract fetch. It degrades gracefully: with no `SERPAPI_KEY` set, every
   candidate passes and is labelled "Not verified" rather than being silently
-  presented as a fresh find.
+  presented as a fresh find. The same holds when the key is set but SerpAPI is
+  not answering — a circuit breaker stops the screen after
+  `SERPAPI_FAILURE_THRESHOLD` consecutive failures (default 3) instead of paying
+  the full timeout on all 60 lookups. On 2026-09-05 every lookup timed out and
+  the un-broken version spent ~16 minutes doing it, taking the 30-minute job
+  down with it; the surviving candidates are now marked "SerpAPI unavailable
+  this run" so a run that could not screen never reads as a run that found
+  everything clean.
 - **A newscientist.com-specific check, on top of the general media filter.**
   `ns_check.py` runs after `media_filter.py` and asks a narrower, more exacting
   question: not "has anyone covered this?" but "has New Scientist itself
@@ -335,6 +342,15 @@ Set these under repo Settings → Secrets and variables → Actions:
   and the newscientist.com-specific check (`ns_check.py`) are both skipped,
   entries are labelled "Not verified", and no style reference is fetched.
 - `NCBI_API_KEY` — optional, raises the PubMed rate limit.
+
+Optional tuning env vars (all have working defaults, none need setting):
+
+- `SERPAPI_TIMEOUT_SECONDS` — per-lookup read timeout (default 15).
+- `SERPAPI_FAILURE_THRESHOLD` — consecutive failed lookups before the media
+  filter gives up for the rest of the run (default 3).
+- `SERPAPI_TIME_BUDGET_SECONDS` — wall-clock ceiling on the whole media-filter
+  stage (default 300), covering the slow-but-succeeding case the failure count
+  never sees.
 
 ## Repo layout
 
