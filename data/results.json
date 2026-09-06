@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-09-06T00:33:21.340308+00:00",
+  "last_updated": "2026-09-06T14:45:33.108019+00:00",
   "source_id": "new-scientist-mh",
   "source_label": "New Scientist \u2014 Mental Health",
-  "total_studies": 1039,
-  "new_this_run": 16,
+  "total_studies": 1058,
+  "new_this_run": 35,
   "studies": [
     {
       "pmid": "42660579",
@@ -592,6 +592,709 @@
           "pitch_angle": "For a campus-affairs or investigative outlet: the shift from bystander-intervention training to \"supporter\" training, and whether university programs are equipped to reach the specific people survivors actually turn to \u2014 often peers who share their identity and have no training at all.",
           "why_it_fits": "",
           "caveats_to_flag": "Cross-sectional (cannot establish causation), single university campus, self-reported symptoms and network member characteristics reported by the survivor rather than the network members themselves, undergraduate population may not generalize."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42691284",
+      "headline": "Mindfulness courses genuinely lower levels of the stress hormone cortisol",
+      "journal": "Health Psychology",
+      "pubdate": "3 September 2026",
+      "doi": "10.1037/hea0001636",
+      "category": "Psychology",
+      "groundbreaking": "First-in-class",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Researchers pooled 39 trials of mindfulness-based stress reduction (MBSR) \u2014 the standardized 8-week program \u2014 that measured cortisol before and after and controlled for the time of day samples were taken, covering 2,059 participants. MBSR lowered cortisol relative to controls (g = \u22120.38), with a bigger drop against inactive controls (g = \u22120.42) than active ones (g = \u22120.29), and the within-group effect appeared only in randomized trials, not uncontrolled ones.",
+      "why_it_matters": "Mindfulness research has long been dogged by the criticism that its benefits are self-reported and expectation-driven; this is the strongest pooled evidence yet that an eight-week course shifts a hard biological marker of stress, though the effect is modest.",
+      "caveats": "Substantial unexplained heterogeneity between studies; cortisol is a noisy biomarker; no data on whether cortisol changes translate into health outcomes; publication bias not fully excluded.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 7,
+      "ns_score_reason": "first meta-analysis to pin a physiological, not just self-reported, effect on mindfulness training; heterogeneity and small effect size hold it back.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Mindfulness courses genuinely lower levels of the stress hormone cortisol",
+          "hook": "Mindfulness research has long been dogged by the criticism that its benefits are self-reported and expectation-driven; this is the strongest pooled evidence yet that an eight-week course shifts a hard biological marker of stress, though the effect is modest.",
+          "pitch_angle": "Everyone who has been told to \"just breathe\" suspects mindfulness is placebo with a mat. Open on someone halfway through week four of an MBSR course, then reveal that the cortisol data hold up \u2014 but only in properly controlled trials, and by less than the wellness industry implies. Call Blair Johnson at the University of Connecticut, who led the meta-analysis, and ask what the unexplained heterogeneity means.",
+          "why_it_fits": "first meta-analysis to pin a physiological, not just self-reported, effect on mindfulness training; heterogeneity and small effect size hold it back.",
+          "caveats_to_flag": "Substantial unexplained heterogeneity between studies; cortisol is a noisy biomarker; no data on whether cortisol changes translate into health outcomes; publication bias not fully excluded."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Mindfulness courses genuinely lower levels of the stress hormone cortisol (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a health or business outlet: the workplace wellness question. Employers are buying mindfulness apps by the seat; this analysis suggests the full eight-week, in-person program has measurable physiology behind it, while the app-sized doses tested against active controls do much less. A piece on what dose of mindfulness is actually evidenced.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Substantial unexplained heterogeneity between studies; cortisol is a noisy biomarker; no data on whether cortisol changes translate into health outcomes; publication bias not fully excluded."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42569817",
+      "headline": "People who put things off rate their own health as worse \u2014 and stress explains part of it",
+      "journal": "British Journal of Health Psychology",
+      "pubdate": "September 2026",
+      "doi": "10.1111/bjhp.70099",
+      "category": "Psychology",
+      "groundbreaking": "New mechanism",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Fuschia Sirois and a colleague meta-analyzed 36 cross-sectional samples totaling 8,603 people who reported trait procrastination and rated their current and future health. Chronic procrastinators rated their health as worse (average r = .21) and their future health as somewhat worse (r = .13); controlling for perceived stress shrank but did not eliminate the link to current health, and wiped out the link to future health entirely. Procrastinators nonetheless expected their health to improve slightly over the next decade.",
+      "why_it_matters": "It reframes procrastination as a stress-generating trait with body-wide consequences rather than a time-management quirk \u2014 and hints that the same optimism that lets people delay a task also lets them assume their health will sort itself out later.",
+      "caveats": "All samples cross-sectional \u2014 cannot establish causation; outcomes entirely self-reported, including health status; \"future health\" measured as expectation, not outcome; samples skew toward students and convenience recruitment.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 7,
+      "ns_score_reason": "big multi-sample dataset on an everyday trait almost everyone recognizes in themselves; cross-sectional design limits how far it can be pushed.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "People who put things off rate their own health as worse \u2014 and stress explains part of it",
+          "hook": "It reframes procrastination as a stress-generating trait with body-wide consequences rather than a time-management quirk \u2014 and hints that the same optimism that lets people delay a task also lets them assume their health will sort itself out later.",
+          "pitch_angle": "Lead with the mismatch: procrastinators feel unhealthy now but confidently expect to feel better in 10 years \u2014 the same \"future me will handle it\" logic that got them there. Open on a reader delaying a doctor's appointment. Call Fuschia Sirois at Durham University, who has built the procrastination\u2013health model over two decades.",
+          "why_it_fits": "big multi-sample dataset on an everyday trait almost everyone recognizes in themselves; cross-sectional design limits how far it can be pushed.",
+          "caveats_to_flag": "All samples cross-sectional \u2014 cannot establish causation; outcomes entirely self-reported, including health status; \"future health\" measured as expectation, not outcome; samples skew toward students and convenience recruitment."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "People who put things off rate their own health as worse \u2014 and stress explains part of it (wider angle)",
+          "hook": "",
+          "pitch_angle": "A feature for a general-interest magazine on the psychology of deferred consequences \u2014 why the brain treats future selves as strangers, spanning pensions, climate inaction and unfilled prescriptions, with procrastination research as the empirical spine.",
+          "why_it_fits": "",
+          "caveats_to_flag": "All samples cross-sectional \u2014 cannot establish causation; outcomes entirely self-reported, including health status; \"future health\" measured as expectation, not outcome; samples skew toward students and convenience recruitment."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42464912",
+      "headline": "Newborn babies can already hear when their own language is spoken with a foreign rhythm",
+      "journal": "Developmental Science",
+      "pubdate": "September 2026",
+      "doi": "10.1111/desc.70254",
+      "category": "Psychology",
+      "groundbreaking": "Overturns prior research",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Forty-four Czech newborns listened to naturally spoken, well-formed Czech sentences delivered either with native Czech rhythm or with a foreign-accented rhythm (lengthened foot-initial syllables) while their brain hemodynamics were recorded. Their brains responded more strongly to the foreign-rhythm version, with the difference strongest in the right hemisphere.",
+      "why_it_matters": "Standard theory holds that at birth infants can only tell apart languages from broadly different rhythm classes \u2014 this shows they pick up fine-grained timing differences within their own language, presumably learned in the womb.",
+      "caveats": "N = 44, single center; one language and one accent manipulation; hemodynamic response tells you the brain distinguished the sounds, not what the baby \"understood\"; population may not generalize to other rhythm classes.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 7,
+      "ns_score_reason": "overturns a textbook claim about what newborns can hear; clean design, but modest N and a single language pairing.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Newborn babies can already hear when their own language is spoken with a foreign rhythm",
+          "hook": "Standard theory holds that at birth infants can only tell apart languages from broadly different rhythm classes \u2014 this shows they pick up fine-grained timing differences within their own language, presumably learned in the womb.",
+          "pitch_angle": "Open in a maternity ward: a baby hours old, hearing its mother tongue spoken by someone with an accent, and reacting. The hook is that prenatal listening is far more detailed than assumed \u2014 newborns aren't sorting languages into crude rhythm buckets, they're tracking syllable timing. Call Kate\u0159ina Chl\u00e1dkov\u00e1 at Charles University in Prague.",
+          "why_it_fits": "overturns a textbook claim about what newborns can hear; clean design, but modest N and a single language pairing.",
+          "caveats_to_flag": "N = 44, single center; one language and one accent manipulation; hemodynamic response tells you the brain distinguished the sounds, not what the baby \"understood\"; population may not generalize to other rhythm classes."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Newborn babies can already hear when their own language is spoken with a foreign rhythm (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a parenting or education outlet: what fetuses actually learn in the third trimester, and what that means for bilingual households, premature babies in noisy NICUs, and the marketing claims made for prenatal audio products.",
+          "why_it_fits": "",
+          "caveats_to_flag": "N = 44, single center; one language and one accent manipulation; hemodynamic response tells you the brain distinguished the sounds, not what the baby \"understood\"; population may not generalize to other rhythm classes."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42658011",
+      "headline": "The evidence that therapy helps bullying victims largely vanishes once publication bias is corrected",
+      "journal": "Clinical Psychology & Psychotherapy",
+      "pubdate": "September\u2013October 2026",
+      "doi": "10.1002/cpp.70330",
+      "category": "Psychiatry",
+      "groundbreaking": "Overturns prior research",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "A team at Ghent University pooled 23 studies of individual cognitive behavioral therapy (n = 15) and imagery-based interventions (n = 8) for people with psychological problems related to bullying. Raw effects looked healthy \u2014 internalizing symptoms fell with g = 0.72 \u2014 but after adjusting for publication bias the pre-post effect dropped to g = 0.26 and lost statistical significance. Curiously, the adjusted effect on self-perception and coping went the other way, rising to g = 0.98, and the follow-up effect on internalizing symptoms remained significant but small (g = 0.37).",
+      "why_it_matters": "Schools and services routinely refer bullied children to CBT; this suggests the symptom-reduction evidence base is thinner than headline numbers imply, while the case for improving how victims see and manage themselves may be stronger than assumed.",
+      "caveats": "Only 23 heterogeneous studies (I\u00b2 = 68\u201398%); many were small and at risk of bias; adjusted estimates are model-dependent; pooled across ages and intervention formats.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 6,
+      "ns_score_reason": "a genuinely deflating correction to an accepted literature; the story is about method, which makes it a slightly harder sell.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "The evidence that therapy helps bullying victims largely vanishes once publication bias is corrected",
+          "hook": "Schools and services routinely refer bullied children to CBT; this suggests the symptom-reduction evidence base is thinner than headline numbers imply, while the case for improving how victims see and manage themselves may be stronger than assumed.",
+          "pitch_angle": "The surprise is directional: correcting for publication bias didn't just shrink the effect, it swapped which outcome looks best. Open on a bullied 13-year-old referred for six sessions of CBT and ask what those sessions realistically deliver. Call Ernst Koster's group at Ghent University.",
+          "why_it_fits": "a genuinely deflating correction to an accepted literature; the story is about method, which makes it a slightly harder sell.",
+          "caveats_to_flag": "Only 23 heterogeneous studies (I\u00b2 = 68\u201398%); many were small and at risk of bias; adjusted estimates are model-dependent; pooled across ages and intervention formats."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "The evidence that therapy helps bullying victims largely vanishes once publication bias is corrected (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a specialist or education outlet: an investigation into how anti-bullying interventions get commissioned in schools, and how far procurement decisions lean on unadjusted meta-analytic effect sizes.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Only 23 heterogeneous studies (I\u00b2 = 68\u201398%); many were small and at risk of bias; adjusted estimates are model-dependent; pooled across ages and intervention formats."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42680058",
+      "headline": "Brain stimulation for PTSD works on questionnaires but not on clinician interviews",
+      "journal": "Progress in Neuro-Psychopharmacology & Biological Psychiatry",
+      "pubdate": "1 September 2026",
+      "doi": "10.1016/j.pnpbp.2026.111912",
+      "category": "Psychiatry",
+      "groundbreaking": "Counterintuitive",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "A Spanish team systematically reviewed and meta-analyzed randomized controlled trials of repetitive transcranial magnetic stimulation (rTMS) for PTSD, with 16 trials and 786 participants in the main sham-controlled comparison. Self-reported PTSD symptoms improved substantially compared with sham, but interview-based outcomes did not reach significance, heterogeneity was large, prediction intervals were wide, and evidence beyond the treatment period was sparse. Adverse events were mild.",
+      "why_it_matters": "rTMS is being marketed and rolled out for trauma; this analysis suggests the apparent benefit rides largely on how symptoms are measured, and the overall certainty of the evidence is low to very low.",
+      "caveats": "Secondary analysis of published trials; substantial between-study heterogeneity; protocols, coil placement and dosing varied widely; short follow-up in most trials; certainty of evidence rated low or very low by the authors.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 6,
+      "ns_score_reason": "a clean split between self-report and blinded-rater outcomes is exactly the kind of red flag readers should know about; the negative framing limits reach.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Brain stimulation for PTSD works on questionnaires but not on clinician interviews",
+          "hook": "rTMS is being marketed and rolled out for trauma; this analysis suggests the apparent benefit rides largely on how symptoms are measured, and the overall certainty of the evidence is low to very low.",
+          "pitch_angle": "Lead with the discrepancy \u2014 patients say they feel better, trained assessors can't detect it. That gap is the story, and it applies far beyond rTMS. Open on a veteran paying out of pocket for a course of stimulation. Call Wenceslao Pe\u00f1ate-Castro at the University of La Laguna.",
+          "why_it_fits": "a clean split between self-report and blinded-rater outcomes is exactly the kind of red flag readers should know about; the negative framing limits reach.",
+          "caveats_to_flag": "Secondary analysis of published trials; substantial between-study heterogeneity; protocols, coil placement and dosing varied widely; short follow-up in most trials; certainty of evidence rated low or very low by the authors."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Brain stimulation for PTSD works on questionnaires but not on clinician interviews (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a health-policy or investigative outlet: the private neuromodulation clinic market, what it claims for PTSD, and what regulators require as proof before a device-based treatment can be advertised.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Secondary analysis of published trials; substantial between-study heterogeneity; protocols, coil placement and dosing varied widely; short follow-up in most trials; certainty of evidence rated low or very low by the authors."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42303590",
+      "headline": "Men recover from PTSD in about a decade \u2014 for women it takes twice as long",
+      "journal": "Australian & New Zealand Journal of Psychiatry",
+      "pubdate": "September 2026",
+      "doi": "10.1177/00048674261450374",
+      "category": "Psychiatry",
+      "groundbreaking": "First-in-class",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Using diagnostic interviews with 15,893 people in Australia's 2020\u20132022 National Study of Mental Health and Wellbeing, researchers estimated lifetime PTSD prevalence at 7.1% and projected lifetime risk at 9.6%. Women were more than twice as likely to be diagnosed, and although about 63% of people eventually remit, three quarters of men reached remission within 10 years versus 20 years for women. Prevalence had not changed since the 2007 survey.",
+      "why_it_matters": "It quantifies something clinicians suspect but rarely see in national data \u2014 that PTSD is not just more common in women but far more persistent \u2014 and it shows that despite two decades of trauma awareness, population prevalence hasn't budged.",
+      "caveats": "Cross-sectional survey with retrospective age-of-onset and remission reporting; DSM-IV criteria; Australian population may not generalize; remission estimates rest on recall.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 6,
+      "ns_score_reason": "nationally representative, diagnostic-interview data with a striking sex asymmetry in recovery time; the design is descriptive epidemiology.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Men recover from PTSD in about a decade \u2014 for women it takes twice as long",
+          "hook": "It quantifies something clinicians suspect but rarely see in national data \u2014 that PTSD is not just more common in women but far more persistent \u2014 and it shows that despite two decades of trauma awareness, population prevalence hasn't budged.",
+          "pitch_angle": "The headline number is time: a decade of difference in how long PTSD lasts, depending on sex. Open on the flat prevalence line between 2007 and 2022 \u2014 trauma treatment has improved, so why hasn't the population picture? Call Katherine Mills at the Matilda Centre, University of Sydney.",
+          "why_it_fits": "nationally representative, diagnostic-interview data with a striking sex asymmetry in recovery time; the design is descriptive epidemiology.",
+          "caveats_to_flag": "Cross-sectional survey with retrospective age-of-onset and remission reporting; DSM-IV criteria; Australian population may not generalize; remission estimates rest on recall."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Men recover from PTSD in about a decade \u2014 for women it takes twice as long (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a specialist psychiatry or public-health outlet: PTSD as a multisystem condition. The same survey ties PTSD to doubled odds of asthma and raised odds of diabetes and sedative use disorder \u2014 a piece on why trauma clinics may need physicians in the room.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Cross-sectional survey with retrospective age-of-onset and remission reporting; DSM-IV criteria; Australian population may not generalize; remission estimates rest on recall."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42695429",
+      "headline": "On days you procrastinate, tomorrow's stress rises \u2014 and stress feeds back into attention problems",
+      "journal": "Journal of Attention Disorders",
+      "pubdate": "4 September 2026",
+      "doi": "10.1177/10870547261484217",
+      "category": "Psychiatry",
+      "groundbreaking": "New mechanism",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "A total of 187 undergraduates (mean age 19.7; 78% women) reported ADHD symptoms and perceived stress daily for 28 days, and the researchers modeled temporal, contemporaneous and between-person networks. Days with more concentration difficulty and procrastination were followed by higher perceived stress the next day; days with more perceived stress \u2014 especially feeling a lack of control \u2014 were followed by more ADHD symptoms the next day.",
+      "why_it_matters": "It shows a genuinely bidirectional, day-scale loop between attentional symptoms and stress, and identifies which specific symptoms (procrastination, restlessness, loss of control) sit at the hinge points \u2014 plausible targets for very short, in-the-moment interventions.",
+      "caveats": "Non-clinical student sample, not a diagnosed ADHD cohort; all measures self-reported; N = 187 with heavy female skew; network models are correlational and cannot establish causation.",
+      "fact_check_note": "\u2705 Accurate",
+      "excluded": false,
+      "ns_score": 6,
+      "ns_score_reason": "28 days of intensive daily data resolving the direction of a chicken-and-egg question; student sample and self-report cap it.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "On days you procrastinate, tomorrow's stress rises \u2014 and stress feeds back into attention problems",
+          "hook": "It shows a genuinely bidirectional, day-scale loop between attentional symptoms and stress, and identifies which specific symptoms (procrastination, restlessness, loss of control) sit at the hinge points \u2014 plausible targets for very short, in-the-moment interventions.",
+          "pitch_angle": "ADHD is described as a lifelong trait, but these data show it fluctuating from Tuesday to Wednesday in step with stress. Open on a student in an exam period watching the loop tighten. Call Patrick Goh at the University of Hawai'i at M\u0101noa, and ask whether the same dynamics hold in diagnosed adults.",
+          "why_it_fits": "28 days of intensive daily data resolving the direction of a chicken-and-egg question; student sample and self-report cap it.",
+          "caveats_to_flag": "Non-clinical student sample, not a diagnosed ADHD cohort; all measures self-reported; N = 187 with heavy female skew; network models are correlational and cannot establish causation."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "On days you procrastinate, tomorrow's stress rises \u2014 and stress feeds back into attention problems (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a technology or higher-education outlet: the rise of \"micro-interventions\" delivered by phone at the moment a symptom spikes, and whether ecological momentary assessment can move from measurement tool to treatment.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Non-clinical student sample, not a diagnosed ADHD cohort; all measures self-reported; N = 187 with heavy female skew; network models are correlational and cannot establish causation."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42700715",
+      "headline": "Difficulty naming your own emotions seems to protect fragile narcissists from burnout",
+      "journal": "Journal of Psychosomatic Research",
+      "pubdate": "4 September 2026",
+      "doi": "10.1016/j.jpsychores.2026.112986",
+      "category": "Psychiatry",
+      "groundbreaking": "Counterintuitive",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Researchers analyzed routinely collected psychometric data from 1,239 adults treated as inpatients for stress-related disorders at a Swiss clinic between 2018 and 2024. Burnout was predicted by alexithymia (difficulty identifying and describing feelings), effort\u2013reward imbalance at work, and overcommitment. Unexpectedly, the alexithymia \u00d7 narcissistic vulnerability interaction was significant and negative: at high levels of alexithymia, the effect of narcissistic vulnerability on burnout was attenuated.",
+      "why_it_matters": "Emotional awareness is usually cast as protective; here, not being in touch with your feelings appears to blunt the burnout cost of a fragile ego \u2014 a wrinkle for interventions that assume more emotional insight is always better.",
+      "caveats": "Retrospective observational study, single center, no control group; cannot establish causation; burnout and alexithymia both self-reported, raising the possibility that alexithymia suppresses symptom reporting rather than symptoms; inpatient sample not representative of working population.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "a genuinely odd buffering effect in a large clinical sample; retrospective chart data and a single Swiss clinic limit it.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Difficulty naming your own emotions seems to protect fragile narcissists from burnout",
+          "hook": "Emotional awareness is usually cast as protective; here, not being in touch with your feelings appears to blunt the burnout cost of a fragile ego \u2014 a wrinkle for interventions that assume more emotional insight is always better.",
+          "pitch_angle": "Lead with the paradox: in a clinic full of burned-out professionals, the ones least able to name what they feel were partly insulated from the damage of a fragile self-image. Open on an inpatient program for exhausted managers. Call Katharina Ledermann at University Hospital Zurich, and press her on whether this is protection or just under-reporting.",
+          "why_it_fits": "a genuinely odd buffering effect in a large clinical sample; retrospective chart data and a single Swiss clinic limit it.",
+          "caveats_to_flag": "Retrospective observational study, single center, no control group; cannot establish causation; burnout and alexithymia both self-reported, raising the possibility that alexithymia suppresses symptom reporting rather than symptoms; inpatient sample not representative of working population."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Difficulty naming your own emotions seems to protect fragile narcissists from burnout (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a business or work-culture outlet: burnout is being medicalized as a personality problem while effort\u2013reward imbalance remains the single strongest predictor in this dataset \u2014 a piece on the quiet shift of responsibility from employer to employee.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Retrospective observational study, single center, no control group; cannot establish causation; burnout and alexithymia both self-reported, raising the possibility that alexithymia suppresses symptom reporting rather than symptoms; inpatient sample not representative of working population."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42642073",
+      "headline": "Loneliness predicts later suicidal thoughts even after accounting for depression and anxiety",
+      "journal": "Clinical Psychology & Psychotherapy",
+      "pubdate": "September\u2013October 2026",
+      "doi": "10.1002/cpp.70322",
+      "category": "Psychiatry",
+      "groundbreaking": "New mechanism",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "A German team surveyed 4,277 people aged 18\u201389 at two time points and tested whether baseline loneliness predicted later suicidal ideation or behavior. Across all four age bands, loneliness remained a significant predictor after controlling for gender, size of social circle, depression, anxiety, stress, and prior lifetime suicidality \u2014 the models explained 25\u201339% of the variance.",
+      "why_it_matters": "Loneliness is usually treated as a symptom of depression; these data indicate it carries independent prospective risk, and that the size of someone's social network does not capture it.",
+      "caveats": "Observational, two-wave design \u2014 cannot establish causation; online convenience panel; all measures self-reported; suicidal ideation and behavior combined into a single outcome.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "large longitudinal population sample with strong statistical controls; the direction of the finding is not surprising.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Loneliness predicts later suicidal thoughts even after accounting for depression and anxiety",
+          "hook": "Loneliness is usually treated as a symptom of depression; these data indicate it carries independent prospective risk, and that the size of someone's social network does not capture it.",
+          "pitch_angle": "The counterintuitive detail is that how many people you know is not what matters \u2014 loneliness predicted risk even with social circle size controlled. Open on the gap between a full contacts list and an empty evening. Call Tobias Teismann at Ruhr-Universit\u00e4t Bochum. Frame as risk assessment research, not a treatment claim.",
+          "why_it_fits": "large longitudinal population sample with strong statistical controls; the direction of the finding is not surprising.",
+          "caveats_to_flag": "Observational, two-wave design \u2014 cannot establish causation; online convenience panel; all measures self-reported; suicidal ideation and behavior combined into a single outcome."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Loneliness predicts later suicidal thoughts even after accounting for depression and anxiety (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a policy or general-interest outlet: whether national loneliness strategies (UK, Japan, Germany) are measuring the right thing, given that connection quality rather than contact frequency is what tracks with harm.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Observational, two-wave design \u2014 cannot establish causation; online convenience panel; all measures self-reported; suicidal ideation and behavior combined into a single outcome."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42595230",
+      "headline": "Living with long-term stress may blunt, not amplify, the daily link between hassles and low mood",
+      "journal": "Journal of Affective Disorders",
+      "pubdate": "1 December 2026 (online 13 August 2026)",
+      "doi": "10.1016/j.jad.2026.122373",
+      "category": "Psychiatry",
+      "groundbreaking": "Counterintuitive",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Sixty-one young men who have sex with men living with HIV, recruited at three US Adolescent Trials Network sites, reported daily stressors and mood by phone for 66 days, with chronic HIV-related stressors measured at baseline. Daily stressors predicted both a higher level and greater day-to-day swing in depressed mood \u2014 but among participants carrying more chronic HIV stressors, those daily associations were weaker, not stronger.",
+      "why_it_matters": "It challenges the intuitive \"stress sensitization\" model in which chronic adversity leaves people more reactive to everyday knocks, raising the possibility of either adaptive toughening or a blunted stress response.",
+      "caveats": "Small N (61), no control group, observational; highly specific population that will not generalize; all mood and stress measures self-reported; the attenuation effect could reflect floor or ceiling effects in reporting.",
+      "fact_check_note": "\u2705 Accurate",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "result runs directly opposite the authors' hypothesis, which is interesting; N = 61 keeps it a line of enquiry rather than a finding.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Living with long-term stress may blunt, not amplify, the daily link between hassles and low mood",
+          "hook": "It challenges the intuitive \"stress sensitization\" model in which chronic adversity leaves people more reactive to everyday knocks, raising the possibility of either adaptive toughening or a blunted stress response.",
+          "pitch_angle": "Lead with the reversal: the researchers expected chronic stress to make bad days worse, and found the opposite. Open on one participant's 66 days of phone diaries. Call Patrick Wilson's lab at UCLA and ask which explanation they favor \u2014 resilience or physiological dysregulation.",
+          "why_it_fits": "result runs directly opposite the authors' hypothesis, which is interesting; N = 61 keeps it a line of enquiry rather than a finding.",
+          "caveats_to_flag": "Small N (61), no control group, observational; highly specific population that will not generalize; all mood and stress measures self-reported; the attenuation effect could reflect floor or ceiling effects in reporting."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Living with long-term stress may blunt, not amplify, the daily link between hassles and low mood (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a specialist health outlet: what intensive longitudinal phone data is revealing about living with HIV as a chronic condition in your twenties, and why mood variability rather than average mood may matter most for treatment adherence.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Small N (61), no control group, observational; highly specific population that will not generalize; all mood and stress measures self-reported; the attenuation effect could reflect floor or ceiling effects in reporting."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42624213",
+      "headline": "Erratic dinner times are linked to more depressive symptoms \u2014 breakfast and lunch aren't",
+      "journal": "Journal of Affective Disorders",
+      "pubdate": "1 December 2026 (online 20 August 2026)",
+      "doi": "10.1016/j.jad.2026.122404",
+      "category": "Psychiatry",
+      "groundbreaking": "First-in-class",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Researchers in Tehran assessed 450 healthy adults aged 20\u201359 using three non-consecutive 24-hour dietary recalls, calculating composite phase deviation scores for how variable each person's breakfast, lunch and dinner timing was. Adjusting for sleep quality, chronotype, physical activity and demographics, dinner timing irregularity was associated with higher depressive symptom scores (B = 1.08), while breakfast and lunch irregularity showed nothing, and there were no associations with anxiety or stress.",
+      "why_it_matters": "It points to the evening meal specifically as the circadian anchor that may matter for mood \u2014 a much more actionable hypothesis than \"eat regularly\" \u2014 but only a trial can tell whether fixing dinner time does anything.",
+      "caveats": "Cross-sectional \u2014 cannot establish direction (low mood may itself disorganize eating); convenience sampling; self-reported symptoms and dietary recall; the categorical tertile analysis was null, with the finding surviving only in continuous models; single country.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "a specific, testable meal-timing signal that readers can picture; cross-sectional convenience sample and a null on the categorical analysis temper it.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Erratic dinner times are linked to more depressive symptoms \u2014 breakfast and lunch aren't",
+          "hook": "It points to the evening meal specifically as the circadian anchor that may matter for mood \u2014 a much more actionable hypothesis than \"eat regularly\" \u2014 but only a trial can tell whether fixing dinner time does anything.",
+          "pitch_angle": "Of three daily meals, only one tracked with depressive symptoms. Open on a shift worker or a parent whose dinner lands anywhere between 6pm and 11pm, then explain why the evening meal may be the body clock's most important non-light cue. Call Sakineh Shab-Bidar at Tehran University of Medical Sciences. Do not imply that changing dinner time treats depression.",
+          "why_it_fits": "a specific, testable meal-timing signal that readers can picture; cross-sectional convenience sample and a null on the categorical analysis temper it.",
+          "caveats_to_flag": "Cross-sectional \u2014 cannot establish direction (low mood may itself disorganize eating); convenience sampling; self-reported symptoms and dietary recall; the categorical tertile analysis was null, with the finding surviving only in continuous models; single country."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Erratic dinner times are linked to more depressive symptoms \u2014 breakfast and lunch aren't (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a nutrition or lifestyle outlet: the emerging science of chrononutrition \u2014 when you eat versus what you eat \u2014 and why time-restricted eating trials have so far focused on metabolism and ignored mood.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Cross-sectional \u2014 cannot establish direction (low mood may itself disorganize eating); convenience sampling; self-reported symptoms and dietary recall; the categorical tertile analysis was null, with the finding surviving only in continuous models; single country."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42693548",
+      "headline": "Children born preterm run hot: raised heart rate at five, but normal stress regulation",
+      "journal": "Psychophysiology",
+      "pubdate": "September 2026",
+      "doi": "10.1111/psyp.70393",
+      "category": "Psychophysiology",
+      "groundbreaking": "Overturns prior research",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Seventy preterm-born children aged 5.5 years and 32 matched full-term controls had heart rate and heart rate variability recorded at rest and during structured social interactions with their mother and with a stranger, including eye contact, conversation and triadic play. Preterm children showed more social difficulties and internalizing problems and consistently higher heart rate across all conditions \u2014 but their heart rate variability tracked social context in exactly the same way as full-term peers, with conversation the most physiologically demanding task for both groups.",
+      "why_it_matters": "It suggests prematurity's autonomic legacy is elevated baseline arousal rather than a broken regulatory system, which changes what any intervention should be aiming at.",
+      "caveats": "Small N by cohort standards (70 vs 32), single center, 98% White sample so limited generalizability; cross-sectional at one age; parent-reported social difficulties.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "cleanly separates \"aroused\" from \"dysregulated,\" which reframes a common assumption; modest sample and one age point.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Children born preterm run hot: raised heart rate at five, but normal stress regulation",
+          "hook": "It suggests prematurity's autonomic legacy is elevated baseline arousal rather than a broken regulatory system, which changes what any intervention should be aiming at.",
+          "pitch_angle": "The finding is a distinction people rarely make: being permanently on edge is not the same as being unable to calm down. Open on a five-year-old meeting a stranger, heart racing but regulating normally. Call Bart Boets at KU Leuven. Also worth noting: talking to someone stressed both groups more than making eye contact did.",
+          "why_it_fits": "cleanly separates \"aroused\" from \"dysregulated,\" which reframes a common assumption; modest sample and one age point.",
+          "caveats_to_flag": "Small N by cohort standards (70 vs 32), single center, 98% White sample so limited generalizability; cross-sectional at one age; parent-reported social difficulties."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Children born preterm run hot: raised heart rate at five, but normal stress regulation (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a parenting or neonatology outlet: what follow-up care for preterm children currently monitors (motor and cognitive milestones) versus what these data suggest it should also track (arousal and social-emotional function into school age).",
+          "why_it_fits": "",
+          "caveats_to_flag": "Small N by cohort standards (70 vs 32), single center, 98% White sample so limited generalizability; cross-sectional at one age; parent-reported social difficulties."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42683544",
+      "headline": "When childhood abuse happens may matter more than how much of it there was",
+      "journal": "European Journal of Psychotraumatology",
+      "pubdate": "2 September 2026",
+      "doi": "10.1080/20008066.2026.2711481",
+      "category": "Psychiatry",
+      "groundbreaking": "Counterintuitive",
+      "media_coverage": "Not verified \u2014 SerpAPI lookup failed",
+      "summary": "Researchers measured blood markers of oxidative stress in 116 young adults (mean age 26.3) who had spent time in residential care as children, and mapped them against detailed year-by-year histories of maltreatment type and timing. Abuse during adolescence was associated with higher glutathione reductase and neglect with lower levels; neglect at ages 8 and 12 stood out for the GPx/GRed ratio. Overall severity, multiplicity and total duration of maltreatment showed no association with any marker.",
+      "why_it_matters": "Adversity research overwhelmingly uses cumulative \"how many, how bad\" scores; this suggests those totals may obscure biologically specific windows in which particular kinds of harm register.",
+      "caveats": "Small N (116) with only 30.5% women; observational and cross-sectional; retrospective recall of childhood timing; exploratory random-forest analysis with many predictors; care-experienced population is not representative; oxidative stress markers have uncertain clinical meaning.",
+      "fact_check_note": "\u2705 Accurate",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "the null on cumulative severity is the interesting part; small N and exploratory machine-learning approach limit confidence.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "When childhood abuse happens may matter more than how much of it there was",
+          "hook": "Adversity research overwhelmingly uses cumulative \"how many, how bad\" scores; this suggests those totals may obscure biologically specific windows in which particular kinds of harm register.",
+          "pitch_angle": "The surprise is a null: the more-is-worse ACE score model found nothing here, while narrow age windows did. Open on the difference between a childhood tallied as a score and one reconstructed year by year. Call Vera Clemens at University Hospital Ulm or David B\u00fcrgin in Basel. Frame strictly as biomarker association, not risk prediction.",
+          "why_it_fits": "the null on cumulative severity is the interesting part; small N and exploratory machine-learning approach limit confidence.",
+          "caveats_to_flag": "Small N (116) with only 30.5% women; observational and cross-sectional; retrospective recall of childhood timing; exploratory random-forest analysis with many predictors; care-experienced population is not representative; oxidative stress markers have uncertain clinical meaning."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "When childhood abuse happens may matter more than how much of it there was (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a specialist or long-read outlet: the growing challenge to the ACE score, the single most influential instrument in child trauma policy, and what a timing-sensitive replacement would look like in practice.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Small N (116) with only 30.5% women; observational and cross-sectional; retrospective recall of childhood timing; exploratory random-forest analysis with many predictors; care-experienced population is not representative; oxidative stress markers have uncertain clinical meaning."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42419608",
+      "headline": "Children whose parents and coaches both push winning report the most stress \u2014 and the least fun",
+      "journal": "Psychology of Sport and Exercise",
+      "pubdate": "September 2026",
+      "doi": "10.1016/j.psychsport.2026.103216",
+      "category": "Psychology",
+      "groundbreaking": "First-in-class",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "A total of 347 adolescent athletes (65% female, mean age 12.5) rated the motivational climates created by their parents and their coaches, along with their own goal orientations, enjoyment and stress. Latent profile analysis identified five combined climate profiles. Athletes in predominantly mastery-focused profiles reported high enjoyment and low stress; those in performance-leaning profiles reported the reverse; and, notably, athletes getting both mastery and performance messaging from both adults reported adaptive *and* maladaptive outcomes simultaneously.",
+      "why_it_matters": "It shows that parents and coaches don't cancel each other out \u2014 mixed messages from both sides produce a mixed psychological profile, not a neutral one.",
+      "caveats": "Cross-sectional and entirely self-reported by the athletes; single-country sample; profiles are descriptive and cannot establish that climate causes stress; N = 347 spread across five profiles leaves some groups small.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "first study to profile parent and coach climates together rather than separately, with a relatable result; self-report and cross-sectional.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Children whose parents and coaches both push winning report the most stress \u2014 and the least fun",
+          "hook": "It shows that parents and coaches don't cancel each other out \u2014 mixed messages from both sides produce a mixed psychological profile, not a neutral one.",
+          "pitch_angle": "Open on the touchline: a coach shouting about effort and a parent shouting about the scoreboard. The new finding is what happens when a child gets both messages at once \u2014 they get the enjoyment and the stress. Call Sarah Fuller and Erin Moore at East Carolina University.",
+          "why_it_fits": "first study to profile parent and coach climates together rather than separately, with a relatable result; self-report and cross-sectional.",
+          "caveats_to_flag": "Cross-sectional and entirely self-reported by the athletes; single-country sample; profiles are descriptive and cannot establish that climate causes stress; N = 347 spread across five profiles leaves some groups small."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Children whose parents and coaches both push winning report the most stress \u2014 and the least fun (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a sports or parenting outlet: youth sport dropout rates around ages 12\u201314, and whether the climate a child is embedded in \u2014 rather than talent or injury \u2014 is the real predictor of who quits.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Cross-sectional and entirely self-reported by the athletes; single-country sample; profiles are descriptive and cannot establish that climate causes stress; N = 347 spread across five profiles leaves some groups small."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42607893",
+      "headline": "Growing up in a war zone changes which brain circuits track a child's attachment style",
+      "journal": "Journal of Affective Disorders",
+      "pubdate": "1 December 2026 (online 18 August 2026)",
+      "doi": "10.1016/j.jad.2026.122394",
+      "category": "Psychiatry",
+      "groundbreaking": "New mechanism",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Seventy-nine children in Israel \u2014 42 with war-related exposure, 37 without \u2014 underwent resting-state fMRI plus assessments of attachment characteristics and parent-reported executive function. The groups did not differ in attachment or, after adjustment, in executive function. But the brain\u2013behavior coupling diverged: in war-exposed children, attachment anxiety and avoidance tracked reduced cingulate\u2013amygdala connectivity, whereas in unexposed children the same traits tracked reduced amygdala\u2013hippocampal connectivity.",
+      "why_it_matters": "It suggests extreme environmental unpredictability doesn't necessarily produce a uniformly \"damaged\" brain or personality, but rewires which circuits carry a given psychological trait \u2014 a subtler model of adversity than group-difference studies deliver.",
+      "caveats": "Observational, cross-sectional, N = 79; some key network results did not survive correction for multiple comparisons and the authors flag them as tentative; parent-reported executive function; exposure index structured but unvalidated; no longitudinal follow-up.",
+      "fact_check_note": "\u2705 Accurate",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "timely and methodologically careful about what it doesn't show; modest N and uncorrected secondary results.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Growing up in a war zone changes which brain circuits track a child's attachment style",
+          "hook": "It suggests extreme environmental unpredictability doesn't necessarily produce a uniformly \"damaged\" brain or personality, but rewires which circuits carry a given psychological trait \u2014 a subtler model of adversity than group-difference studies deliver.",
+          "pitch_angle": "The result nobody expects: war-exposed and unexposed children looked the same on attachment questionnaires and, after adjustment, on executive function. The difference was only visible in which circuits the traits mapped onto. Call Tzipi Horowitz-Kraus at the Technion. Emphasize preliminary status.",
+          "why_it_fits": "timely and methodologically careful about what it doesn't show; modest N and uncorrected secondary results.",
+          "caveats_to_flag": "Observational, cross-sectional, N = 79; some key network results did not survive correction for multiple comparisons and the authors flag them as tentative; parent-reported executive function; exposure index structured but unvalidated; no longitudinal follow-up."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Growing up in a war zone changes which brain circuits track a child's attachment style (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a foreign-affairs or long-form outlet: the science of measuring war's effect on children, and why the standard toolkit \u2014 symptom checklists, group comparisons \u2014 may systematically miss what conflict actually does to developing brains.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Observational, cross-sectional, N = 79; some key network results did not survive correction for multiple comparisons and the authors flag them as tentative; parent-reported executive function; exposure index structured but unvalidated; no longitudinal follow-up."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42679763",
+      "headline": "The largest genetic map yet of everyday moodiness and impulsivity points to two different brain regions",
+      "journal": "European Neuropsychopharmacology",
+      "pubdate": "1 September 2026",
+      "doi": "10.1016/j.euroneuro.2026.113546",
+      "category": "Psychopharmacology",
+      "groundbreaking": "First-in-class",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Using genomic structural equation modeling across 13 genome-wide association studies of non-clinical population traits (samples of 64,000 to 1.2 million), researchers built two-factor models of externalizing (impulsive, outward-directed) and internalizing (anxious, inward-directed) behavior. They found 184 genome-wide significant loci for externalizing and 31 for internalizing, plus 70 novel genes. Single-cell expression pointed to hippocampal CA4 neurons for externalizing and amygdalar excitatory neurons for internalizing, and internalizing polygenic scores predicted emotional well-being in an independent cohort of 4,565 people.",
+      "why_it_matters": "It suggests the two broadest dimensions of human temperament have partly distinct cellular addresses in the brain, and that the genetics of ordinary personality variation shade continuously into psychiatric diagnoses rather than being separate.",
+      "caveats": "Predominantly European-ancestry GWAS data \u2014 will not generalize globally; effect sizes at the individual level are tiny and non-predictive; enrichment analyses are inferential, not direct measurements of brain tissue; industry-adjacent disclosure (BF has received speaking fees and travel support from Medice).",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 5,
+      "ns_score_reason": "enormous sample and a clean anatomical dissociation; genomic-SEM stories are hard to make vivid for general readers.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "The largest genetic map yet of everyday moodiness and impulsivity points to two different brain regions",
+          "hook": "It suggests the two broadest dimensions of human temperament have partly distinct cellular addresses in the brain, and that the genetics of ordinary personality variation shade continuously into psychiatric diagnoses rather than being separate.",
+          "pitch_angle": "Two of the oldest categories in psychology \u2014 acting out versus turning inward \u2014 turn out to point at two different neuron populations. Open on the continuum question: the same variants that make someone restless in the general population are the ones enriched in ADHD and substance-use disorder. Call Barbara Franke at Radboud University Medical Center.",
+          "why_it_fits": "enormous sample and a clean anatomical dissociation; genomic-SEM stories are hard to make vivid for general readers.",
+          "caveats_to_flag": "Predominantly European-ancestry GWAS data \u2014 will not generalize globally; effect sizes at the individual level are tiny and non-predictive; enrichment analyses are inferential, not direct measurements of brain tissue; industry-adjacent disclosure (BF has received speaking fees and travel support from Medice)."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "The largest genetic map yet of everyday moodiness and impulsivity points to two different brain regions (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a specialist genetics outlet: the rise of genomic structural equation modeling and transdiagnostic psychiatry, and what it means for a diagnostic system built on discrete categories.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Predominantly European-ancestry GWAS data \u2014 will not generalize globally; effect sizes at the individual level are tiny and non-predictive; enrichment analyses are inferential, not direct measurements of brain tissue; industry-adjacent disclosure (BF has received speaking fees and travel support from Medice)."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42687444",
+      "headline": "Older men with more mentally rich lifestyles report less stress \u2014 but more loneliness",
+      "journal": "Brain and Behavior",
+      "pubdate": "September 2026",
+      "doi": "10.1002/brb3.71714",
+      "category": "Behavioral Sciences",
+      "groundbreaking": "Counterintuitive",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Eighty independently living Spanish adults aged 65\u2013101 completed measures of cognitive reserve (built from educational, occupational and leisure engagement), stress, anxiety, loneliness and life satisfaction, plus memory-span and spatial-cueing attention tasks. Among men only, higher cognitive reserve scores were associated with both lower perceived stress and greater reported loneliness. Cognitive reserve related to some attention measures but not to memory span.",
+      "why_it_matters": "Not much yet \u2014 but it raises an awkward question for the \"stay mentally active\" prescription: some of the activities that build reserve are solitary, and the trade-off with social connection has barely been examined.",
+      "caveats": "Small N (80), cross-sectional, exploratory with no pre-registration; sex-specific findings from subgroups of roughly 33 men and 47 women and explicitly flagged by the authors as needing caution; self-reported stress and loneliness; Spanish community sample only.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 4,
+      "ns_score_reason": "the paradox is genuinely odd, but the study is explicitly exploratory with N = 80 and sex-split results the authors themselves distrust.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Older men with more mentally rich lifestyles report less stress \u2014 but more loneliness",
+          "hook": "Not much yet \u2014 but it raises an awkward question for the \"stay mentally active\" prescription: some of the activities that build reserve are solitary, and the trade-off with social connection has barely been examined.",
+          "pitch_angle": "The uncomfortable possibility is that a lifetime of reading, studying and solitary hobbies buys cognitive resilience at a social cost \u2014 at least for men. Open on a retired engineer with a full bookshelf and a quiet phone. Call Mikhail Ordin at the University of the Basque Country, and be upfront that this is hypothesis-generating.",
+          "why_it_fits": "the paradox is genuinely odd, but the study is explicitly exploratory with N = 80 and sex-split results the authors themselves distrust.",
+          "caveats_to_flag": "Small N (80), cross-sectional, exploratory with no pre-registration; sex-specific findings from subgroups of roughly 33 men and 47 women and explicitly flagged by the authors as needing caution; self-reported stress and loneliness; Spanish community sample only."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Older men with more mentally rich lifestyles report less stress \u2014 but more loneliness (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a general-interest or aging outlet: how \"cognitive reserve\" became a consumer product \u2014 brain-training apps, adult education, puzzle subscriptions \u2014 and how thin the evidence for the leisure component of the construct actually is.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Small N (80), cross-sectional, exploratory with no pre-registration; sex-specific findings from subgroups of roughly 33 men and 47 women and explicitly flagged by the authors as needing caution; self-reported stress and loneliness; Spanish community sample only."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42683538",
+      "headline": "A key theory of what drives suicidal thinking holds up in the US but not in the UK",
+      "journal": "Archives of Suicide Research",
+      "pubdate": "2 September 2026",
+      "doi": "10.1080/13811118.2026.2724116",
+      "category": "Behavioral Sciences",
+      "groundbreaking": "Failed replication",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Testing the Integrated Motivational-Volitional model of suicide, researchers examined whether sexual and gender minority (SGM) status changes the relationship between feelings of defeat and entrapment and suicidal thoughts, across a US college sample (n = 865) and a UK adult community sample (n = 734). Defeat and entrapment predicted suicidal ideation in both samples and SGM participants reported more lifetime ideation in both. But the moderation effect \u2014 entrapment mattering more for SGM people \u2014 appeared only in the US students and did not replicate in the UK adults.",
+      "why_it_matters": "It suggests the core psychological mechanism is universal while the identity-specific amplification is context-dependent, which matters for whether prevention programs can be exported wholesale between countries.",
+      "caveats": "Cross-sectional, self-reported; samples differ in both country and life stage (students versus community adults), confounding the comparison; SGM defined broadly, collapsing very different groups; suicidal ideation measured retrospectively.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 4,
+      "ns_score_reason": "an honest cross-national non-replication of a moderation effect, which is useful but technical; the main effects replicate fine.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "A key theory of what drives suicidal thinking holds up in the US but not in the UK",
+          "hook": "It suggests the core psychological mechanism is universal while the identity-specific amplification is context-dependent, which matters for whether prevention programs can be exported wholesale between countries.",
+          "pitch_angle": "Two samples, one theory, two different answers about whether minority stress amplifies entrapment. Open on the question of whether a US college campus and a UK community sample are even measuring the same social experience. Call Rory O'Connor at the University of Glasgow, who developed the IMV model.",
+          "why_it_fits": "an honest cross-national non-replication of a moderation effect, which is useful but technical; the main effects replicate fine.",
+          "caveats_to_flag": "Cross-sectional, self-reported; samples differ in both country and life stage (students versus community adults), confounding the comparison; SGM defined broadly, collapsing very different groups; suicidal ideation measured retrospectively."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "A key theory of what drives suicidal thinking holds up in the US but not in the UK (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a science-methods or specialist outlet: the replication problem in moderation analyses specifically \u2014 interaction effects are underpowered almost everywhere in psychology, and this study is a clean worked example.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Cross-sectional, self-reported; samples differ in both country and life stage (students versus community adults), confounding the comparison; SGM defined broadly, collapsing very different groups; suicidal ideation measured retrospectively."
+        }
+      ],
+      "run_date": "2026-09-06",
+      "status": "new"
+    },
+    {
+      "pmid": "42658624",
+      "headline": "Nonbinary people describe the current political climate in the language of trauma and bereavement",
+      "journal": "American Psychologist",
+      "pubdate": "September 2026",
+      "doi": "10.1037/amp0001640",
+      "category": "Psychology",
+      "groundbreaking": "First-in-class",
+      "media_coverage": "Not verified \u2014 SerpAPI unavailable this run",
+      "summary": "Using mixed methods, researchers thematically analyzed open-text survey responses from nonbinary people about the impact of the current US sociopolitical climate, then tested whether themes differed by race, gender expression and geography. Four themes emerged \u2014 trauma and stress from the climate, grief over lost self and lost connection to society, emotional consequences, and resistance. Rural participants more often described a loss of authenticity; gender-nonconforming participants more often described a loss of possible future.",
+      "why_it_matters": "It makes the case that sustained legislative hostility functions psychologically like a chronic trauma exposure rather than as ordinary political stress \u2014 a framing with direct implications for how clinicians assess and code such distress.",
+      "caveats": "Qualitative write-in responses with no control group or baseline; self-selected survey sample, likely skewed toward the most affected; chi-square subgroup comparisons on theme endorsement are exploratory; US-specific and time-bound; no clinical outcome measures.",
+      "fact_check_note": "\u26a0\ufe0f Minor issues",
+      "excluded": false,
+      "ns_score": 4,
+      "ns_score_reason": "genuinely novel framing of political events as a trauma exposure, in a flagship journal; qualitative design and no quantitative outcomes cap it.",
+      "pitch_angles": [
+        {
+          "publication_type": "New Scientist Mind",
+          "headline": "Nonbinary people describe the current political climate in the language of trauma and bereavement",
+          "hook": "It makes the case that sustained legislative hostility functions psychologically like a chronic trauma exposure rather than as ordinary political stress \u2014 a framing with direct implications for how clinicians assess and code such distress.",
+          "pitch_angle": "The most striking finding is grammatical: participants describe a *future* they have lost, not only a present they endure \u2014 anticipatory grief as a stress exposure. Open on a rural nonbinary participant describing dressing differently to leave the house. Call Em Matsuno at Arizona State University.",
+          "why_it_fits": "genuinely novel framing of political events as a trauma exposure, in a flagship journal; qualitative design and no quantitative outcomes cap it.",
+          "caveats_to_flag": "Qualitative write-in responses with no control group or baseline; self-selected survey sample, likely skewed toward the most affected; chi-square subgroup comparisons on theme endorsement are exploratory; US-specific and time-bound; no clinical outcome measures."
+        },
+        {
+          "publication_type": "Wider angle \u2014 elsewhere",
+          "headline": "Nonbinary people describe the current political climate in the language of trauma and bereavement (wider angle)",
+          "hook": "",
+          "pitch_angle": "For a policy or health-affairs outlet: the emerging concept of \"sociopolitical trauma\" and whether psychology's diagnostic frameworks, built around discrete threatening events, can accommodate a slow-moving legislative environment.",
+          "why_it_fits": "",
+          "caveats_to_flag": "Qualitative write-in responses with no control group or baseline; self-selected survey sample, likely skewed toward the most affected; chi-square subgroup comparisons on theme endorsement are exploratory; US-specific and time-bound; no clinical outcome measures."
         }
       ],
       "run_date": "2026-09-06",

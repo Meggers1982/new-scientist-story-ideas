@@ -2,17 +2,21 @@
 _Last updated: 2026-09-06_
 
 ## Established findings
-- (none yet established across runs — first digest on this topic, 2026-09-06)
+- Loneliness carries risk independent of depression, anxiety and network size, and behaves like an appraisal/regulation problem rather than a headcount (42456921 Sep 2026; 42642073 Sep–Oct 2026).
+- Which measure you use determines whether a treatment "works": self-report versus blinded clinician ratings, actigraphy versus questionnaires, publication-bias-adjusted versus raw effects (42660579, 42173054 Sep 2026; 42680058, 42658011, 42691284 Sep 2026).
+- Unbundling composite stress/adversity constructs changes the direction or existence of effects (acculturation pressure 42682243; cumulative ACE-style scores vs timing 42683544; meal timing by meal 42624213).
+- Intensive daily sampling repeatedly overturns retrospective accounts of stress: no stress–inactivity link (42612762), bidirectional day-scale ADHD–stress loop (42695429), chronic stress blunting rather than amplifying daily reactivity (42595230).
 
 ## Emerging threads
-- Stress as an explanatory variable is shrinking under better measurement: null or reversed stress–exercise link with hourly EMA (42612762, Sep 2026), failed stress modulation of Pavlovian-to-instrumental transfer (41680576, Sep 2026), bruxism–chewing link surviving adjustment for perceived stress (42681265, Sep 2026), stress–discounting effect present at $100 but absent at $10,000 (42693377, Sep 2026).
-- Sleep framed as a parallel treatment target rather than a downstream symptom: adding sleep work to PTSD exposure therapy improved actigraphy-measured sleep only at 6 months while exposure-only sleep worsened (42660579); frequent napping in Navy sailors linked to lower job stress but higher burnout (42692480); perfectionism damaging sleep indirectly via daily stress (41989986).
-- Symptom checklists may index distress rather than pathology: post-concussion symptoms tracked psychological distress and anxiety sensitivity, with orthopedic controls reporting similar complaints (42173054).
-- Resilience and social support behaving differently than assumed: resilience as main effect but not a buffer for OCD-plus-interpersonal-trauma youth (42697249); family support predicting depression/suicide attempts in homeless youth while friend support showed nothing (42691267).
-- Unbundling composite stress constructs changes the answer: pressure *against* acculturation, not pressure to assimilate, tracked drinking in Hispanic students (42682243).
-- Trauma treatment delivered under ongoing threat: large uncontrolled pre-post effects for EMDR with Ukrainian children during active war, via a brief-training cascade model (42635370).
-- Multimorbidity and stress vulnerability may compound supra-additively rather than additively (COH-FIT, 121,066 adults, 42686352) — watch for replication outside retrospective self-report.
+- Adversity research shifting from dose to pattern: timing windows, circuit remapping without group differences, arousal-versus-regulation dissociations (42683544, 42607893, 42693548, 42419608).
+- Political/legislative climates and active war framed as chronic trauma exposures with their own psychological signature (42658624, 42607893; cf. 42635370).
+- Procrastination as a stress-generating trait with body-wide correlates, now supported at both trait and day level (42569817, 42695429).
+- Sleep as a parallel psychiatric target rather than downstream symptom (42660579, 42692480, 41989986) — no new entries this run; watch whether it recurs.
+- PTSD epidemiology flat since 2007 with markedly longer time to remission in women (42303590) — needs replication outside Australia.
+- Contradiction to watch: newborn sensitivity to within-language rhythm (42464912) versus syllable-as-universal-default in 4–8-month-olds (42621832).
+- Genomics entering the batch: distinct cellular signatures for externalizing vs internalizing temperament (42679763); first appearance, unreplicated here.
 
 ## Feature ideas already pitched
-- 2026-09-06: "What stress stops predicting when you measure it every hour" — cross-study methodological squeeze on the stress construct (EMA, adjusted models, lab manipulation nulls, magnitude-dependent effects); PMIDs 42612762, 41680576, 42681265, 42693377, 42697249. Suggested: New Scientist Features, Undark, The Atlantic Health, BBC Future.
-- Not yet pitched but noted as a live alternative: sleep as parallel psychiatric target across PTSD, occupational burnout and perfectionism (42660579, 42692480, 41989986).
+- 2026-09-06 (run 1): "What stress stops predicting when you measure it every hour" — methodological squeeze on the stress construct via EMA, adjusted models and lab nulls (42612762, 41680576, 42681265, 42693377, 42697249). New Scientist Features, Undark, The Atlantic Health, BBC Future.
+- 2026-09-06 (run 2): "Timing of childhood abuse showed up in the blood; the total amount did not" — dose-to-pattern shift in adversity measurement, ACE score under challenge (42683544, 42624213, 42607893, 42693548, 42419608). New Scientist Features, Undark, STAT, Knowable.
+- Live alternatives not yet pitched: (a) sleep as parallel psychiatric target across PTSD, burnout and perfectionism; (b) the self-report/clinician-rating gap as a consumer-protection story about neuromodulation and wellness marketing.
