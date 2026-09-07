@@ -1,10 +1,11 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 61,
+  "run_count": 62,
   "topics": [
     "addiction",
     "anxiety",
     "autism",
+    "bipolar",
     "dementia",
     "depression",
     "exercise",
@@ -17,6 +18,16 @@
     "trauma"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-bipolar-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Bipolar \u2014 September 2026",
+      "topic": "bipolar",
+      "run_date": "2026-09-07",
+      "study_count": 11,
+      "top_score": 7,
+      "total_issues": "19 (13 Minor, 6 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 bipolar \u2014 september 2026 bipolar bipolar genes for addiction \u2014 not for drinking or smoking as such \u2014 explain why bipolar disorder and substance problems travel together 42636965 biological psychiatry serotonin abnormality blamed on borderline personality disorder turns out to belong to depression 42173043 journal of psychiatric research more data beats smarter algorithms when predicting bipolar disorder in children 42600789 journal of affective disorders most people with bipolar depression would not qualify for the trials that produced their treatment guidelines 42575197 journal of affective disorders stimulating the balance organ changes how quickly you recognize your own face 42276516 biological psychology two stages of treatment-resistant depression turn out to be two different conditions 41904070 international clinical psychopharmacology veterans with ptsd improve faster in borderline personality disorder therapy, not slower 41084836 cognitive behaviour therapy bipolar disorder and schizophrenia look identical in blood tests at the first psychotic episode 42112712 international journal of psychiatry in clinical practice shame about a bipolar diagnosis damages daily functioning through a specific route 42113129 psychiatric rehabilitation journal loading the dose of a long-acting antipsychotic upfront shortens hospital stays for women 41924987 journal of clinical psychopharmacology memory circuits go wrong in different ways in schizophrenia and bipolar disorder 42679550 journal of psychiatric research"
+    },
     {
       "id": "new-scientist-story-ideas-stress-september-2026",
       "title": "New Scientist Story Ideas \u2014 Stress \u2014 September 2026",
