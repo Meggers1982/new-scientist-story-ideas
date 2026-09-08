@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 62,
+  "run_count": 63,
   "topics": [
     "addiction",
     "anxiety",
@@ -8,6 +8,7 @@
     "bipolar",
     "dementia",
     "depression",
+    "emotion regulation",
     "exercise",
     "memory",
     "neuroimaging",
@@ -18,6 +19,16 @@
     "trauma"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-emotion-regulation-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Emotion Regulation \u2014 September 2026",
+      "topic": "emotion regulation",
+      "run_date": "2026-09-08",
+      "study_count": 22,
+      "top_score": 7,
+      "total_issues": "34 (28 Minor, 5 Moderate, 1 Major)",
+      "search": "new scientist story ideas \u2014 emotion regulation \u2014 september 2026 emotion regulation emotion regulation distracting yourself from something upsetting makes it hit harder the next time you see it 42693580 psychophysiology deliberately dampening your own good mood softens the crash that follows 42468402 behaviour research and therapy in depression, reappraisal is barely used \u2014 and distraction only helps when you actually want to feel good 42660575 behavior therapy people will pay money to find out exactly how much a coming pain will hurt 41347565 cognition and emotion being properly listened to makes advice work better \u2014 and shows up as synchrony between two brains 42288208 biological psychology couples who acknowledge each other mid-argument pull each other out of bad moods in real time 42441643 journal of family psychology five weeks of slow breathing changes how the amygdala and prefrontal cortex covary in size 42669395 international journal of psychophysiology four weeks of memory training changes how six-year-olds' brains handle upsetting images 42632448 international journal of psychophysiology depressed patients get real, short-lived relief from telling someone \u2014 then the cycle restarts 41885910 emotion persistent grumpiness and explosive tempers look like different things in children's brains 42702353 journal of child psychology and psychiatry social stress, not trauma, is what stops refugees leaning on other people to manage their feelings 42619365 anxiety, stress and coping how well you read your own body \u2014 not how you think about feelings \u2014 separates the active from the inactive 42413746 psychology of sport and exercise fathers are slower than mothers to respond to a distressed baby \u2014 and three-way play stresses infants most 42269373 infant behavior and development people with functional neurological disorder say they struggle to manage emotions \u2014 the lab does not show it 42704885 biopsychosocial science and medicine whether you cry in front of someone depends on how agreeable you are \u2014 and on whose sadness it is 42537321 acta psychologica mothers who bottle up their feelings have toddlers with more screen time 42447742 infant behavior and development savoring works just as well on the biggest highs as on the small ones 42398883 biological psychology we rarely use one coping strategy at a time \u2014 and only two combinations actually lower distress 41806361 anxiety, stress and coping sensory sensitivity, not iq, predicts whether self-injury in autistic children gets better or worse 42657937 autism research sixteen hours of home audio reveals which mothers snap when a child gets very upset 41642821 journal of family psychology virtual reality meditation shifts children's heart rhythms in four short sessions 41484577 applied psychophysiology and biofeedback men in treatment for violence describe consent in a long-term relationship as something that stretches 42647097 journal of sex and marital therapy"
+    },
     {
       "id": "new-scientist-story-ideas-bipolar-september-2026",
       "title": "New Scientist Story Ideas \u2014 Bipolar \u2014 September 2026",
