@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 64,
+  "run_count": 65,
   "topics": [
     "addiction",
     "anxiety",
@@ -13,6 +13,7 @@
     "exercise",
     "memory",
     "neuroimaging",
+    "psychotherapy",
     "schizophrenia",
     "sleep",
     "social media",
@@ -20,6 +21,16 @@
     "trauma"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-psychotherapy-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Psychotherapy \u2014 September 2026",
+      "topic": "psychotherapy",
+      "run_date": "2026-09-11",
+      "study_count": 14,
+      "top_score": 7,
+      "total_issues": "24 (19 Minor, 5 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 psychotherapy \u2014 september 2026 psychotherapy psychotherapy exposure therapy for spider phobia works less well when progesterone is high 42700422 psychotherapy and psychosomatics people want their psilocybin natural, even when the synthetic version is chemically identical 42678038 journal of psychoactive drugs psychotherapy use in the us jumped 41 per cent in four years \u2014 and worsening mental health explains only a third of it 42723007 psychiatric services children's therapy works better when the therapist unconsciously mirrors them 42721331 psychotherapy social life doesn't improve during therapy \u2014 it improves for years afterward 42695247 journal of clinical psychology ai writes usable therapy notes \u2014 but misses what clinicians notice 42715612 psychotherapy research automated sentiment analysis of therapy sessions barely matches what human coders see 42708250 psychotherapy research whether a patient had a \"sudden gain\" in therapy depends on which questionnaire you used 40955789 cognitive behaviour therapy trauma-focused therapy for ptsd plus addiction helps veterans more than civilians 41114957 psychological trauma muslim clients say they censor their faith in the therapy room 42068016 psychology and psychotherapy: theory, research and practice in psilocybin trials, giving the active metabolite may be gentler than the drug itself 42668404 journal of psychopharmacology european psychiatrists learn to handle suicide risk mostly by living through a patient's suicide 42622500 international journal of psychiatry in clinical practice indigenous australians reach mental health services more often but get fewer therapy sessions 42592892 australian & new zealand journal of psychiatry when hypnosis makes facial pain worse, it may be revealing where the pain came from 42685357 american journal of clinical hypnosis"
+    },
     {
       "id": "new-scientist-story-ideas-artificial-intelligence-september-2026",
       "title": "New Scientist Story Ideas \u2014 Artificial Intelligence \u2014 September 2026",
