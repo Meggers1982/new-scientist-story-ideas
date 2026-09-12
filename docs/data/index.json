@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 65,
+  "run_count": 66,
   "topics": [
     "addiction",
     "anxiety",
@@ -21,6 +21,16 @@
     "trauma"
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-neuroimaging-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Neuroimaging \u2014 September 2026",
+      "topic": "neuroimaging",
+      "run_date": "2026-09-12",
+      "study_count": 14,
+      "top_score": 8,
+      "total_issues": "21 (14 Minor, 7 Moderate, 0 Major)",
+      "search": "new scientist story ideas \u2014 neuroimaging \u2014 september 2026 neuroimaging neuroimaging people who donate a kidney to a stranger show a reversed brain map of social closeness 42667790 cognition a brain marker for loneliness shows up across depression, schizophrenia and alzheimer's 42044556 european neuropsychopharmacology people with epilepsy in rural china are now dying of strokes and heart disease, not accidents 42704311 epilepsia sleep apnea leaves a fingerprint in the fine wiring of grey matter 42687385 journal of sleep research bilingual children's brains predict the next word in the language they don't learn at school 42667920 brain and language brain scans of \"digital addiction\" converge on the same three regions \u2014 and on serotonin 42190596 journal of psychiatric research in frontotemporal dementia, poor memory scores don't mean a damaged memory system 40995692 assessment your brain treats \"will they cheat me?\" completely differently from \"could i lose?\" 42341477 cortex a model using genes, autism and eeg predicts which delayed children will have intellectual disability 42634999 journal of intellectual disability research learning a language in later life helps \u2014 but only a narrow slice of thinking 42684539 journal of psycholinguistic research schizophrenia's motivation symptoms track how rigidly the cortex is linked together 42176687 schizophrenia research the cerebellum turns up as an unexpected marker of problem gaming 42727812 progress in neuro-psychopharmacology & biological psychiatry mitochondria may shape how fast time feels \u2014 but the evidence is thin 42669931 psychophysiology a genetic epilepsy comes with a second kind of seizure that scans can't see 42704296 epileptic disorders"
+    },
     {
       "id": "new-scientist-story-ideas-psychotherapy-september-2026",
       "title": "New Scientist Story Ideas \u2014 Psychotherapy \u2014 September 2026",
