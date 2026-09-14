@@ -134,6 +134,16 @@ headline/PMID/journal, see each study's NS fit score and fact-check verdict
 inline, and export any run to .docx. When a run includes a feature pitch, a
 "Jump to Feature Pitch" link appears in the run header.
 
+The **type filter** in the sidebar picks out one Novelty type — Counterintuitive,
+First-in-class, New mechanism, Overturns prior research, Failed replication, or
+Included for relevance. It is the same "Counterintuitive finding" tag the topic
+digests carry in `research-digest-dashboard`, where this repo's studies used to
+be filterable by it. It narrows the run list to runs with at least one study of
+that type, badges each run with its count, and shows only those studies in the
+open run (and in its .docx export). The options and their study totals come from
+`novelty_types` in `data/index.json`; per-run counts are each run's
+`novelty_counts`.
+
 The data is split so first load stays flat as runs accumulate: `data/index.json`
 holds only what the sidebar and search box need, and each run's full body lives
 in `data/runs/<id>.json`, fetched on demand when that run is opened.

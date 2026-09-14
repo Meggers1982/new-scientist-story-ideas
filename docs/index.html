@@ -289,6 +289,10 @@
       <select id="topic-filter">
         <option value="">All topics</option>
       </select>
+      <label class="sr-only" for="novelty-filter">Filter by novelty type</label>
+      <select id="novelty-filter">
+        <option value="">All types</option>
+      </select>
     </div>
     <div id="run-count" style="color: var(--muted); font-size: 0.78rem; margin-bottom: 8px;"></div>
     <div class="run-list" id="run-list"></div>
@@ -330,6 +334,9 @@ const state = {
   // Active-only by default: an archived or deleted idea shouldn't keep
   // competing for attention with ones still worth pitching.
   statusFilter: localStorage.getItem(STATUS_FILTER_KEY) || "active",
+  // Sidebar type filter (Counterintuitive, First-in-class, ...). Narrows both
+  // the run list and the open run's studies; not persisted, like the topic filter.
+  noveltyFilter: "",
 };
 
 function saveStudyStatus() {
@@ -362,6 +369,17 @@ function filterByStatus(studies, statusMap, filter) {
 function filterStudies(studies, minScore) {
   if (!minScore) return studies;
   return studies.filter(s => !Number.isFinite(s.ns_score) || s.ns_score >= minScore);
+}
+
+// Split the same way as build_dashboard_data.novelty_types(), so a combined
+// "Counterintuitive / First-in-class" answer matches either type.
+function noveltyTypes(novelty) {
+  return String(novelty || "").split(/\s*[\/;,|]\s*/).filter(Boolean);
+}
+
+function filterByNovelty(studies, type) {
+  if (!type) return studies;
+  return studies.filter(s => noveltyTypes(s.novelty).includes(type));
 }
 
 // Studies with no parsed score sort last rather than being treated as a 0 —
@@ -405,11 +423,8 @@ function verdictClass(verdict) {
 }
 
 function renderSidebar() {
-  const topicSelect = document.getElementById("topic-filter");
-  topicSelect.innerHTML = '<option value="">All topics</option>' +
-    state.data.topics.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
-
   const list = document.getElementById("run-list");
+  const type = state.noveltyFilter;
   list.innerHTML = state.filtered.map(r => `
     <div class="run-card ${r.id === state.activeId ? "active" : ""}" data-id="${r.id}"
          role="button" tabindex="0" aria-current="${r.id === state.activeId ? "true" : "false"}">
@@ -417,6 +432,7 @@ function renderSidebar() {
       <div class="rc-meta">
         <span>${escapeHtml(r.run_date || "—")}</span>
         <span class="badge">${r.study_count} studies</span>
+        ${type ? `<span class="badge">${(r.novelty_counts || {})[type] || 0} ${escapeHtml(type.toLowerCase())}</span>` : ""}
         ${r.top_score ? `<span class="badge ${scoreClass(r.top_score)}">top ${r.top_score}/10</span>` : ""}
         ${r.total_issues ? `<span class="badge">${escapeHtml(r.total_issues)} issues</span>` : ""}
       </div>
@@ -557,17 +573,22 @@ async function renderMain() {
     ? `<div class="fact-summary">Fact check: ${escapeHtml(run.fact_check.summary.total_issues)} total issues · ${escapeHtml(run.fact_check.summary.entries_requiring_revision)} entries need revision · ${escapeHtml(run.fact_check.summary.entries_cleared)} cleared</div>`
     : (run.fact_check ? `<div class="fact-summary">Fact check available (no summary table found)</div>` : "");
 
-  const statusFiltered = filterByStatus(run.studies, state.studyStatus, state.statusFilter);
+  const typeFiltered = filterByNovelty(run.studies, state.noveltyFilter);
+  const statusFiltered = filterByStatus(typeFiltered, state.studyStatus, state.statusFilter);
   const shownStudies = sortStudies(filterStudies(statusFiltered, state.minScore), state.studySort);
-  const emptyReason = statusFiltered.length === 0 && state.statusFilter !== "active"
+  const emptyReason = typeFiltered.length === 0
+    ? `No studies in this run are tagged ${state.noveltyFilter}.`
+    : statusFiltered.length === 0 && state.statusFilter !== "active"
     ? `No studies in this run are ${state.statusFilter}.`
     : `No studies in this run score ${state.minScore}/10 or higher.`;
   const studiesHtml = shownStudies.length
     ? shownStudies.map(s => renderStudy(s, run.fact_check, state.studyStatus[s.pmid])).join("")
     : `<div class="empty-state">${escapeHtml(emptyReason)}</div>`;
   const hiddenByScore = statusFiltered.length - shownStudies.length;
-  const hiddenByStatus = run.studies.length - statusFiltered.length;
+  const hiddenByStatus = typeFiltered.length - statusFiltered.length;
+  const hiddenByType = run.studies.length - typeFiltered.length;
   const noteParts = [];
+  if (hiddenByType) noteParts.push(`${hiddenByType} not ${state.noveltyFilter} hidden`);
   if (hiddenByStatus) noteParts.push(`${hiddenByStatus} archived/deleted hidden`);
   if (hiddenByScore) noteParts.push(`${hiddenByScore} below NS fit ${state.minScore}/10 hidden`);
   const filterNote = noteParts.length
@@ -867,9 +888,12 @@ async function exportRunToDocx(run, studies) {
 function applyFilters() {
   const query = document.getElementById("search").value.trim().toLowerCase();
   const topic = document.getElementById("topic-filter").value;
+  const type = document.getElementById("novelty-filter").value;
+  state.noveltyFilter = type;
 
   state.filtered = state.data.runs.filter(r => {
     if (topic && r.topic !== topic) return false;
+    if (type && !(r.novelty_counts || {})[type]) return false;
     if (!query) return true;
     return (r.search || "").includes(query);
   });
@@ -909,12 +933,23 @@ async function init() {
   state.filtered = state.data.runs;
   state.activeId = state.filtered.length ? state.filtered[0].id : null;
 
+  // Options are filled once here, not on every sidebar render: rebuilding a
+  // select's options resets it to the first one, so the dropdown would show
+  // "All topics" while a topic filter was still applied.
+  document.getElementById("topic-filter").innerHTML = '<option value="">All topics</option>' +
+    state.data.topics.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
+  document.getElementById("novelty-filter").innerHTML = '<option value="">All types</option>' +
+    (state.data.novelty_types || []).map(({ type, count }) =>
+      `<option value="${escapeHtml(type)}">${escapeHtml(type)} (${count})</option>`).join("");
+
   document.getElementById("search").addEventListener("input", applyFilters);
   document.getElementById("topic-filter").addEventListener("change", applyFilters);
+  document.getElementById("novelty-filter").addEventListener("change", applyFilters);
   document.getElementById("home-link").addEventListener("click", (e) => {
     e.preventDefault();
     document.getElementById("search").value = "";
     document.getElementById("topic-filter").value = "";
+    document.getElementById("novelty-filter").value = "";
     applyFilters();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });

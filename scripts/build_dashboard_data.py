@@ -9,6 +9,7 @@ demand when that run is opened."""
 
 import json
 import re
+from collections import Counter
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent.parent
@@ -193,6 +194,21 @@ def _search_blob(run: dict) -> str:
     return " ".join(p for p in parts if p).lower()
 
 
+def novelty_types(novelty: str) -> list:
+    """Split a Novelty value into its types. The prompt asks for one, but a
+    combined answer ("Counterintuitive / First-in-class") should count under
+    each rather than become a type of its own. docs/index.html splits the same
+    way when it filters a run's studies."""
+    return [t for t in re.split(r"\s*[/;,|]\s*", novelty or "") if t]
+
+
+def _novelty_counts(run: dict) -> dict:
+    """Per-type study counts, so the sidebar's type filter can narrow the run
+    list without fetching every run body."""
+    counts = Counter(t for s in run.get("studies", []) for t in novelty_types(s.get("novelty", "")))
+    return dict(counts.most_common())
+
+
 def _index_entry(run: dict) -> dict:
     fact_check = run.get("fact_check") or {}
     summary = fact_check.get("summary") or {}
@@ -205,6 +221,7 @@ def _index_entry(run: dict) -> dict:
         "study_count": run.get("study_count", 0),
         "top_score": max(scores) if scores else None,
         "total_issues": summary.get("total_issues", ""),
+        "novelty_counts": _novelty_counts(run),
         "search": _search_blob(run),
     }
 
@@ -245,11 +262,17 @@ def main() -> None:
     for path in stale:
         path.unlink()
 
+    entries = [_index_entry(r) for r in runs]
+    novelty_totals = Counter()
+    for entry in entries:
+        novelty_totals.update(entry["novelty_counts"])
     index = {
         "generated_from": "outputs/*.md",
         "run_count": len(runs),
         "topics": sorted({r["topic"] for r in runs if r["topic"]}),
-        "runs": [_index_entry(r) for r in runs],
+        # Most common first, with study totals, for the sidebar's type filter.
+        "novelty_types": [{"type": t, "count": n} for t, n in novelty_totals.most_common()],
+        "runs": entries,
     }
     DASHBOARD_INDEX_PATH.write_text(json.dumps(index, indent=2), encoding="utf-8")
 
