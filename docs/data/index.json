@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 66,
+  "run_count": 67,
   "topics": [
     "addiction",
     "anxiety",
@@ -23,7 +23,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 611
+      "count": 613
     },
     {
       "type": "Included for relevance",
@@ -31,15 +31,15 @@
     },
     {
       "type": "First-in-class",
-      "count": 176
+      "count": 178
     },
     {
       "type": "New mechanism",
-      "count": 81
+      "count": 88
     },
     {
       "type": "Overturns prior research",
-      "count": 44
+      "count": 45
     },
     {
       "type": "Failed replication",
@@ -47,6 +47,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-social-media-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Social Media \u2014 September 2026",
+      "topic": "social media",
+      "run_date": "2026-09-14",
+      "study_count": 12,
+      "top_score": 8,
+      "total_issues": "15 (12 Minor, 3 Moderate, 0 Major)",
+      "novelty_counts": {
+        "New mechanism": 7,
+        "Counterintuitive": 2,
+        "First-in-class": 2,
+        "Overturns prior research": 1
+      },
+      "search": "new scientist story ideas \u2014 social media \u2014 september 2026 social media social media posts loaded with moral language get less engagement, not more 42686956 nature human behaviour ai influencers dent women's body image just as much as real ones 42379075 body image a dose of negative social media posts about iuds is enough to put people off them 42641053 the journal of sex research heaviest phone users either zone out completely \u2014 or barely at all 42492199 acta psychologica algorithms and chatbots are distorting what we learn from each other \u2014 in opposite directions 42715802 current opinion in psychology checking your ex's instagram is about distress, not attachment style 42388174 cyberpsychology, behavior, and social networking fear of missing out may be what turns disaster feeds into lasting distress 42722509 the journal of general psychology burnt-out teenagers scroll more \u2014 and that may raise their eating disorder risk 41580900 journal of health psychology reddit posts reveal how people really take one of the most intense psychedelics 42704210 journal of psychoactive drugs online victimization stands out in depressed teenagers who have attempted suicide 42714373 archives of suicide research fear of missing out is tied to brooding, not to healthy self-reflection 41622812 anxiety, stress, & coping loneliness may push people toward impulse buying online, via self-esteem and fomo 42594777 acta psychologica"
+    },
     {
       "id": "new-scientist-story-ideas-neuroimaging-september-2026",
       "title": "New Scientist Story Ideas \u2014 Neuroimaging \u2014 September 2026",
