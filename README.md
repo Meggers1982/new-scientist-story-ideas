@@ -56,12 +56,9 @@ below.
    same study is never pitched twice.
 10. **Rebuilds the dashboard** (`build_dashboard_data.py`) — parses every digest +
     fact-check in `outputs/` into `docs/data/`.
-11. **Refreshes the aggregator feed** (`build_aggregator_feed.py`) — see below.
-12. **Commits everything back** — `outputs/`, `topic_memory/`, `docs/` and
-    `data/results.json` and `seen_pmids.json` are committed and pushed by the
-    workflow, so history accumulates in the repo and Vercel redeploys
-    automatically. The workflow then pings `research-digest-dashboard` to pull
-    the new feed.
+11. **Commits everything back** — `outputs/`, `topic_memory/`, `docs/` and
+    `seen_pmids.json` are committed and pushed by the workflow, so history
+    accumulates in the repo and Vercel redeploys automatically.
 
 Nothing is ever overwritten: if two digests would land on the same filename
 (e.g. two runs on the same topic in one month), `main.py` appends "(Part N)".
@@ -152,11 +149,7 @@ dashboard has exactly one viewer, so there was no case for a shared backend
 (unlike `research-digest-dashboard`'s move to Neon Postgres, which exists
 because that dashboard has more than one). Archiving or deleting a study never
 changes its underlying data — a study hidden by "Active only" is still in
-`docs/data/`, restorable at any time with the **Restore** button, and it's
-still included in the flat aggregator feed
-(`data/results.json`/`build_aggregator_feed.py`), since that feed is a record
-of everything ever pitched, not a view of what's currently active here.
-Clearing the browser's site data resets every study back to active.
+`docs/data/`, restorable at any time with the **Restore** button. Clearing the browser's site data resets every study back to active.
 
 This status is additive to the digest's own fields (Novelty, NS fit, Media
 check, NS.com check) — it's a dashboard-only view state layered on top, not a
@@ -183,42 +176,16 @@ bullets, etc.) and `fact_checker.py`'s per-study verdict line
 (`**PMID:** ... | **Verdict:** ...`). If either prompt's output format changes,
 update the corresponding regexes in `build_dashboard_data.py` too.
 
-## Feeding research-digest-dashboard
+## No longer feeds research-digest-dashboard
 
+Until 2026-09-14 this repo also emitted a flat `data/results.json` feed that
 [`research-digest-dashboard`](https://github.com/Meggers1982/research-digest-dashboard)
-aggregates this repo alongside ~11 other feeders. Its `sync-new-scientist.yml`
-fetches one fixed raw URL:
-
-```
-https://raw.githubusercontent.com/Meggers1982/new-scientist-story-ideas/main/data/results.json
-```
-
-The previous pipeline wrote that file as its primary output. This one writes
-markdown, so `scripts/build_aggregator_feed.py` regenerates the feed from the
-same parsed digests that build the local dashboard: one flat, PMID-deduplicated
-array of every study ever written up, using the field names that repo's sync
-step already maps (`ns_score` → `relevance_score`, and `pitch_angles` emitted
-directly). Where a study appears in more than one digest, the newest write-up
-wins.
-
-The two story angles become two entries in `pitch_angles`, tagged
-`publication_type` "New Scientist Mind" and "Wider angle — elsewhere", since
-that dashboard already supports several pitch angles per study. `category` is
-the journal's primary NLM category, resolved from the curated CSV (~98% of
-studies; the rest fall back to the digest's topic) so the aggregator's category
-filter keeps working.
-
-**The path and the field names are a contract with that repo.** If you rename or
-reshape this output, update `sync-new-scientist.yml` over there in the same
-breath, or its daily 14:00 UTC run starts failing — which is exactly what
-happened when the markdown rebuild first moved `data/results.json` to
-`archive/`.
-
-Regenerate by hand with:
-
-```bash
-python3 scripts/build_aggregator_feed.py
-```
+pulled in as its "New Scientist — Mental Health" source. That source was
+retired: the story ideas now live only on this repo's own dashboard. The feed
+builder (`scripts/build_aggregator_feed.py`), the feed file and the workflow's
+dispatch to that repo were removed in the same change; all three are in git
+history if the feed is ever wanted back. Nothing was lost with them, since the
+feed was regenerated from `outputs/` on every run.
 
 ## The archive
 
@@ -378,7 +345,6 @@ scripts/
   fact_checker.py            Claude prompt + call that fact-checks the digest
   trends.py                  Claude prompt + call for trends/feature pitch + topic memory
   build_dashboard_data.py    parses outputs/*.md into docs/data/
-  build_aggregator_feed.py   emits data/results.json for research-digest-dashboard
   migrate_legacy_results.py  one-time back-conversion of the old JSON archive
 outputs/                     every digest + fact-check ever generated (.md)
 topic_memory/                per-topic running memory used by trends.py
@@ -386,7 +352,6 @@ docs/                        static dashboard, served by Vercel (Root Directory)
 archive/legacy-results.json  the previous pipeline's full 904-study archive
 data/
   Mental Health ... .csv      the curated journal list
-  results.json               flat feed consumed by research-digest-dashboard
 config/digest_config.json    publication, rotation and threshold settings
 seen_pmids.json              every PMID ever written up — never pitched twice
 .github/workflows/           daily cron (daily-digest.yml)
