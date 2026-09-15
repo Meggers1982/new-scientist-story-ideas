@@ -136,9 +136,11 @@ inline, and export any run to .docx. When a run includes a feature pitch, a
 
 PMIDs cited in the trends and feature-pitch prose link to PubMed, the same as
 the study cards. All links take `var(--accent)` from a base `a` rule, never
-browser blue (`#0000EE`), which is hard to read in dark mode. A bare
-parenthesized number with no "PMID" in front is left as plain text; 7 of about
-240 prose citations in the archive are written that way.
+browser blue (`#0000EE`), which is hard to read in dark mode. The model cites
+PMIDs three ways, and `linkPmids` handles each: "PMID 42635035", a list
+("PMIDs 42660579, 42635370"), and a bare "(42447742)". A bare number only
+counts inside parentheses and at 7+ digits, so long figures in the prose are
+not mistaken for PMIDs.
 
 The **type filter** in the sidebar picks out one Novelty type — Counterintuitive,
 First-in-class, New mechanism, Overturns prior research, Failed replication, or
