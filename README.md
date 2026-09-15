@@ -134,6 +134,12 @@ headline/PMID/journal, see each study's NS fit score and fact-check verdict
 inline, and export any run to .docx. When a run includes a feature pitch, a
 "Jump to Feature Pitch" link appears in the run header.
 
+PMIDs cited in the trends and feature-pitch prose link to PubMed, the same as
+the study cards. All links take `var(--accent)` from a base `a` rule, never
+browser blue (`#0000EE`), which is hard to read in dark mode. A bare
+parenthesized number with no "PMID" in front is left as plain text; 7 of about
+240 prose citations in the archive are written that way.
+
 The **type filter** in the sidebar picks out one Novelty type — Counterintuitive,
 First-in-class, New mechanism, Overturns prior research, Failed replication, or
 Included for relevance. It is the same "Counterintuitive finding" tag the topic

@@ -52,6 +52,10 @@
     color: var(--text);
     line-height: 1.45;
   }
+  /* Links written into the prose (PMIDs in the trends and pitch sections) carry
+     no class. Without this rule they fall back to the browser's #0000EE, which
+     all but disappears on the dark panel. Classed links keep their own rules. */
+  a { color: var(--accent); text-underline-offset: 2px; }
   header {
     padding: 20px 24px 16px;
     border-bottom: 1px solid var(--border);
@@ -484,11 +488,18 @@ function renderTrendsBlock(raw) {
   return html;
 }
 
+/* The study cards link their PMIDs; the prose around them printed the same
+   numbers as plain text, which is where they are most often read. */
+function linkPmids(html) {
+  return html.replace(/\bPMID:?\s*(\d{6,9})\b/g, (m, id) =>
+    `<a href="https://pubmed.ncbi.nlm.nih.gov/${id}/" target="_blank" rel="noopener">${m}</a>`);
+}
+
 function inlineMd(text) {
   // Bold first, so the leftover single asterisks are unambiguously emphasis.
-  return escapeHtml(text)
+  return linkPmids(escapeHtml(text)
     .replace(/\*\*([^*]+?)\*\*/g, "<b>$1</b>")
-    .replace(/\*([^*]+?)\*/g, "<i>$1</i>");
+    .replace(/\*([^*]+?)\*/g, "<i>$1</i>"));
 }
 
 function studyActionsHtml(pmid, status) {
