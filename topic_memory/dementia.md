@@ -1,18 +1,22 @@
 # Topic Memory: dementia
-_Last updated: 2026-08-27_
+_Last updated: 2026-09-16_
 
 ## Established findings
-- Modifiable/dynamic risk factors (frailty, labor market exit, anticholinergic burden) show consistent but often small associations with incident dementia in very large cohorts; effect sizes shrink as designs improve (PMIDs 42600788, 41885755, Aug 2026).
-- Depression and dementia co-occur at roughly 25% prevalence with strong credibility, while the prognostic consequences of that comorbidity remain unestablished (PMID 41895003, Aug 2026).
-- Caregiver mental health is a measurable casualty of dementia, with relational (not just workload) mechanisms implicated; dementia caregiving remains psychoneuroimmunology's key chronic-stress model (PMIDs 42593973, 42566682, Aug 2026).
+- Plasma p-tau217 is the standout blood marker, but well-chosen verbal memory tests track it closely and add comparable diagnostic value — shown in Down syndrome and in a large prevention cohort (PMIDs 42138095 Aug 2026, 42335710 Sep 2026).
+- Detection and risk-management tools systematically underperform in intellectual/developmental disability: verbal-fluency-linked screening bias, frailty scales confounded by lifelong baseline ability, diagnostic overshadowing in hospital (PMIDs 42311142, 42609160, 42659675).
+- Depression and dementia co-occur at ~25% with strong credibility; prognostic consequences remain unestablished, and new within-person data suggest depressive symptoms depress test scores at a visit without changing decline trajectory (PMIDs 41895003, 40859820).
+- Caregiver distress has relational and physiological, not purely workload, mechanisms — impaired mutual emotion repair, round-the-clock heart rate synchrony (PMIDs 42593973, 42398884).
+- Mechanism-rich, trial-poor is the norm in dementia therapeutics: cognitive training, tirzepatide, low-dose lithium all have biology and observational signals without randomized endpoints (PMIDs 42259152, 42608956, 42268602).
 
 ## Emerging threads
-- Detection and biomarker tools underperform in intellectual/developmental disability populations: verbal-fluency-linked screening bias, plasma p-tau217 adding nothing over memory testing in Down syndrome (PMIDs 42311142, 42138095).
-- Early-life anticholinergic burden in autistic adults as a decades-early dementia risk exposure — first-in-class, needs prospective follow-up (PMID 42592704).
-- Data-driven subtyping of neurodegenerative disease (SuStaIn on dual-phase PET in DLB) as a possible fix for failing heterogeneous trials (PMID 42522580).
-- Biology-outpaces-benefit problem: cognitive training changes connectivity without behavioral gain; tirzepatide has mechanism and retrospective signals but no randomized neurological endpoints (PMIDs 42259152, 42608956).
-- Subjective age tracks neurofilament light but not amyloid/tau — a candidate biological substrate for self-perception-of-aging effects (PMID 42594533).
-- Real-world prescribing drifting against guidance: rising antipsychotic use in German dementia care 2016–2025 (PMID 42586160).
+- Population-scale dementia burden in intellectual disability without Down syndrome: 17.6% over 11 years, mean diagnosis age 62.6, cause unexplained (PMID 42623159).
+- Severe mental illness linked to dementia diagnosis at strikingly young ages (OR 23 at 30–39); coding artifact versus biology unresolved (PMID 42013686).
+- Competing-risk and comorbidity adjustment dissolving established neuro-psychiatric associations — epilepsy and later-life depression/anxiety (PMID 42155275); a methods thread worth tracking across age-related epidemiology.
+- Upstream, non-individual risk exposures with multi-decade lags: adolescent state policy environment and dementia 50 years later (PMID 41109848).
+- Sleep phenotype combinations as risk strata: COMISA (apnea plus insomnia) carrying 34% excess dementia risk, with reverse causation unresolved (PMID 42640940).
+- Reversible and iatrogenic dementia-like presentations: CSF leak producing measurable mechanical strain in temporal/hippocampal regions (PMID 42665818); dopaminergic therapy causing most documented hypersexuality (PMID 42330690).
+- Historical brain archives as evidence on pre-treatment disease: hemisphere-asymmetric tau in focal epilepsy (PMID 42715912).
 
 ## Feature ideas already pitched
 - Aug 2026: Dementia detection and risk management failing people with intellectual/developmental disabilities — anticholinergic burden at 31, verbal-fluency screening bias, p-tau217 not beating a memory test in Down syndrome (42592704, 42311142, 42138095).
+- Sep 2026: The caregiver as the unmeasured second patient — the unreplicated mortality statistic, heart rate synchrony, depression persisting after care-home placement, informants never interviewed (42721295, 42398884, 42720084, 42330690, 42659675).

@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 67,
+  "run_count": 68,
   "topics": [
     "addiction",
     "anxiety",
@@ -23,7 +23,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 613
+      "count": 618
     },
     {
       "type": "Included for relevance",
@@ -31,15 +31,15 @@
     },
     {
       "type": "First-in-class",
-      "count": 178
+      "count": 184
     },
     {
       "type": "New mechanism",
-      "count": 88
+      "count": 93
     },
     {
       "type": "Overturns prior research",
-      "count": 45
+      "count": 48
     },
     {
       "type": "Failed replication",
@@ -47,6 +47,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-dementia-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Dementia \u2014 September 2026",
+      "topic": "dementia",
+      "run_date": "2026-09-16",
+      "study_count": 19,
+      "top_score": 8,
+      "total_issues": "30 (26 Minor, 4 Moderate, 0 Major)",
+      "novelty_counts": {
+        "First-in-class": 6,
+        "Counterintuitive": 5,
+        "New mechanism": 5,
+        "Overturns prior research": 3
+      },
+      "search": "new scientist story ideas \u2014 dementia \u2014 september 2026 dementia dementia insomnia on top of sleep apnea is linked to a sharply higher risk of dementia 42640940 sleep people with severe mental illness are diagnosed with dementia far younger than everyone else 42013686 european neuropsychopharmacology the politics of the state you grew up in is linked to your dementia risk 50 years later 41109848 journal of health and social behavior the claim that caring for someone with dementia shortens your life may rest on one study 42721295 biopsychosocial science and medicine a leak of spinal fluid physically distorts the brain's memory and behavior regions 42665818 fluids and barriers of the cns creativity depends on a gradient running across the front of the brain 41614679 brain a bad mood week makes people with mild cognitive impairment test worse than they really are 40859820 the british journal of psychiatry dementia carers' hearts fall into rhythm with the person they care for 42398884 biological psychology a simple story-recall test tracks alzheimer's blood markers \u2014 more reliably in women 42335710 cortex nearly one in six adults with intellectual disability has a dementia diagnosis \u2014 and it comes early 42623159 american journal on intellectual and developmental disabilities the case for reviving lithium \u2014 at a fraction of the psychiatric dose \u2014 as a dementia drug 42268602 jama psychiatry most cases of hypersexuality in neurological illness are caused by the treatment 42330690 neuroscience & biobehavioral reviews brains from a mid-century asylum archive suggest seizures leave tau behind 42715912 epilepsy research depression and anxiety in older people with epilepsy may not be caused by the epilepsy 42155275 epilepsy & behavior moving a relative with dementia into a care home does not end the caregiving 42720084 dementia (london) a genetic small-vessel disease disrupts the hippocampus's rhythms long before dementia 41622715 brain in down syndrome, frailty tracks cognitive decline whatever its cause 42609160 journal of intellectual disability research in hospital, a dementia diagnosis changes how everything else is interpreted 42659675 dementia (london) \"digital dementia\" may explain how escaping into your phone dents your memory 42141732 psychology and psychotherapy: theory, research and practice"
+    },
     {
       "id": "new-scientist-story-ideas-social-media-september-2026",
       "title": "New Scientist Story Ideas \u2014 Social Media \u2014 September 2026",
