@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 68,
+  "run_count": 69,
   "topics": [
     "addiction",
     "anxiety",
@@ -23,7 +23,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 618
+      "count": 626
     },
     {
       "type": "Included for relevance",
@@ -31,15 +31,15 @@
     },
     {
       "type": "First-in-class",
-      "count": 184
+      "count": 190
     },
     {
       "type": "New mechanism",
-      "count": 93
+      "count": 99
     },
     {
       "type": "Overturns prior research",
-      "count": 48
+      "count": 50
     },
     {
       "type": "Failed replication",
@@ -47,6 +47,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-september-2026",
+      "title": "New Scientist Story Ideas \u2014 September 2026",
+      "topic": "",
+      "run_date": "2026-09-17",
+      "study_count": 22,
+      "top_score": 7,
+      "total_issues": "48 (35 Minor, 13 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 8,
+        "First-in-class": 6,
+        "New mechanism": 6,
+        "Overturns prior research": 2
+      },
+      "search": "new scientist story ideas \u2014 september 2026 broad (all mind and brain topics) postpartum depression is strongly heritable, danish twin study finds 42648551 journal of affective disorders insomnia travels with ptsd and depression but does not seem to cause them 42750113 journal of sleep research twelve minutes of vigorous exercise a week matches 150 minutes of moderate activity 42745313 international journal of behavioral nutrition and physical activity \"food noise\" is quieter in people six months into glp-1 drugs \u2014 and sweet tastes register less 42641845 physiology & behavior boosting a language region of the brain makes metaphors harder to understand 42667874 brain and cognition survivors of the nova festival attack are being studied from weeks after the trauma to two years on 42735067 european journal of psychotraumatology anxious people don't get the usual relief of bad imagined futures fading 42750110 quarterly journal of experimental psychology your baseline cortisol decides whether stress wrecks your memory 42749210 neurobiology of learning and memory sending clowns into dementia wards changes how families experience visiting 42749305 dementia (london) what is actually happening in the brain when blindness brings hallucinations 42747922 brain exercise gives a small but real lift to memory in people with depression 42641961 journal of affective disorders aggression, insomnia and loneliness explain much of the link between childhood trauma and suicide risk 42637149 journal of affective disorders cannabis use disorder tracks with suicide attempts \u2014 except in people with bipolar disorder, where it barely moves quality of life 42664567 journal of psychiatric research detained teenagers reach psychiatric emergency rooms with insomnia and suicide attempts, not aggression 42748415 criminal behaviour and mental health boys and girls with autism turn out to look developmentally alike \u2014 with one exception 42748595 acta psychologica people with psychosis are least likely to get the medication that treats opioid addiction 42743214 journal of dual diagnosis moral injury sits alongside ptsd in most treatment-seeking veterans \u2014 and strains their families 42734648 european journal of psychotraumatology patients who avoid infection by staying home have far worse depression and anxiety scores 42745244 bmc psychiatry mental health parity laws and bigger state budgets barely move what patients actually get 42750086 psychiatric services a self-help app for trauma in arabic reduced sadness, but did not raise happiness 42747789 cognitive behaviour therapy whether teenagers switch to reusable period products depends on where their toilet is 42748594 acta psychologica emotional intelligence wins you trust at the negotiating table \u2014 but not money 42685541 current opinion in psychology"
+    },
     {
       "id": "new-scientist-story-ideas-dementia-september-2026",
       "title": "New Scientist Story Ideas \u2014 Dementia \u2014 September 2026",
