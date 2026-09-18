@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 69,
+  "run_count": 70,
   "topics": [
     "addiction",
     "anxiety",
@@ -23,7 +23,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 626
+      "count": 635
     },
     {
       "type": "Included for relevance",
@@ -31,22 +31,39 @@
     },
     {
       "type": "First-in-class",
-      "count": 190
+      "count": 194
     },
     {
       "type": "New mechanism",
-      "count": 99
+      "count": 103
     },
     {
       "type": "Overturns prior research",
-      "count": 50
+      "count": 51
     },
     {
       "type": "Failed replication",
-      "count": 7
+      "count": 8
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-depression-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Depression \u2014 September 2026",
+      "topic": "depression",
+      "run_date": "2026-09-18",
+      "study_count": 19,
+      "top_score": 7,
+      "total_issues": "29 (23 Minor, 6 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 9,
+        "First-in-class": 4,
+        "New mechanism": 4,
+        "Overturns prior research": 1,
+        "Failed replication": 1
+      },
+      "search": "new scientist story ideas \u2014 depression \u2014 september 2026 depression depression sleep and body-clock measures can tell unipolar and bipolar depression apart 42751051 depression and anxiety sleeping pills taken in pregnancy may not raise a child's risk of adhd or autism 42744942 archives of women's mental health adding exercise to school pe lessons does nothing for teenagers' mood 42752288 journal of mental health blood fat levels predict who responds to magnetic brain stimulation for depression 42720531 clinical eeg and neuroscience depression rewires how the brain handles trust from close friends 42702279 biological psychology distrusting doctors a little makes black adults more likely to seek mental health help \u2014 distrusting them a lot does not 42749881 community mental health journal a cold, deferential social style marks out the most stubborn depression 42731108 journal of clinical psychology it is loneliness, not how often you see people, that predicts depression 42623964 journal of psychiatric research health records suggest one in six new mothers has depression-related care 42745087 archives of women's mental health forgiveness goes with worse, not better, post-traumatic symptoms 42664566 journal of psychiatric research women in ongoing depression treatment conceive less often during fertility care 42735740 progress in neuro-psychopharmacology & biological psychiatry people whose brains respond least to reward gain most from a single mood-training session 42700813 biological psychology how harshly stroke patients treat themselves in week one tracks their depression 42731412 acta psychologica boxing and expressive writing improve mental health in survivors of childhood sexual abuse 42752360 european journal of psychotraumatology half of trafficking survivors have depression, global review finds 42752993 archives of women's mental health refugees keep their therapy gains even when asylum decisions change 42703887 european journal of psychotraumatology depression's link to advanced heart, kidney and metabolic disease is stronger in women 42747918 biopsychosocial science and medicine chronic pelvic pain leaves a distinct mark on body image 42600312 body image patients lost weight over a year on a new antipsychotic 42696983 schizophrenia research"
+    },
     {
       "id": "new-scientist-story-ideas-september-2026",
       "title": "New Scientist Story Ideas \u2014 September 2026",
