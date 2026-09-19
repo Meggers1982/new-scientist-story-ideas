@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 70,
+  "run_count": 71,
   "topics": [
     "addiction",
     "anxiety",
@@ -23,7 +23,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 635
+      "count": 642
     },
     {
       "type": "Included for relevance",
@@ -31,15 +31,15 @@
     },
     {
       "type": "First-in-class",
-      "count": 194
+      "count": 197
     },
     {
       "type": "New mechanism",
-      "count": 103
+      "count": 106
     },
     {
       "type": "Overturns prior research",
-      "count": 51
+      "count": 53
     },
     {
       "type": "Failed replication",
@@ -47,6 +47,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-memory-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Memory \u2014 September 2026",
+      "topic": "memory",
+      "run_date": "2026-09-19",
+      "study_count": 15,
+      "top_score": 7,
+      "total_issues": "20 (16 Minor, 4 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 7,
+        "First-in-class": 3,
+        "New mechanism": 3,
+        "Overturns prior research": 2
+      },
+      "search": "new scientist story ideas \u2014 memory \u2014 september 2026 memory memory your earliest memory dates from the same age whatever culture you grew up in 42757868 memory intrusive memories may not be the simple conditioned reflexes we assumed 42759257 behaviour research and therapy a third of sexual abuse survivors with ptsd report genital arousal when the memory returns 42704048 european journal of psychotraumatology typing the first few digits helps you hold more in working memory 42754727 psychonomic bulletin & review people who recall their lives in more detail tell their stories more often 42742196 memory choosing to act makes you remember better \u2014 and the brain signal shows it 42753975 international journal of psychophysiology years on the football field damage memory directly; military service does it through ptsd 42753419 journal of psychiatric research talking yourself down after good news makes you read social situations more rigidly 42727265 behaviour research and therapy event boundaries matter less to your memory than what happens next 42760449 memory & cognition interrupting a film scrambles your memory of it but not how you carve it into events 42758465 memory & cognition even fluent bilinguals falter when instructions come in their second language 42717310 quarterly journal of experimental psychology raised gamma brainwaves in autistic children track memory for faces over four years 42721928 european neuropsychopharmacology nighttime seizure activity may be stealing the memory benefit of sleep 42748517 epilepsy & behavior a depressive bias doesn't stop your brain getting the usual memory boost from a sudden target 42706587 bmc psychology decades after epilepsy surgery, most people say life is good \u2014 even those still having seizures 42727324 epilepsy & behavior"
+    },
     {
       "id": "new-scientist-story-ideas-depression-september-2026",
       "title": "New Scientist Story Ideas \u2014 Depression \u2014 September 2026",
