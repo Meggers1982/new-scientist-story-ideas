@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 71,
+  "run_count": 72,
   "topics": [
     "addiction",
     "anxiety",
@@ -23,7 +23,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 642
+      "count": 646
     },
     {
       "type": "Included for relevance",
@@ -31,15 +31,15 @@
     },
     {
       "type": "First-in-class",
-      "count": 197
+      "count": 202
     },
     {
       "type": "New mechanism",
-      "count": 106
+      "count": 111
     },
     {
       "type": "Overturns prior research",
-      "count": 53
+      "count": 56
     },
     {
       "type": "Failed replication",
@@ -47,6 +47,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-sleep-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Sleep \u2014 September 2026",
+      "topic": "sleep",
+      "run_date": "2026-09-20",
+      "study_count": 17,
+      "top_score": 7,
+      "total_issues": "23 (16 Minor, 6 Moderate, 1 Major)",
+      "novelty_counts": {
+        "New mechanism": 5,
+        "First-in-class": 5,
+        "Counterintuitive": 4,
+        "Overturns prior research": 3
+      },
+      "search": "new scientist story ideas \u2014 sleep \u2014 september 2026 sleep sleep sleeping nine hours or more is linked to earlier death \u2014 sleeping six is not 42744622 journal of sleep research how you use your phone predicts depression far better than how long you use it 42759324 clinical psychology review night owls don't actually sleep worse than larks \u2014 their clocks are just shifted 42751860 journal of sleep research poor sleep and inactivity cluster together \u2014 and that pattern tracks bipolar disorder risk 42723029 bmc psychiatry ultramarathon runners get 96 minutes of sleep during a 217km race \u2014 and hallucinate 42637627 sleep health moderate drinkers have enlarged choroid plexus \u2014 and it tracks their sleep problems 42202661 journal of psychiatric research camera-tracked cribs reveal how a baby's temperament locks in their sleep pattern 42470789 infant behavior and development it's how well you sleep, not how long, that tracks your heart and metabolic risk 42648984 sleep health parents who quit sleep training describe distress, exhaustion and disrupted breastfeeding 42725637 journal of reproductive and infant psychology switching on a cpap machine calms blood pressure the same night \u2014 even in people without hypertension 42754769 sleep and breathing the people with the worst sleep in america sit at the intersection of several identities 42660768 sleep health being aware you're dreaming is the easy part \u2014 controlling the dream is not 42728107 journal of sleep research honeybees nap in bursts all day, and their sleep may hold a lesson for ai 42728400 journal of comparative physiology a a child's airway is most vulnerable between the ages of five and ten 42762282 sleep and breathing ai can spot sleep apnea from an ecg \u2014 but it isn't detecting your airway 42747635 sleep and breathing a telehealth sleep program for children in foster care gets parents to stay the course 42725804 behavioral sleep medicine an epilepsy treatment cleans up the eeg without necessarily helping the child 42407303 epilepsy research"
+    },
     {
       "id": "new-scientist-story-ideas-memory-september-2026",
       "title": "New Scientist Story Ideas \u2014 Memory \u2014 September 2026",
