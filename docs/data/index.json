@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 72,
+  "run_count": 73,
   "topics": [
     "addiction",
     "anxiety",
@@ -23,7 +23,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 646
+      "count": 649
     },
     {
       "type": "Included for relevance",
@@ -31,22 +31,39 @@
     },
     {
       "type": "First-in-class",
-      "count": 202
+      "count": 205
     },
     {
       "type": "New mechanism",
-      "count": 111
+      "count": 114
     },
     {
       "type": "Overturns prior research",
-      "count": 56
+      "count": 57
     },
     {
       "type": "Failed replication",
-      "count": 8
+      "count": 9
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-schizophrenia-september-2026-part-2",
+      "title": "New Scientist Story Ideas \u2014 Schizophrenia \u2014 September 2026 (Part 2)",
+      "topic": "schizophrenia",
+      "run_date": "2026-09-23",
+      "study_count": 11,
+      "top_score": 8,
+      "total_issues": "19 (14 Minor, 5 Moderate, 0 Major)",
+      "novelty_counts": {
+        "First-in-class": 3,
+        "New mechanism": 3,
+        "Counterintuitive": 3,
+        "Overturns prior research": 1,
+        "Failed replication": 1
+      },
+      "search": "new scientist story ideas \u2014 schizophrenia \u2014 september 2026 (part 2) schizophrenia schizophrenia stopping antipsychotics does not trigger a distinct kind of rapid relapse, trial data suggest 42636852 the lancet psychiatry the biggest study yet of a genetic syndrome linked to psychosis finds an uneven profile of thinking skills 42765380 psychological medicine screening service members as they leave the military flags undetected early psychosis 42723010 psychiatric services how childhood abuse and neglect may translate into hearing voices later on 42740395 psychological medicine metformin, but not the standard add-on drug, curbs weight gain in people taking clozapine 42742489 the canadian journal of psychiatry people with schizophrenia look away exactly when their conversation partner smiles 42702091 journal of behavior therapy and experimental psychiatry gut bacteria look different in people with treatment-resistant schizophrenia on clozapine 42758012 the canadian journal of psychiatry brain \"background noise\" is altered in schizophrenia and tracks memory for one's own life 42744260 progress in neuro-psychopharmacology & biological psychiatry voice hearers describe a constant negotiation over who is in charge 41354941 psychology and psychotherapy: theory, research and practice computational models of memory turn out to be as reliable as the simple scores they replace 42765980 journal of psychopathology and clinical science an eeg marker touted to predict who responds to clozapine does not deliver 41124326 clinical eeg and neuroscience"
+    },
     {
       "id": "new-scientist-story-ideas-sleep-september-2026",
       "title": "New Scientist Story Ideas \u2014 Sleep \u2014 September 2026",
