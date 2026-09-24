@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 73,
+  "run_count": 74,
   "topics": [
     "addiction",
     "anxiety",
@@ -23,7 +23,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 649
+      "count": 655
     },
     {
       "type": "Included for relevance",
@@ -31,15 +31,15 @@
     },
     {
       "type": "First-in-class",
-      "count": 205
+      "count": 209
     },
     {
       "type": "New mechanism",
-      "count": 114
+      "count": 119
     },
     {
       "type": "Overturns prior research",
-      "count": 57
+      "count": 58
     },
     {
       "type": "Failed replication",
@@ -47,6 +47,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-trauma-september-2026-part-2",
+      "title": "New Scientist Story Ideas \u2014 Trauma \u2014 September 2026 (Part 2)",
+      "topic": "trauma",
+      "run_date": "2026-09-24",
+      "study_count": 16,
+      "top_score": 7,
+      "total_issues": "23 (17 Minor, 6 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 6,
+        "New mechanism": 5,
+        "First-in-class": 4,
+        "Overturns prior research": 1
+      },
+      "search": "new scientist story ideas \u2014 trauma \u2014 september 2026 (part 2) trauma trauma many adults who score high on autism questionnaires may be describing the effects of anxiety and a hard childhood 42772961 autism a genetic hunt for resilience finds a single variant that tracks who stays well after trauma 42765393 psychological medicine people who struggle to name their feelings think their coping is working \u2014 and it isn't 42721324 emotion making patients relive their trauma works outside the trial setting too \u2014 and almost nobody got worse 42766476 european journal of psychotraumatology in gaza, 94% of adults screen above the normal range for psychological distress 42728821 clinical psychology & psychotherapy recovery from disaster does not creep up on people \u2014 it arrives in sudden jumps 42715666 journal of anxiety disorders everyday racist stereotypes track how much physical pain black women report \u2014 independently of their mental health 42721338 health psychology virtual reality role-play helps adults with difficult childhoods read faces again 42765386 psychological medicine shame, not guilt, is what cuts trauma survivors off from the people around them 42766479 european journal of psychotraumatology when a mother's trauma reaches her child, it travels through the stress of parenting 42760574 bmc psychology the trauma-exposed brain's sensory-to-thinking hierarchy is reorganized \u2014 and differently in teenagers 42740407 psychological medicine what actually protects child protection workers from secondary trauma is not what protects them from burnout 42732758 clinical psychology review teenagers who try suicide again are not flagged by the obvious warning signs 42734150 european psychiatry mothers who were maltreated as children feel like objects while breastfeeding \u2014 and it shows in the room 42711662 journal of reproductive and infant psychology self-harm in psychosis has different roots depending on whether the patient is in a forensic unit 42711065 bmj mental health racism and sexism push men and women toward addiction after trauma by opposite routes 42708575 american journal of community psychology"
+    },
     {
       "id": "new-scientist-story-ideas-schizophrenia-september-2026-part-2",
       "title": "New Scientist Story Ideas \u2014 Schizophrenia \u2014 September 2026 (Part 2)",
