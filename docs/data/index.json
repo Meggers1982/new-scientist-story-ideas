@@ -1,12 +1,13 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 74,
+  "run_count": 75,
   "topics": [
     "addiction",
     "anxiety",
     "artificial intelligence",
     "autism",
     "bipolar",
+    "decision-making",
     "dementia",
     "depression",
     "emotion regulation",
@@ -23,7 +24,7 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 655
+      "count": 660
     },
     {
       "type": "Included for relevance",
@@ -31,15 +32,15 @@
     },
     {
       "type": "First-in-class",
-      "count": 209
+      "count": 211
     },
     {
       "type": "New mechanism",
-      "count": 119
+      "count": 125
     },
     {
       "type": "Overturns prior research",
-      "count": 58
+      "count": 62
     },
     {
       "type": "Failed replication",
@@ -47,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-decision-making-september-2026",
+      "title": "New Scientist Story Ideas \u2014 Decision-Making \u2014 September 2026",
+      "topic": "decision-making",
+      "run_date": "2026-09-25",
+      "study_count": 17,
+      "top_score": 8,
+      "total_issues": "38 (28 Minor, 10 Moderate, 0 Major)",
+      "novelty_counts": {
+        "New mechanism": 6,
+        "Counterintuitive": 5,
+        "Overturns prior research": 4,
+        "First-in-class": 2
+      },
+      "search": "new scientist story ideas \u2014 decision-making \u2014 september 2026 decision-making decision-making people reject the utilitarian answer when asked to settle a group's disagreements 42759227 cognition saying \"um\" doesn't dent your reputation \u2014 but it does cost you the conversation 42691919 cognition being told you're wrong when you felt sure makes you doubt yourself for a long while afterward 42734967 journal of experimental psychology: general people who have attempted suicide quit faster after a setback \u2014 and everyone with depression persists too long 42704954 behaviour research and therapy autistic people use rewards to guide their decisions exactly as much as anyone else 42721846 cognition telling women what antibiotics do to their gut cuts demand as effectively as invoking superbugs 42702911 british journal of health psychology ai teammates can be drawn into sharing what only they know \u2014 if someone asks 42708610 human factors playing the villain pulls you deeper into a game \u2014 but only when the choice is really yours 42784909 acta psychologica time perception in autistic traits looks fine \u2014 it's the decision rule that differs 42721950 consciousness and cognition the brains of anxious, depressed gamblers barely flinch at a loss 42779459 psychological medicine people with more autistic traits take the money now 42722131 behavioural brain research money worries don't stop people giving \u2014 they change how they want to give 42713986 the journal of social psychology nobody knows why finding your way together is so much harder than doing it alone 42767709 wires cognitive science letting advertising change what you care about might be a rational strategy 42773691 topics in cognitive science parents rarely regret the surgery that disconnects half their child's brain 42730552 epileptic disorders where a seizure starts shapes how a person gambles 42710371 epilepsy research parents of autistic children show subtle differences in attention and memory 42728861 autism research"
+    },
     {
       "id": "new-scientist-story-ideas-trauma-september-2026-part-2",
       "title": "New Scientist Story Ideas \u2014 Trauma \u2014 September 2026 (Part 2)",
