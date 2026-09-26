@@ -1,22 +1,25 @@
 # Topic Memory: stress
-_Last updated: 2026-09-06_
+_Last updated: 2026-09-26_
 
 ## Established findings
-- Loneliness carries risk independent of depression, anxiety and network size, and behaves like an appraisal/regulation problem rather than a headcount (42456921 Sep 2026; 42642073 Sep–Oct 2026).
-- Which measure you use determines whether a treatment "works": self-report versus blinded clinician ratings, actigraphy versus questionnaires, publication-bias-adjusted versus raw effects (42660579, 42173054 Sep 2026; 42680058, 42658011, 42691284 Sep 2026).
-- Unbundling composite stress/adversity constructs changes the direction or existence of effects (acculturation pressure 42682243; cumulative ACE-style scores vs timing 42683544; meal timing by meal 42624213).
-- Intensive daily sampling repeatedly overturns retrospective accounts of stress: no stress–inactivity link (42612762), bidirectional day-scale ADHD–stress loop (42695429), chronic stress blunting rather than amplifying daily reactivity (42595230).
+- PTSD and anxiety disorders behave like systemic, not purely psychiatric, conditions: raised stroke hazard in 11m people (42767516, Sep 2026), pain falling when PTSD alone is treated (42766718), comorbid asthma/diabetes and longer female time-to-remission (42303590).
+- Which measure you use determines whether an effect exists: self-report vs blinded clinician ratings (42680058), raw vs publication-bias-adjusted effects (42658011), cortisol vs self-rated relationships (42667999), self-report vs behavior vs EEG in one sample (42773853).
+- Loneliness carries risk independent of depression, anxiety and social-network size (42456921, 42642073).
+- Adversity effects are conditional rather than cumulative: timing windows beat severity totals (42683544), early adversity only shows in cardiovascular reactivity under nicotine withdrawal (42771860), trauma→sleep runs via perceived stress with vagal moderation (42785565).
+- Intensive/repeated sampling keeps overturning retrospective accounts (42612762, 42695429, 42595230, 42667999).
 
 ## Emerging threads
-- Adversity research shifting from dose to pattern: timing windows, circuit remapping without group differences, arousal-versus-regulation dissociations (42683544, 42607893, 42693548, 42419608).
-- Political/legislative climates and active war framed as chronic trauma exposures with their own psychological signature (42658624, 42607893; cf. 42635370).
-- Procrastination as a stress-generating trait with body-wide correlates, now supported at both trait and day level (42569817, 42695429).
-- Sleep as a parallel psychiatric target rather than downstream symptom (42660579, 42692480, 41989986) — no new entries this run; watch whether it recurs.
-- PTSD epidemiology flat since 2007 with markedly longer time to remission in women (42303590) — needs replication outside Australia.
-- Contradiction to watch: newborn sensitivity to within-language rhythm (42464912) versus syllable-as-universal-default in 4–8-month-olds (42621832).
-- Genomics entering the batch: distinct cellular signatures for externalizing vs internalizing temperament (42679763); first appearance, unreplicated here.
+- Stress is visible to observers and physiology before it is visible to the self; help-seeking tracks internal symptom change, not external hardship (42667999, 42732668, 42765820, 42764724).
+- Anhedonia asymmetry: conditions that blunt positive affect often don't raise negative affect (42765820; cf. 42773853 blunted reward positivity).
+- Treatment delivered *inside* ongoing trauma rather than after it — Ukraine group therapy with 96% retention, in-person beating online (42731584).
+- Perinatal mental health as a 12-month dynamic process, with early adjustment disorder as warning signal (42749161) and "pregnancy brain" reframed as mood (42764724).
+- Network/ML models used prescriptively to rank intervention targets, still on cross-sectional data (42788378, 42732833).
+- Immune-glymphatic interaction in adolescent depression, sex-specific and unreplicated (42777933).
+- Suicide prediction shifting from ideation to the ideation-to-attempt transition; possible protective role of harm-avoidant symptoms (42705422, cf. 42683538).
+- Sport psychology gaining time axes — seasonal symptom peaks in women's soccer (42759733) building on climate profiles (42419608).
 
 ## Feature ideas already pitched
-- 2026-09-06 (run 1): "What stress stops predicting when you measure it every hour" — methodological squeeze on the stress construct via EMA, adjusted models and lab nulls (42612762, 41680576, 42681265, 42693377, 42697249). New Scientist Features, Undark, The Atlantic Health, BBC Future.
-- 2026-09-06 (run 2): "Timing of childhood abuse showed up in the blood; the total amount did not" — dose-to-pattern shift in adversity measurement, ACE score under challenge (42683544, 42624213, 42607893, 42693548, 42419608). New Scientist Features, Undark, STAT, Knowable.
-- Live alternatives not yet pitched: (a) sleep as parallel psychiatric target across PTSD, burnout and perfectionism; (b) the self-report/clinician-rating gap as a consumer-protection story about neuromodulation and wellness marketing.
+- 2026-09-06 (run 1): "What stress stops predicting when you measure it every hour" — EMA/adjusted-model squeeze on the stress construct.
+- 2026-09-06 (run 2): "Timing of childhood abuse showed up in the blood; the total amount did not" — dose-to-pattern shift, ACE score under challenge.
+- 2026-09-26 (run 3): limits of stress introspection — observers, hormones and tasks detect stress the person doesn't report; help-seeking mismatch (42667999, 42732668, 42765820, 42764724, 42773853). New Scientist Features, The Atlantic, BBC Future, Aeon.
+- Live alternatives not yet pitched: (a) trauma as a vascular and pain condition, arguing for shared psychiatry/cardiology/pain risk charts (42767516, 42766718, 42303590); (b) sleep as a parallel psychiatric target across PTSD, adolescence and burnout; (c) therapy designed for people still inside the danger, challenging the "post" in post-traumatic (42731584).

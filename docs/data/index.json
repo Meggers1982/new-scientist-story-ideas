@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 75,
+  "run_count": 76,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,23 +24,23 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 660
+      "count": 666
+    },
+    {
+      "type": "First-in-class",
+      "count": 218
     },
     {
       "type": "Included for relevance",
       "count": 215
     },
     {
-      "type": "First-in-class",
-      "count": 211
-    },
-    {
       "type": "New mechanism",
-      "count": 125
+      "count": 128
     },
     {
       "type": "Overturns prior research",
-      "count": 62
+      "count": 64
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-stress-september-2026-part-3",
+      "title": "New Scientist Story Ideas \u2014 Stress \u2014 September 2026 (Part 3)",
+      "topic": "stress",
+      "run_date": "2026-09-26",
+      "study_count": 18,
+      "top_score": 7,
+      "total_issues": "27 (19 Minor, 8 Moderate, 0 Major)",
+      "novelty_counts": {
+        "First-in-class": 7,
+        "Counterintuitive": 6,
+        "New mechanism": 3,
+        "Overturns prior research": 2
+      },
+      "search": "new scientist story ideas \u2014 stress \u2014 september 2026 (part 3) stress stress anxiety disorders and ptsd are linked to a higher risk of stroke, in a pooled analysis of 11 million people 42767516 journal of affective disorders stress hormones show up in how other people rate your working relationships \u2014 not in how you rate them yourself 42667999 biological psychology a close bond with parents fails to protect stressed teenagers' response to reward 42773853 development and psychopathology treating ptsd reduces physical pain \u2014 even when no one treats the pain 42766718 european journal of psychotraumatology post-traumatic stress symptoms predict who moves from suicidal thoughts to an attempt 42705422 journal of affective disorders about half of postpartum depression cases don't lift within the first year 42749161 journal of affective disorders inflammation in the body changes what brain-clearance markers mean in depressed teenage girls 42777933 biological psychiatry childhood trauma shows up in teenagers' sleep years later \u2014 and perceived stress is the route 42785565 international journal of psychophysiology people who had tough childhoods react hardest to stress when they quit smoking 42771860 biopsychosocial science and medicine female footballers' anxiety and depression symptoms peak in the middle of the season 42759733 psychology of sport and exercise group therapy run inside a war zone proves workable for ukrainian outpatients 42731584 journal of affective disorders supervisor support does more for remote workers the longer they stay remote 42777487 applied ergonomics toddlers' sleep splits into two types \u2014 and bedtime struggles with parents mark the difference 42764403 journal of sleep research \"pregnancy brain\" tracks mood, not pregnancy \u2014 and exercise softens the link 42764724 psychology & health feeling that your life has gone off-course drains the good feelings, but doesn't add bad ones 42765820 cognition and emotion chronic stress is the single best lever against teenage self-harm \u2014 but the route differs by gender 42788378 journal of health psychology gender outranks every psychological factor in predicting teenage gaming disorder 42732833 journal of affective disorders people start therapy when their symptoms spike \u2014 not when their lives get harder 42732668 behaviour research and therapy"
+    },
     {
       "id": "new-scientist-story-ideas-decision-making-september-2026",
       "title": "New Scientist Story Ideas \u2014 Decision-Making \u2014 September 2026",
