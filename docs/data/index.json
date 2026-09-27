@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 76,
+  "run_count": 77,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 666
+      "count": 667
     },
     {
       "type": "First-in-class",
-      "count": 218
+      "count": 222
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 128
+      "count": 131
     },
     {
       "type": "Overturns prior research",
-      "count": 64
+      "count": 65
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-bipolar-september-2026-part-2",
+      "title": "New Scientist Story Ideas \u2014 Bipolar \u2014 September 2026 (Part 2)",
+      "topic": "bipolar",
+      "run_date": "2026-09-27",
+      "study_count": 9,
+      "top_score": 7,
+      "total_issues": "19 (14 Minor, 4 Moderate, 1 Major)",
+      "novelty_counts": {
+        "First-in-class": 4,
+        "New mechanism": 3,
+        "Overturns prior research": 1,
+        "Counterintuitive": 1
+      },
+      "search": "new scientist story ideas \u2014 bipolar \u2014 september 2026 (part 2) bipolar bipolar people with bipolar disorder or schizophrenia accumulate chronic physical illness decades early \u2014 and young women fare worst 42586082 the lancet psychiatry lithium's reputation as the anti-suicide drug does not hold up against valproate 42765379 psychological medicine walking more lifts your mood, and your mood gets you walking \u2014 but screen time only pushes one way 42765378 psychological medicine brain blood flow is lowest in bipolar disorder with psychosis \u2014 and higher flow tracks worse symptoms 42779463 psychological medicine long-acting antipsychotic injections help some people with intellectual disability \u2014 and may be harming those prescribed them off-label 42711066 bmj mental health the body's own cannabis-like chemicals fall as mania lifts \u2014 unless the person uses cannabis 42735776 journal of affective disorders people with serious mental illness want ai companions \u2014 but only ones built with them, not for them 42789145 community mental health journal a blood test may show whether lithium is reaching someone's brain 42742966 international clinical psychopharmacology half of people with anorexia or bulimia also meet criteria for a personality disorder \u2014 but almost nothing is known about why 42777340 journal of psychosomatic research"
+    },
     {
       "id": "new-scientist-story-ideas-stress-september-2026-part-3",
       "title": "New Scientist Story Ideas \u2014 Stress \u2014 September 2026 (Part 3)",
