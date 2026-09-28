@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 77,
+  "run_count": 78,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 667
+      "count": 673
     },
     {
       "type": "First-in-class",
-      "count": 222
+      "count": 228
     },
     {
       "type": "Included for relevance",
@@ -36,7 +36,7 @@
     },
     {
       "type": "New mechanism",
-      "count": 131
+      "count": 136
     },
     {
       "type": "Overturns prior research",
@@ -48,6 +48,21 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-emotion-regulation-september-2026-part-2",
+      "title": "New Scientist Story Ideas \u2014 Emotion Regulation \u2014 September 2026 (Part 2)",
+      "topic": "emotion regulation",
+      "run_date": "2026-09-28",
+      "study_count": 17,
+      "top_score": 7,
+      "total_issues": "31 (21 Minor, 10 Moderate, 0 Major)",
+      "novelty_counts": {
+        "First-in-class": 6,
+        "Counterintuitive": 6,
+        "New mechanism": 5
+      },
+      "search": "new scientist story ideas \u2014 emotion regulation \u2014 september 2026 (part 2) emotion regulation emotion regulation halving violence against children by treating the parents' own distress 42754240 journal of child psychology and psychiatry it's how impulsive you feel today, not how impulsive you are, that predicts suicidal thoughts 42778027 journal of affective disorders feeling seen as human by political opponents softens partisan hostility \u2014 and disgust is the reason 42723350 personality and social psychology bulletin resilience stops teenage distress starting \u2014 but won't get you out of it 42749162 journal of affective disorders transcendental meditation cuts workplace stress in a six-month randomized trial 42778032 journal of affective disorders ai-written stories only calm you down if they are both coherent and about you 42714089 cognition and emotion teenagers' emotional habits track their own reading of the family, not their parents' 42753047 journal of youth and adolescence gay and bisexual women veterans gain more from emotion-skills therapy after military sexual trauma 41411035 psychological trauma brain scans link punishment sensitivity to a surprising pattern of prefrontal wiring 42722323 progress in neuro-psychopharmacology & biological psychiatry bottling up feelings \u2014 not spirituality \u2014 predicts problematic porn use 42766058 archives of sexual behavior tracking the eyes while making an argument changes whether people act on it 42784902 acta psychologica anxious attachment predicts which children with adhd stay traumatized a year after an earthquake 41910948 journal of attention disorders unit support protects deployed fathers from parental burnout \u2014 until combat exposure gets severe 42671804 psychological trauma a systematic review maps what prayer, chanting and meditation do to the brain 42670176 brain and behavior a psychodynamic online program shifts a personality trait in 10 weeks 42735080 psychodynamic psychiatry a transdiagnostic therapy adapted into urdu passes its first test in pakistan 42768329 bmc psychiatry putting people in a bad mood reveals different brain networks in heavy internet users 42773324 brain imaging and behavior"
+    },
     {
       "id": "new-scientist-story-ideas-bipolar-september-2026-part-2",
       "title": "New Scientist Story Ideas \u2014 Bipolar \u2014 September 2026 (Part 2)",
