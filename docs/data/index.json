@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 78,
+  "run_count": 79,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 673
+      "count": 677
     },
     {
       "type": "First-in-class",
-      "count": 228
+      "count": 233
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 136
+      "count": 138
     },
     {
       "type": "Overturns prior research",
-      "count": 65
+      "count": 66
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-artificial-intelligence-september-2026-part-2",
+      "title": "New Scientist Story Ideas \u2014 Artificial Intelligence \u2014 September 2026 (Part 2)",
+      "topic": "artificial intelligence",
+      "run_date": "2026-09-29",
+      "study_count": 12,
+      "top_score": 7,
+      "total_issues": "15 (12 Minor, 3 Moderate, 0 Major)",
+      "novelty_counts": {
+        "First-in-class": 5,
+        "Counterintuitive": 4,
+        "New mechanism": 2,
+        "Overturns prior research": 1
+      },
+      "search": "new scientist story ideas \u2014 artificial intelligence \u2014 september 2026 (part 2) artificial intelligence artificial intelligence saying \"we\" instead of \"i\" makes people more afraid of ai 40745650 personality and social psychology bulletin chatting with an ai that plays a foreigner softens prejudice \u2014 but only on the surface 42763964 acta psychologica ai spots hidden brain disorganization in epilepsy tissue that looks normal to pathologists 42767799 brain pathology feeling good at using ai doesn't make students lean on it \u2014 trusting it does 42804850 acta psychologica two-thirds of hiv patients at a nigerian clinic are already asking chatbots about their treatment 42736503 international journal of behavioral medicine people can't tell ai-generated faces from real photographs \u2014 and researchers are exploiting it 42773386 behavior research methods sleep doctors watching the same airway video often disagree \u2014 and off-the-shelf ai doesn't fix it 42766212 sleep and breathing brain waves may be the reason ai can't be conscious, argues a leading philosopher of mind 42750504 behavioral and brain sciences chatbots are being told about suicidal thoughts \u2014 and they don't push people toward help 42298343 psychiatric services a questionnaire for spotting risky student drinking was built with help from chatgpt 42473812 international journal of methods in psychiatric research office ergonomics ai works well in the lab \u2014 then loses accuracy on new people 42669165 ergonomics a new theory says hidden depression leaks out through your phone at night 42753424 asian journal of psychiatry"
+    },
     {
       "id": "new-scientist-story-ideas-emotion-regulation-september-2026-part-2",
       "title": "New Scientist Story Ideas \u2014 Emotion Regulation \u2014 September 2026 (Part 2)",
