@@ -2,8 +2,8 @@ name: Daily New Scientist Story Ideas
 
 on:
   schedule:
-    # 12:00 UTC every day (07:00 ET, 08:00 EDT)
-    - cron: "0 12 * * *"
+    # 10:00 UTC every day (5:00am CDT, 4:00am CST)
+    - cron: "0 10 * * *"
 
   # Allow manual runs with an optional focus override
   workflow_dispatch:

@@ -17,7 +17,7 @@ below.
 ## How it works
 
 `.github/workflows/daily-digest.yml` runs `scripts/main.py` on a daily cron
-(12:00 UTC / 07:00 ET) via GitHub Actions. Each run:
+(10:00 UTC / 5:00 AM CDT) via GitHub Actions. Each run:
 
 1. **Searches PubMed** (`pubmed.py`) across 325 curated mental health, psychiatry
    and brain science journals (`journals.py`) for articles from the last 30 days,
