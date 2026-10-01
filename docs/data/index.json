@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 79,
+  "run_count": 80,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 677
+      "count": 682
     },
     {
       "type": "First-in-class",
-      "count": 233
+      "count": 236
     },
     {
       "type": "Included for relevance",
@@ -36,18 +36,35 @@
     },
     {
       "type": "New mechanism",
-      "count": 138
+      "count": 141
     },
     {
       "type": "Overturns prior research",
-      "count": 66
+      "count": 68
     },
     {
       "type": "Failed replication",
-      "count": 9
+      "count": 10
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-psychotherapy-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Psychotherapy \u2014 October 2026",
+      "topic": "psychotherapy",
+      "run_date": "2026-10-01",
+      "study_count": 14,
+      "top_score": 8,
+      "total_issues": "18 (12 Minor, 6 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 5,
+        "New mechanism": 3,
+        "First-in-class": 3,
+        "Overturns prior research": 2,
+        "Failed replication": 1
+      },
+      "search": "new scientist story ideas \u2014 psychotherapy \u2014 october 2026 psychotherapy psychotherapy talking therapy rooted in freud improves daily functioning in people with schizophrenia 42716057 the lancet psychiatry comfortable therapy sessions beat gruelling ones for getting better 42530984 journal of counseling psychology therapy for childhood ocd works \u2014 but not by fixing how children think 42800322 journal of anxiety disorders shame drives symptoms \u2014 and makes kindness hard to accept 42775480 psychotherapy research people believe in therapy more than they believe in their own therapy 42789775 american journal of psychotherapy borderline personality disorder doesn't blunt the effect of ketamine's cousin 42322927 psychiatry research depressed patients who can't stand up for themselves are more likely to be readmitted 42736557 bmc psychiatry giving people feedback on a two-week eye-movement task cuts binge eating \u2014 briefly 42698100 international journal of eating disorders jungian therapy, long dismissed as unevidenced, shows measurable gains 42779379 zeitschrift f\u00fcr psychosomatische medizin und psychotherapie a sniff of oxytocin changes how vividly people with bpd imagine compassion 42372695 psychiatry research why people from minority ethnic backgrounds walk away from therapy 42726438 community mental health journal older people who use cannabis for pain are more careful with it than those using it for mood 42341079 psychiatry the word \"i\" in your messages tracks how well you get on with your therapist 42755118 psychotherapy research a system for classifying group therapy sessions fails to replicate 42295247 journal of counseling psychology"
+    },
     {
       "id": "new-scientist-story-ideas-artificial-intelligence-september-2026-part-2",
       "title": "New Scientist Story Ideas \u2014 Artificial Intelligence \u2014 September 2026 (Part 2)",
