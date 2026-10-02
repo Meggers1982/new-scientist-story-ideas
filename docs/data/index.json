@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 80,
+  "run_count": 81,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 682
+      "count": 686
     },
     {
       "type": "First-in-class",
-      "count": 236
+      "count": 239
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 141
+      "count": 144
     },
     {
       "type": "Overturns prior research",
-      "count": 68
+      "count": 69
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-neuroimaging-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Neuroimaging \u2014 October 2026",
+      "topic": "neuroimaging",
+      "run_date": "2026-10-02",
+      "study_count": 11,
+      "top_score": 7,
+      "total_issues": "20 (13 Minor, 7 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 4,
+        "First-in-class": 3,
+        "New mechanism": 3,
+        "Overturns prior research": 1
+      },
+      "search": "new scientist story ideas \u2014 neuroimaging \u2014 october 2026 neuroimaging neuroimaging most children who feel lonely at 10 are still lonely at 14 42186177 journal of child psychology and psychiatry brain scans during a failed night's sleep show what insomnia actually looks like 42458639 journal of sleep research lab experiments missed a brain network that decides where you look 42772940 eneuro impulsive suicidal thoughts leave a different mark on the brain than planned ones 42710718 journal of affective disorders catatonia may be the ancient freeze response jammed on 42815707 progress in neuro-psychopharmacology & biological psychiatry feeling rejected makes you lonely through a specific psychological step \u2014 and it looks different in older brains 42091836 cognitive, affective & behavioral neuroscience people who fear punishment are better at waiting for a reward 42800541 behavioural brain research your sense of numbers runs through the part of the brain that moves your body 42764054 biological psychology for m\u0101ori, the brain is sacred \u2014 and mri practice has no rules for that 42503436 brain impairment in gaming disorder, the brain's reward circuit reacts oddly to rewards that have nothing to do with games 42335494 journal of psychiatric research depressed people who are sleepy by day lose pleasure in physical things 42746369 depression and anxiety"
+    },
     {
       "id": "new-scientist-story-ideas-psychotherapy-october-2026",
       "title": "New Scientist Story Ideas \u2014 Psychotherapy \u2014 October 2026",
