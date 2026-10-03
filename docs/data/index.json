@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 81,
+  "run_count": 82,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 686
+      "count": 689
     },
     {
       "type": "First-in-class",
-      "count": 239
+      "count": 243
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 144
+      "count": 149
     },
     {
       "type": "Overturns prior research",
-      "count": 69
+      "count": 70
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-addiction-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Addiction \u2014 October 2026",
+      "topic": "addiction",
+      "run_date": "2026-10-03",
+      "study_count": 13,
+      "top_score": 7,
+      "total_issues": "23 (17 Minor, 6 Moderate, 0 Major)",
+      "novelty_counts": {
+        "New mechanism": 5,
+        "First-in-class": 4,
+        "Counterintuitive": 3,
+        "Overturns prior research": 1
+      },
+      "search": "new scientist story ideas \u2014 addiction \u2014 october 2026 addiction addiction heavy phone use and depression travel together, but one may not be driving the other 42748880 addictive behaviors seeing drug-related images breaks down basic sensory filtering in people who use methamphetamine 42740334 psychological medicine what gamblers believe about gambling predicts their trajectory better than how well they manage emotions 42143790 addictive behaviors self-control protects teenagers from internet addiction \u2014 except when they are being punished 42727287 acta psychologica a blood marker flags which methamphetamine users will still have thinking problems a year later 42379379 behavioural brain research semaglutide blocks three different relapse triggers for fentanyl in rats 42228850 behavioural pharmacology real-world reports flag unexpected psychiatric effects for the first pill approved for postpartum depression 42711976 australasian psychiatry the immune system may be running the brain chemistry of addiction 42425280 neuroscience and biobehavioral reviews psychedelics may work by loosening the scaffolding that holds brain circuits in place 41765343 biological psychiatry heavy digital media use is tied to higher bmi, and comfort eating sits in the middle of the link 42785564 appetite gambling harm in kazakhstan concentrates in middle-aged men, not the young 41887939 the journal of general psychology when one man gambles online, the whole extended family pays the debt \u2014 and swears an oath 42704516 journal of gambling studies gambling, gaming, social media and porn use may run through the same chain of thought 42801890 addictive behaviors"
+    },
     {
       "id": "new-scientist-story-ideas-neuroimaging-october-2026",
       "title": "New Scientist Story Ideas \u2014 Neuroimaging \u2014 October 2026",
