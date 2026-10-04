@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 82,
+  "run_count": 83,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 689
+      "count": 692
     },
     {
       "type": "First-in-class",
-      "count": 243
+      "count": 248
     },
     {
       "type": "Included for relevance",
@@ -36,7 +36,7 @@
     },
     {
       "type": "New mechanism",
-      "count": 149
+      "count": 154
     },
     {
       "type": "Overturns prior research",
@@ -48,6 +48,21 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-social-media-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Social Media \u2014 October 2026",
+      "topic": "social media",
+      "run_date": "2026-10-04",
+      "study_count": 13,
+      "top_score": 6,
+      "total_issues": "20 (15 Minor, 5 Moderate, 0 Major)",
+      "novelty_counts": {
+        "First-in-class": 5,
+        "New mechanism": 5,
+        "Counterintuitive": 3
+      },
+      "search": "new scientist story ideas \u2014 social media \u2014 october 2026 social media social media a scale now exists for \"main character syndrome\" \u2014 and it looks more like identity confusion than narcissism 42696901 acta psychologica virtual influencers who overshare put people off \u2014 unless they are beautiful 42765465 cyberpsychology, behavior, and social networking punishing a teenager for being upset predicts worse doomscrolling months later 42817062 applied psychology: health and well-being liking a vaping post is a stronger marker of heavy tobacco use than just seeing one 42229276 addictive behaviors personal trainers say their own bodies are the product \u2014 and it's wrecking their body image 42785604 psychology of sport and exercise men preoccupied with getting bigger report more sexual problems 42809933 body image most bereaved partners have sexual memories of the person who died \u2014 and mostly find them comforting 40208217 the journal of sex research compulsive internet users may be easier to phish 42808340 cyberpsychology, behavior, and social networking fear of being cancelled is showing up in therapy rooms as a distinct anxiety 42296638 current opinion in psychology social media and ai are quietly rewriting what psychiatric terms mean 41770174 american psychologist the more you understand how targeted ads work, the harder you work to avoid them 42790213 acta psychologica labeling a robot's fact-check as coming from a regulator doesn't make people believe it more 42765662 ergonomics in online arguments about returning wolves, people blame the wolf 42804846 acta psychologica"
+    },
     {
       "id": "new-scientist-story-ideas-addiction-october-2026",
       "title": "New Scientist Story Ideas \u2014 Addiction \u2014 October 2026",
