@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 83,
+  "run_count": 84,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 692
+      "count": 700
     },
     {
       "type": "First-in-class",
-      "count": 248
+      "count": 252
     },
     {
       "type": "Included for relevance",
@@ -36,7 +36,7 @@
     },
     {
       "type": "New mechanism",
-      "count": 154
+      "count": 155
     },
     {
       "type": "Overturns prior research",
@@ -44,10 +44,26 @@
     },
     {
       "type": "Failed replication",
-      "count": 10
+      "count": 11
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-exercise-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Exercise \u2014 October 2026",
+      "topic": "exercise",
+      "run_date": "2026-10-05",
+      "study_count": 14,
+      "top_score": 7,
+      "total_issues": "23 (15 Minor, 8 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 8,
+        "First-in-class": 4,
+        "New mechanism": 1,
+        "Failed replication": 1
+      },
+      "search": "new scientist story ideas \u2014 exercise \u2014 october 2026 exercise exercise being told you did worse than average makes you exercise harder \u2014 and feel worse about your body 42805545 psychology of sport and exercise three minutes a day beats two half-hour workouts a week 42704303 behavioral medicine we judge people's health habits as moral failings only when we think they hurt someone else 41185114 personality and social psychology bulletin ten minutes of \"exercise snacks\" a day lowers office workers' blood pressure and stress 42810116 acta psychologica for older adults, being shown how to exercise matters more for mood than how much they exercise 42807680 depression and anxiety fitness instagram is linked to more exercise \u2014 but only in people who don't see themselves as exercisers 42803216 journal of health psychology eating disorder clinicians say they lack any guidance on the compulsive exercise they treat daily 41982074 scandinavian journal of psychology \"realistic\" postpartum workout images still leave new mothers feeling worse about their bodies 41724692 journal of health psychology replaying a relaxation exercise to sleeping nightmare sufferers changes their sleep spindles \u2014 but not their nightmares 42714131 journal of sleep research teaching exercise through \"feel it\" cues beats instruction by demonstration on fitness and movement quality 42804848 acta psychologica prescribing exercise for pleasure gets people back to the gym \u2014 but not via the motivations theory predicts 42772728 journal of sport and exercise psychology team sport, solo spinning or karate \u2014 the mood lift after exercise looks much the same 42801814 acta psychologica confidence in runners builds in one direction: believing in yourself shapes what you think others think of you 42722364 journal of sport and exercise psychology most people with hard-to-treat epilepsy or dissociative seizures do no exercise at all 42700754 epilepsy & behavior"
+    },
     {
       "id": "new-scientist-story-ideas-social-media-october-2026",
       "title": "New Scientist Story Ideas \u2014 Social Media \u2014 October 2026",
