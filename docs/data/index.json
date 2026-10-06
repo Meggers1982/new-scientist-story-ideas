@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 84,
+  "run_count": 85,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 700
+      "count": 706
     },
     {
       "type": "First-in-class",
-      "count": 252
+      "count": 258
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 155
+      "count": 159
     },
     {
       "type": "Overturns prior research",
-      "count": 70
+      "count": 72
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-dementia-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Dementia \u2014 October 2026",
+      "topic": "dementia",
+      "run_date": "2026-10-06",
+      "study_count": 18,
+      "top_score": 7,
+      "total_issues": "29 (22 Minor, 7 Moderate, 0 Major)",
+      "novelty_counts": {
+        "First-in-class": 6,
+        "Counterintuitive": 6,
+        "New mechanism": 4,
+        "Overturns prior research": 2
+      },
+      "search": "new scientist story ideas \u2014 dementia \u2014 october 2026 dementia dementia low-dose lithium is linked to fewer dementia diagnoses than valproate in older adults 42372694 psychiatry research people with bipolar disorder treated with lithium develop dementia less often than those on valproate 42349060 psychiatry research depression predicts dementia better than insomnia does \u2014 and adding poor sleep tells you almost nothing extra 42144138 journal of affective disorders autistic adults report far worse memory and thinking than tests can detect 42815817 neuroscience and biobehavioral reviews loneliness after a stroke is linked to a sharply higher risk of later dementia 42119905 journal of affective disorders people with dementia who have sleep problems are at higher risk of suicide \u2014 and depression doesn't explain it 42790647 journal of affective disorders nearly a third of people newly diagnosed with dementia in german family practices get an antipsychotic first 42772309 psychiatrische praxis a hidden background signal in the brain's electrical noise predicts who develops parkinson's or lewy body dementia 42747400 sleep motor symptoms outrun thinking problems in people destined for parkinson's \u2014 and the gap shows up years early 42213896 brain tiny white-matter lesions damage the brain's acetylcholine supply lines \u2014 and that's what drags cognition down in parkinson's 42117428 brain genetic sleuthing shows many \"sporadic\" cases of frontotemporal dementia are actually inherited 42789481 brain sleeping light instead of deep is linked to early damage in the brain's small blood vessels 42779207 journal of sleep research four in ten older people with epilepsy struggle with everyday tasks \u2014 and one in six at a level seen in dementia 42704320 epilepsia hearing loss makes people feel their memory is failing \u2014 but tests suggest something else is going on 42126868 scandinavian journal of psychology a biological marker in caregivers' blood predicts depression months later \u2014 but only in the anxiously attached 42804652 biopsychosocial science and medicine why african caribbean families in the uk wait longer for dementia help 40939289 dementia (london) most people with advanced dementia do die at home \u2014 but who ends up in hospital is not who you'd expect 40913758 dementia (london) people with down syndrome understand what dementia is \u2014 their families often won't discuss it 42725843 journal of intellectual disability research"
+    },
     {
       "id": "new-scientist-story-ideas-exercise-october-2026",
       "title": "New Scientist Story Ideas \u2014 Exercise \u2014 October 2026",

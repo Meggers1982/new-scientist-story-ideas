@@ -1,22 +1,24 @@
 # Topic Memory: dementia
-_Last updated: 2026-09-16_
+_Last updated: 2026-10-06_
 
 ## Established findings
-- Plasma p-tau217 is the standout blood marker, but well-chosen verbal memory tests track it closely and add comparable diagnostic value — shown in Down syndrome and in a large prevention cohort (PMIDs 42138095 Aug 2026, 42335710 Sep 2026).
-- Detection and risk-management tools systematically underperform in intellectual/developmental disability: verbal-fluency-linked screening bias, frailty scales confounded by lifelong baseline ability, diagnostic overshadowing in hospital (PMIDs 42311142, 42609160, 42659675).
-- Depression and dementia co-occur at ~25% with strong credibility; prognostic consequences remain unestablished, and new within-person data suggest depressive symptoms depress test scores at a visit without changing decline trajectory (PMIDs 41895003, 40859820).
-- Caregiver distress has relational and physiological, not purely workload, mechanisms — impaired mutual emotion repair, round-the-clock heart rate synchrony (PMIDs 42593973, 42398884).
-- Mechanism-rich, trial-poor is the norm in dementia therapeutics: cognitive training, tirzepatide, low-dose lithium all have biology and observational signals without randomized endpoints (PMIDs 42259152, 42608956, 42268602).
+- Mechanism-rich, trial-poor remains the norm in dementia therapeutics; low-dose lithium is the clearest case — narrative advocacy (42268602, Sep 2026) now backed by two active-comparator EHR emulations showing lower dementia incidence versus valproate, with no excess renal harm (42372694, 42349060, Oct 2026), and still no RCT.
+- Depression is a pervasive confounder, not just a comorbidity: it depresses test scores within-person (40859820), outperforms insomnia as a dementia predictor (42144138), and absorbs the hearing-loss link to cognitive complaints (42126868).
+- Detection, measurement and communication tools systematically underperform in neurodivergent populations — intellectual disability, Down syndrome, now autistic adults (42623159, 42609160, 42659675, 42725843, 42815817).
+- Caregiver distress has relational and physiological rather than purely workload mechanisms (42398884, 42721295, 42804652).
+- Plasma p-tau217 is the standout blood marker but well-chosen verbal memory tests track it closely (42138095, 42335710).
 
 ## Emerging threads
-- Population-scale dementia burden in intellectual disability without Down syndrome: 17.6% over 11 years, mean diagnosis age 62.6, cause unexplained (PMID 42623159).
-- Severe mental illness linked to dementia diagnosis at strikingly young ages (OR 23 at 30–39); coding artifact versus biology unresolved (PMID 42013686).
-- Competing-risk and comorbidity adjustment dissolving established neuro-psychiatric associations — epilepsy and later-life depression/anxiety (PMID 42155275); a methods thread worth tracking across age-related epidemiology.
-- Upstream, non-individual risk exposures with multi-decade lags: adolescent state policy environment and dementia 50 years later (PMID 41109848).
-- Sleep phenotype combinations as risk strata: COMISA (apnea plus insomnia) carrying 34% excess dementia risk, with reverse causation unresolved (PMID 42640940).
-- Reversible and iatrogenic dementia-like presentations: CSF leak producing measurable mechanical strain in temporal/hippocampal regions (PMID 42665818); dopaminergic therapy causing most documented hypersexuality (PMID 42330690).
-- Historical brain archives as evidence on pre-treatment disease: hemisphere-asymmetric tau in focal epilepsy (PMID 42715912).
+- TriNetX and target trial emulation are becoming the default engine for dementia pharmacoepidemiology; near-simultaneous papers from the same database are not independent replications (42640940, 42372694, 42349060).
+- Isolated REM sleep behavior disorder as prodromal prediction testbed: aperiodic EEG offset outperforming band power (42747400); disease course mapping splitting motor-first from cognition-first trajectories (42213896).
+- Small vessel disease linked to cognition via cholinergic projection damage (42117428) and to shallow sleep via PSMD before conventional markers change (42779207).
+- Iatrogenic and guideline-discordant prescribing: antipsychotics as the commonest first prescription after dementia diagnosis in German primary care (42772309); dopaminergic hypersexuality (42330690).
+- "Sporadic" neurodegeneration concealing hidden relatedness — 15.9% of sporadic FTD genetically linked to another case (42789481).
+- Subjective versus objective exposure splitting apart: loneliness predicts dementia after stroke where isolation does not (42119905).
+- Service-level inequity and end-of-life metrics: African Caribbean help-seeking delay (40939289); final place of care driven by acute, not fixed, factors (40913758).
+- Competing-risk and comorbidity adjustment dissolving established neuro-psychiatric associations (42155275) — methods thread worth tracking.
 
 ## Feature ideas already pitched
-- Aug 2026: Dementia detection and risk management failing people with intellectual/developmental disabilities — anticholinergic burden at 31, verbal-fluency screening bias, p-tau217 not beating a memory test in Down syndrome (42592704, 42311142, 42138095).
-- Sep 2026: The caregiver as the unmeasured second patient — the unreplicated mortality statistic, heart rate synchrony, depression persisting after care-home placement, informants never interviewed (42721295, 42398884, 42720084, 42330690, 42659675).
+- Aug 2026: Dementia detection and risk management failing people with intellectual/developmental disabilities (42592704, 42311142, 42138095).
+- Sep 2026: The caregiver as the unmeasured second patient — unreplicated mortality statistic, heart rate synchrony, depression after placement (42721295, 42398884, 42720084, 42330690, 42659675).
+- Oct 2026: The modifiable risk-factor checklist audited — sleep, hearing and isolation shrinking or re-sorting once mood and subjective state are modeled (42144138, 42119905, 42126868, 42815817).
