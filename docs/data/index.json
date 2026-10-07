@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 85,
+  "run_count": 86,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 706
+      "count": 710
     },
     {
       "type": "First-in-class",
-      "count": 258
+      "count": 259
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 159
+      "count": 161
     },
     {
       "type": "Overturns prior research",
-      "count": 72
+      "count": 74
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-october-2026",
+      "title": "New Scientist Story Ideas \u2014 October 2026",
+      "topic": "",
+      "run_date": "2026-10-07",
+      "study_count": 9,
+      "top_score": 7,
+      "total_issues": "14 (9 Minor, 5 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 4,
+        "Overturns prior research": 2,
+        "New mechanism": 2,
+        "First-in-class": 1
+      },
+      "search": "new scientist story ideas \u2014 october 2026 broad (all mind and brain topics) crows, monkeys and preschoolers all build mental hierarchies \u2014 just not reliably 42837861 cognition people judge exponential growth more accurately when it's bad news 42837964 acta psychologica fear of childbirth that grows through pregnancy predicts less depression afterwards 42749166 journal of affective disorders legalizing same-sex partnership improves relationships, but not individual well-being 42839126 archives of sexual behavior being bullied by peers in childhood changes how stress biology tracks brain structure 42830709 european journal of psychotraumatology a wearable brain scanner and a word game can tell three psychiatric diagnoses apart 42840883 depression and anxiety 'easy-to-read' versions of stories don't actually help people understand them 42839715 journal of intellectual disability research acute stress makes a smell lose its emotional punch faster 42777956 behavioural brain research care workers find being ignored by management more stressful than the job itself 42836492 journal of intellectual & developmental disability"
+    },
     {
       "id": "new-scientist-story-ideas-dementia-october-2026",
       "title": "New Scientist Story Ideas \u2014 Dementia \u2014 October 2026",
