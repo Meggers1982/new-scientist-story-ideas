@@ -1,21 +1,22 @@
 # Topic Memory: depression
-_Last updated: 2026-09-18_
+_Last updated: 2026-10-08_
 
 ## Established findings
-- Subjective experience outperforms objective proxies as a predictor: loneliness beats contact frequency for depression (PMID 42623964, 2026-09); felt childhood loneliness beats measured isolation for psychosis (PMID 42636467, 2026-08); self-identified beats recorded first-generation status for hardship (PMID 42634162, 2026-08).
-- Risk signals in observational psychiatry routinely attenuate or vanish under better comparators: prenatal benzodiazepines/Z-drugs and ADHD/autism (PMID 42744942, 2026-09), GLP-1 neuropsychiatric claims (PMID 42624955, 2026-08), parental problem drinking (PMID 42665302, 2026-08), refugee resilience/social support (PMID 42642861, 2026-08).
-- Depression compounds rather than explains away somatic burden: fibromyalgia central-sensitization interaction (PMID 42660390, 2026-08); stronger depression-CKM association in women and in under-50s (PMID 42747918, 2026-09).
-- Group-average nulls conceal treatment-matching signals; moderator analysis is where the usable finding sits (ANTOP PMID 42611819, 2026-08; triglycerides and TMS response PMID 42720531, 2026-09; blunted RewP and brief training PMID 42700813, 2026-09).
+- Decomposing broad psychological constructs changes the answer: internalized racism facets mapping to different symptoms (PMID 42829217, 2026-10); uncompassionate vs compassionate self-responding after stroke (PMID 42731412, 2026-09); forgiveness against the grain of resilience items (PMID 42664566, 2026-09); loneliness vs contact frequency (PMID 42623964, 2026-09).
+- Moderators carry the usable finding where main effects are weak: pre-existing world assumptions filtering war exposure (PMID 42844775, 2026-10); triglycerides and TMS response (PMID 42720531, 2026-09); blunted RewP and brief training (PMID 42700813, 2026-09); baseline depression severity in ANTOP (PMID 42611819, 2026-08).
+- Observational risk signals attenuate or vanish under better comparators and author-flagged confounding: prenatal benzodiazepines/Z-drugs (PMID 42744942, 2026-09), antidepressants and conception (PMID 42735740, 2026-09), GLP-1 claims (PMID 42624955, 2026-08), selective-return confounding in burnout follow-up (PMID 42698289, 2026-10).
+- Exercise arms keep returning nulls at realistic dose: no lasting cognitive gain in burnout rehabilitation (PMID 42698289, 2026-10); no mood effect from school PE (PMID 42752288, 2026-09).
+- Depression compounds somatic burden rather than explaining it away (PMIDs 42660390, 42747918, 2026-08/09).
 
 ## Emerging threads
-- Widely promoted interventions failing at realistic dose: school PE exercise for adolescent mood (PMID 42752288, 2026-09), avatar VR support groups (PMID 42661554, 2026-08), perinatal prevention not transferring to parenting warmth (PMID 42593980, 2026-08); forgiveness positively associated with PTSD while approach/hope items protect (PMID 42664566, 2026-09).
-- Passive sensing works better for diagnosis than for momentary cognition: actigraphy plus PSG separating unipolar from bipolar at AUC 0.926 (PMID 42751051, 2026-09) versus failed individual-level EEG decoding of rumination (PMID 42648371, 2026-08) and reversed retinal GCIPL direction (PMID 42637150, 2026-08).
-- Relationship-mapping as measurement: cold-submissive interpersonal style tied to chronicity/comorbidity (PMID 42731108, 2026-09); altered striatal-TPJ trust signaling with close friends (PMID 42702279, 2026-09).
-- Women's reproductive mental health answered almost entirely by administrative data and meta-analysis: perinatal depression at 16% by records algorithm with pre-pregnancy distress OR 8.1 (PMID 42745087), antidepressant timing and conception in fertility care (PMID 42735740), trafficking survivor prevalence with extreme heterogeneity (PMID 42752993), body image in endometriosis/chronic pelvic pain (PMID 42600312) — all 2026-09.
-- Peer- and survivor-designed care as a delivery model (boxing plus expressive writing, PMID 42752360, 2026-09); refugee therapy gains hold across asylum-status change (PMID 42703887, 2026-09). Watch for controlled replications.
-- Metabolic phenotypes creeping into treatment selection and drug development: lipids as TMS response marker (PMID 42720531), weight loss on lumateperone in open-label extension (PMID 42696983), gut SCFA switch (PMID 42636957).
-- Help-seeking limited by symptoms rather than beliefs: non-linear mistrust effect in Black adults, depression independently lowering willingness (PMID 42749881, 2026-09).
+- Short-duration psychiatry: five-day accelerated iTBS for suicidal ideation (PMID 42842759, 2026-10); 20-30 minute tryptamines and a non-hallucinogenic analogue with animal-only data (PMID 42838215, 2026-10). Watch for sham-controlled replications and first human zalsupindole data.
+- Computerized cognitive training showing unusually durable transfer in a clinical population (4.5 years, PMID 42698289) — a counterweight to the brain-training literature; needs independent replication.
+- Unipolar/bipolar separation: objectively distinguishable by sleep and actigraphy (PMID 42751051, 2026-09) yet similarly responsive to accelerated iTBS (PMID 42842759, 2026-10).
+- Relationship- and belief-mapping as psychiatric measurement: cold-submissive style and chronicity (PMID 42731108), striatal-TPJ trust signaling (PMID 42702279), world assumptions as a buffer (PMID 42844775).
+- Passive sensing better for diagnosis than for momentary cognition (PMID 42751051 vs 42648371, 42637150).
+- Industry entanglement rising in psychedelic and neuromodulation coverage — senior-author disclosures now a routine reporting caveat (PMID 42838215).
 
 ## Feature ideas already pitched
-- 2026-08-29: "Mental health's disappearing protective factors" — cross-study deflation of resilience, VR support, perinatal prevention, single-ACE effects and rumination biomarkers, with moderator findings as the constructive turn. NS Features, Undark, STAT, Guardian.
-- 2026-09-18: "Depression in women's reproductive lives, reconstructed from claims data" — registry/meta-analysis epidemiology standing in for absent trials in pregnancy, fertility care, perinatal screening, trafficking survivors and pelvic pain. NS Features, STAT, Guardian, Undark.
+- 2026-08-29: "Mental health's disappearing protective factors" — deflation of resilience, VR support, perinatal prevention and rumination biomarkers, with moderators as the constructive turn.
+- 2026-09-18: "Depression in women's reproductive lives, reconstructed from claims data" — registry and meta-analytic epidemiology standing in for absent trials.
+- 2026-10-08: "The shrinking clock in depression treatment" — five-day stimulation, 20-minute psychedelics and a durable short training course, set against weak trial designs. NS Features, STAT, Undark, Wired.

@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 86,
+  "run_count": 87,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 710
+      "count": 711
     },
     {
       "type": "First-in-class",
-      "count": 259
+      "count": 261
     },
     {
       "type": "Included for relevance",
@@ -36,7 +36,7 @@
     },
     {
       "type": "New mechanism",
-      "count": 161
+      "count": 163
     },
     {
       "type": "Overturns prior research",
@@ -48,6 +48,21 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-depression-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Depression \u2014 October 2026",
+      "topic": "depression",
+      "run_date": "2026-10-08",
+      "study_count": 5,
+      "top_score": 7,
+      "total_issues": "16 (14 Minor, 2 Moderate, 0 Major)",
+      "novelty_counts": {
+        "First-in-class": 2,
+        "New mechanism": 2,
+        "Counterintuitive": 1
+      },
+      "search": "new scientist story ideas \u2014 depression \u2014 october 2026 depression depression brain training for burnout still pays off four and a half years later 42698289 stress and health rapid brain stimulation cuts suicidal thoughts within days in a small trial 42842759 archives of suicide research short-acting psychedelics are being tested against depression \u2014 and one version leaves out the trip 42838215 progress in neuro-psychopharmacology & biological psychiatry whether war damages your mental health may depend on what you already believed about the world 42844775 anxiety, stress & coping not all internalized racism affects mental health the same way 42829217 journal of cognitive psychotherapy"
+    },
     {
       "id": "new-scientist-story-ideas-october-2026",
       "title": "New Scientist Story Ideas \u2014 October 2026",
