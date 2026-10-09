@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 87,
+  "run_count": 88,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 711
+      "count": 714
     },
     {
       "type": "First-in-class",
-      "count": 261
+      "count": 262
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 163
+      "count": 165
     },
     {
       "type": "Overturns prior research",
-      "count": 74
+      "count": 76
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-memory-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Memory \u2014 October 2026",
+      "topic": "memory",
+      "run_date": "2026-10-09",
+      "study_count": 8,
+      "top_score": 7,
+      "total_issues": "18 (14 Minor, 4 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 3,
+        "Overturns prior research": 2,
+        "New mechanism": 2,
+        "First-in-class": 1
+      },
+      "search": "new scientist story ideas \u2014 memory \u2014 october 2026 memory memory professionals on tiktok push repressed-memory claims more than laypeople do 42847121 memory letting your mind wander after studying does not seem to harm what you remember 42771053 psychological research the promise of a reward sharpens memory in older adults just as much as in the young 42849577 international journal of psychophysiology making people feel lonely in the lab does not make them read hostility into others 42831817 emotion words about food resist deliberate forgetting \u2014 words about death do not 42844925 memory parents' and teachers' verdicts on a child's self-control only partly match what tests show 42166276 psychological assessment a deep thalamic region only starts telling danger from safety a week after the lesson 42843708 neurobiology of learning and memory angry and sad faces compete for different mental resources when you try to hold them in mind 42845027 quarterly journal of experimental psychology"
+    },
     {
       "id": "new-scientist-story-ideas-depression-october-2026",
       "title": "New Scientist Story Ideas \u2014 Depression \u2014 October 2026",
