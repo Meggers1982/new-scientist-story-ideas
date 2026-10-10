@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 88,
+  "run_count": 89,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 714
+      "count": 716
     },
     {
       "type": "First-in-class",
-      "count": 262
+      "count": 264
     },
     {
       "type": "Included for relevance",
@@ -36,7 +36,7 @@
     },
     {
       "type": "New mechanism",
-      "count": 165
+      "count": 166
     },
     {
       "type": "Overturns prior research",
@@ -48,6 +48,21 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-sleep-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Sleep \u2014 October 2026",
+      "topic": "sleep",
+      "run_date": "2026-10-10",
+      "study_count": 5,
+      "top_score": 7,
+      "total_issues": "12 (7 Minor, 4 Moderate, 1 Major)",
+      "novelty_counts": {
+        "First-in-class": 2,
+        "Counterintuitive": 2,
+        "New mechanism": 1
+      },
+      "search": "new scientist story ideas \u2014 sleep \u2014 october 2026 sleep sleep bad nights and next-day eating disorder symptoms feed each other in a daily loop 42834479 international journal of eating disorders sleep helps the brain file away where things were, in both directions at once 42844862 memory anxiety about keeping up with ai tracks with worse sleep 42830665 behavioral sleep medicine religious practice goes with lighter sleep problems in older women, but not men \u2014 and the link mostly dissolves on adjustment 42838779 sleep health one in four drug users in a spanish survey say they take something to help them sleep 42802253 archives of sexual behavior"
+    },
     {
       "id": "new-scientist-story-ideas-memory-october-2026",
       "title": "New Scientist Story Ideas \u2014 Memory \u2014 October 2026",
