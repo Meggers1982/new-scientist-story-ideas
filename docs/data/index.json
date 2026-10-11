@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 89,
+  "run_count": 90,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 716
+      "count": 717
     },
     {
       "type": "First-in-class",
-      "count": 264
+      "count": 265
     },
     {
       "type": "Included for relevance",
@@ -36,7 +36,7 @@
     },
     {
       "type": "New mechanism",
-      "count": 166
+      "count": 167
     },
     {
       "type": "Overturns prior research",
@@ -48,6 +48,21 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-anxiety-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Anxiety \u2014 October 2026",
+      "topic": "anxiety",
+      "run_date": "2026-10-11",
+      "study_count": 3,
+      "top_score": 7,
+      "total_issues": "9 (6 Minor, 3 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 1,
+        "First-in-class": 1,
+        "New mechanism": 1
+      },
+      "search": "new scientist story ideas \u2014 anxiety \u2014 october 2026 anxiety anxiety anxiety and depression fell among ukrainian civilians even as the shelling got worse 42831241 european journal of psychotraumatology young men describe sex as a hazard to defuse rather than something to enjoy 42844656 journal of sex & marital therapy reminding people of death makes them want children \u2014 and the effect is strongest in the chronically ill 42833108 acta psychologica"
+    },
     {
       "id": "new-scientist-story-ideas-sleep-october-2026",
       "title": "New Scientist Story Ideas \u2014 Sleep \u2014 October 2026",
