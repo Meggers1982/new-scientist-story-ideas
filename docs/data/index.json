@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 90,
+  "run_count": 91,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 717
+      "count": 719
     },
     {
       "type": "First-in-class",
-      "count": 265
+      "count": 267
     },
     {
       "type": "Included for relevance",
@@ -40,7 +40,7 @@
     },
     {
       "type": "Overturns prior research",
-      "count": 76
+      "count": 79
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,21 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-autism-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Autism \u2014 October 2026",
+      "topic": "autism",
+      "run_date": "2026-10-12",
+      "study_count": 7,
+      "top_score": 8,
+      "total_issues": "18 (13 Minor, 5 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Overturns prior research": 3,
+        "Counterintuitive": 2,
+        "First-in-class": 2
+      },
+      "search": "new scientist story ideas \u2014 autism \u2014 october 2026 autism autism autistic children feel others' distress more strongly \u2014 but read it less accurately 42856069 journal of child psychology and psychiatry a cord blood enzyme at birth tracks autism traits six years later \u2014 in the opposite direction to expectations 42843280 journal of psychiatric research autism is over-represented in binge eating too \u2014 not just anorexia 42850402 current psychiatry reports brain scans suggest autism comes in two structural flavors 42853485 brain imaging and behavior prenatal supplements for preventing autism and adhd: the evidence isn't there 42849536 behavioural brain research an eight-week parent-led program keeps autistic teenagers' job skills from sliding over the summer 42790248 research in developmental disabilities caregivers of children with congenital cmv report *less* emotional strain when autism is in the picture \u2014 at school age 42853118 journal of developmental and behavioral pediatrics"
+    },
     {
       "id": "new-scientist-story-ideas-anxiety-october-2026",
       "title": "New Scientist Story Ideas \u2014 Anxiety \u2014 October 2026",
