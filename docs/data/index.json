@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 91,
+  "run_count": 92,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 719
+      "count": 721
     },
     {
       "type": "First-in-class",
-      "count": 267
+      "count": 268
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 167
+      "count": 169
     },
     {
       "type": "Overturns prior research",
-      "count": 79
+      "count": 80
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-schizophrenia-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Schizophrenia \u2014 October 2026",
+      "topic": "schizophrenia",
+      "run_date": "2026-10-13",
+      "study_count": 6,
+      "top_score": 6,
+      "total_issues": "12 (8 Minor, 4 Moderate, 0 Major)",
+      "novelty_counts": {
+        "Counterintuitive": 2,
+        "New mechanism": 2,
+        "First-in-class": 1,
+        "Overturns prior research": 1
+      },
+      "search": "new scientist story ideas \u2014 schizophrenia \u2014 october 2026 schizophrenia schizophrenia most people have intrusive fears of \"going crazy\" \u2014 and ocd makes them stick 42800306 journal of behavior therapy and experimental psychiatry people in early psychosis say romance is central to recovery \u2014 their clinics almost never ask 41891676 journal of mental health women's verbal memory advantage vanishes after a first episode of psychosis 42843653 spanish journal of psychiatry and mental health genetic evidence points to clozapine itself driving diabetes risk 42472444 the world journal of biological psychiatry there may be no single recipe for recovering from schizophrenia 42734987 psychiatric rehabilitation journal two ways reality can go wrong: the philosopher's case for comparing borderline and schizophrenia 42853770 psychopathology"
+    },
     {
       "id": "new-scientist-story-ideas-autism-october-2026",
       "title": "New Scientist Story Ideas \u2014 Autism \u2014 October 2026",
