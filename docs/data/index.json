@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 92,
+  "run_count": 93,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 721
+      "count": 725
     },
     {
       "type": "First-in-class",
-      "count": 268
+      "count": 272
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 169
+      "count": 174
     },
     {
       "type": "Overturns prior research",
-      "count": 80
+      "count": 82
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-trauma-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Trauma \u2014 October 2026",
+      "topic": "trauma",
+      "run_date": "2026-10-14",
+      "study_count": 15,
+      "top_score": 8,
+      "total_issues": "17 (12 Minor, 5 Moderate, 0 Major)",
+      "novelty_counts": {
+        "New mechanism": 5,
+        "Counterintuitive": 4,
+        "First-in-class": 4,
+        "Overturns prior research": 2
+      },
+      "search": "new scientist story ideas \u2014 trauma \u2014 october 2026 trauma trauma immigrants start later life less depressed than natives \u2014 then overtake them by their mid-60s 42851008 journal of health and social behavior ukrainians who fled abroad report worse ptsd than those who stayed in the war zone 42411615 journal of mental health disgust lingers longer than fear after a disturbing experience 42060450 emotion public distress over israel's hostages fell for six months, then froze for a year 42828449 stress and health parents who were sexually abused as children have children reporting very different kinds of maltreatment 42842484 european journal of psychotraumatology a vr walk through an ordinary street can pick out soldiers with hidden ptsd symptoms 42826675 journal of psychiatric research treating inuit silence as a symptom may be the mistake 42578805 transcultural psychiatry for nova festival survivors, the institutional response became a second injury 42847151 european journal of psychotraumatology trouble naming your own feelings predicts who breaks down in wartime 41944560 australasian psychiatry in lgbtq+ families, parents' stresses simply add up \u2014 they don't multiply 42531029 journal of family psychology being a sad child \u2014 not an abused one \u2014 tracks with worse romantic relationships in your twenties 42852960 the journal of psychology transgender women report rarely seeking formal help after violence \u2014 and rarely getting it when they do 42848018 american journal of orthopsychiatry the people sent instead of police are burning out as \"the face of a broken system\" 41940892 community mental health journal sleep may be the bridge between childhood trauma and emotional numbness in depression 42785231 journal of psychiatric research shame, not avoidance itself, may be what links trauma to suicidal thoughts 42815005 cognitive behaviour therapy"
+    },
     {
       "id": "new-scientist-story-ideas-schizophrenia-october-2026",
       "title": "New Scientist Story Ideas \u2014 Schizophrenia \u2014 October 2026",

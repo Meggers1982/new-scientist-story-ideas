@@ -1,23 +1,26 @@
 # Topic Memory: trauma
-_Last updated: 2026-09-24_
+_Last updated: 2026-10-14_
 
 ## Established findings
-- Childhood adversity/maltreatment robustly predicts symptom severity, persistence and baseline distress across diverse outcomes (42687372, 42673683, 42166956, 2026-09); but it sets the starting point, not the slope of recovery — high-ACE pain patients improved as much as others (42166956), and adversity-linked social-cognitive deficits shifted in an 8-session VR program (42765386, 2026-09).
-- Standard clinical variables predict the outcomes clinicians most want poorly: diagnoses barely predict functioning or suicidality (42644771), symptom severity doesn't predict dropout (42222912), and reattempt sat at the periphery of an adolescent risk network (42734150).
-- Alexithymia is recurring as a mechanism linking early trauma to physiology and to failed self-monitoring (42579979, 42721324).
-- Trauma-related diagnosis retains independent predictive value even where categorical diagnoses generally fail (42644771).
+- Early adversity sets the starting level of distress, not the slope of later response: null stress-sensitization interaction in LGBTQ+ parents (42531029, 2026-10); childhood factors explained ~none of immigrant late-life depression (42851008, 2026-10); high-ACE pain patients improved as much as others (42166956).
+- Standard clinical variables predict the outcomes clinicians care about poorly — diagnoses vs functioning (42644771), severity vs dropout (42222912), reattempt at the periphery of adolescent risk networks (42734150).
+- Alexithymia, and specifically difficulty identifying feelings, recurs as a mechanism linking trauma to physiology, failed self-monitoring and adjustment disorder (42579979, 42721324, 41944560, 42785231).
+- Shame — not guilt, self-blame or avoidance per se — is the recurring mediator between trauma and both social withdrawal and suicidality (42766479, 42815005).
+- Structural and ongoing exposures outweigh the psychological pathway: Gaza displacement (42728821), microaggressions and pain (42721338), victimization and self-harm in psychosis (42711065).
 
 ## Emerging threads
-- Instability of the PTSD construct and of self-report instruments generally: cluster-model choice swings prevalence 18–38% (42635035); avoidance weak in refugees (42635367); non-Criterion-A minority stressors track PTSS (42658623); high autism-questionnaire scores tracking anxiety, depression and childhood adversity in an NHS clinic (42772961, 2026-09).
-- Structural exposures dominating psychological ones: repeated displacement in Gaza with distress mediating only 26–41% (42728821); microaggressions and pain surviving adjustment for mental health (42721338); victimization and self-harm in non-forensic psychosis (42711065); racism/sexism routes to PTSD+SUD (42708575).
-- Self-conscious emotions and self-concept dissociating: shame vs guilt on social support (42766479); trauma identity vs safety-seeking (42036873); perpetration-based moral injury and depersonalization (41347711).
-- Within-person, nonlinear and intensive-longitudinal methods reframing recovery and resilience: tipping points in hurricane survivors (42715666); resilience as deviation from predicted trajectory plus a fragile GWAS hit in SDK1 (42765393); EMA miscalibration (42721324).
-- Delivery and engagement: Prolonged Exposure in routine French care, 76% probable remission, 1% deterioration, 9.5% dropout (42766476) versus 43.4% inpatient dropout (42222912) — setting and comorbidity, not the therapy, may drive disengagement.
-- Occupational/vicarious trauma as a distinct condition from burnout in child protection workers (42732758) — new strand, watch for replication in other trauma-exposed professions.
-- Neurobiology: cortical gradient reorganization in PTSD against trauma-exposed controls, with larger subcortical effects in adolescents (42740407); weakening inflammation-depression story (42673683).
-- Understudied populations continuing to enter the literature: Gaza adults (42728821), Syrian refugee dyads in Türkiye (42760574), Arabic-speaking online treatment-seekers (42766479), unattended children in China (42594693).
+- The response system as a variable in the outcome: institutional betrayal at Nova (42847151), chosen families vs formal services for trans women (42848018), mobile crisis workforce strain (41940892), disclosure-as-duty critique in Greenland (42578805).
+- Displacement itself as an exposure distinct from danger — Ukrainians abroad worse off than matched stayers (42411615), alongside repeated relocation in Gaza (42728821).
+- Targets beyond fear extinction: disgust outlasting fear in analogue trauma (42060450), shame mediation (42815005) — potential complication for exposure-based treatment, which otherwise performed well in routine care (42766476).
+- Intergenerational transmission as general relational vulnerability rather than repetition of the same abuse (42842484), relayed via parenting stress (42760574).
+- Construct boundaries widening: ordinary childhood sadness and relationships (42852960), autism questionnaires capturing distress and adversity (42772961).
+- Ambiguous loss operating at population scale, with a distress plateau rather than a recovery curve (42828449).
+- VR shifting from intervention to physiological assessment (42765386 → 42826675); commercial interests now appearing in author declarations.
+- Occupational/vicarious trauma as distinct from burnout, now across two workforces (42732758, 41940892).
+- Within-person, nonlinear and deviation-from-prediction methods still accumulating (42715666, 42765393, 42721324).
 
 ## Feature ideas already pitched
-- 2026-09-04: "Where the line around trauma is drawn" — scoring rules, DSM criteria and courtroom uses of PTSD (42635035, 42635367, 42658623, 42644771, 41936021, 41308177).
+- 2026-09-04: "Where the line around trauma is drawn" — scoring rules, DSM criteria, courtroom uses of PTSD (42635035, 42635367, 42658623, 42644771).
 - 2026-09-24: "The harm therapy cannot reach" — structural exposures outweighing the psychological pathway (42728821, 42721338, 42711065, 42708575, 42760574, 42732758).
-- Not yet pitched, holding for a future run: recovery as a dynamical system — tipping points, coevolving trajectories and resilience defined as deviation from prediction (42715666, 42765393, 42721324).
+- 2026-10-14: "The response as a second injury" — institutional betrayal, peer networks as the real recovery infrastructure (42847151, 42848018, 41940892, 42578805, 42411615).
+- Holding for a future run: recovery as a dynamical system — tipping points, coevolving trajectories, resilience as deviation from prediction (42715666, 42765393, 42721324). Second candidate: trauma treatment beyond fear — disgust, shame and emotional literacy as targets (42060450, 42815005, 41944560).
