@@ -1,6 +1,6 @@
 {
   "generated_from": "outputs/*.md",
-  "run_count": 93,
+  "run_count": 94,
   "topics": [
     "addiction",
     "anxiety",
@@ -24,11 +24,11 @@
   "novelty_types": [
     {
       "type": "Counterintuitive",
-      "count": 725
+      "count": 730
     },
     {
       "type": "First-in-class",
-      "count": 272
+      "count": 279
     },
     {
       "type": "Included for relevance",
@@ -36,11 +36,11 @@
     },
     {
       "type": "New mechanism",
-      "count": 174
+      "count": 179
     },
     {
       "type": "Overturns prior research",
-      "count": 82
+      "count": 85
     },
     {
       "type": "Failed replication",
@@ -48,6 +48,22 @@
     }
   ],
   "runs": [
+    {
+      "id": "new-scientist-story-ideas-decision-making-october-2026",
+      "title": "New Scientist Story Ideas \u2014 Decision-Making \u2014 October 2026",
+      "topic": "decision-making",
+      "run_date": "2026-10-15",
+      "study_count": 20,
+      "top_score": 8,
+      "total_issues": "38 (29 Minor, 8 Moderate, 1 Major)",
+      "novelty_counts": {
+        "First-in-class": 7,
+        "Counterintuitive": 5,
+        "New mechanism": 5,
+        "Overturns prior research": 3
+      },
+      "search": "new scientist story ideas \u2014 decision-making \u2014 october 2026 decision-making decision-making land acknowledgements raise awareness of indigenous groups but can dampen interest in their culture 42791336 nature human behaviour angry voters pick dominant-looking leaders, frightened voters pick trustworthy-looking ones 42858097 cognition and emotion offered good and bad stories about a drug, people deliberately choose the bad ones \u2014 and then expect side effects 42843138 behaviour research and therapy two heads don't average \u2014 they pick a winner 42822293 cognitive psychology people are better at judging a food's nutritional quality than its calories \u2014 but far more confident about the calories 42863397 cognition we work hardest when we believe our effort can change the outcome \u2014 and depressive traits sharpen that calculus 42675261 cognitive, affective & behavioral neuroscience steep delay discounting predicts gambling harm \u2014 but mostly through the stories gamblers tell themselves 42821202 journal of gambling studies teenagers' thinking gets faster and sharper with age \u2014 and puberty barely explains it 42826555 acta psychologica the eu's new energy labels are easier to read \u2014 and change what you can remember about them 42832023 psychonomic bulletin & review brain wiring differs by drug of choice \u2014 and in cannabis dependence it tracks impulsive choice 42855476 translational psychiatry scanning doctors' brains as they decide who qualifies for assisted dying 42091837 cognitive, affective & behavioral neuroscience playing for points instead of cash makes people try less hard \u2014 even in psychosis research 42475772 schizophrenia research people really do compute the average of a set of numbers \u2014 they're not just eyeballing the biggest one 42870117 attention, perception, & psychophysics anorexia plus suicidal thoughts shows up as choosing less food you still find tasty 42834510 international journal of eating disorders a night in a sleep lab already contains a decade-long warning about your heart 42852996 sleep pilots describe what actually saves them when something happens that no checklist covers 42095443 human factors people rarely check whether an ai advisor is making things up \u2014 and generic warnings don't help 42759086 current opinion in psychology pressure doesn't just narrow your attention \u2014 it changes how complicated your thinking is 42875363 trends in cognitive sciences in shared-motherhood ivf, who carries the baby comes down to who wants to be pregnant 42875086 culture, health & sexuality doctors running ketamine clinics have written their own rulebook 42144140 journal of affective disorders"
+    },
     {
       "id": "new-scientist-story-ideas-trauma-october-2026",
       "title": "New Scientist Story Ideas \u2014 Trauma \u2014 October 2026",
